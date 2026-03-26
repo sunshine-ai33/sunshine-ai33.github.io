@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI驱动组织风险预警项目 - 落地方案汇报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 封面 */
+        .cover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #6d28d9 100%);
+            color: white;
+            padding: 80px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 50px rgba(30, 58, 138, 0.3);
+        }
+
+        .cover h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cover .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cover .meta {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.85;
+        }
+
+        .cover .meta-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 25px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* 章节 */
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #6d28d9;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title .icon {
+            font-size: 2rem;
+        }
+
+        /* 两栏布局 */
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        /* 卡片 */
+        .card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid #6d28d9;
+        }
+
+        .card h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #6d28d9;
+            font-weight: bold;
+        }
+
+        /* 时间线 */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #6d28d9 0%, #1e3a8a 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: #6d28d9;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(109, 40, 217, 0.4);
+        }
+
+        .timeline-item .week {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item h4 {
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        /* 风险评分模块 */
+        .risk-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .risk-level {
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .risk-level.high {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+        }
+
+        .risk-level.medium {
+            background: #fffbeb;
+            border: 2px solid #f59e0b;
+        }
+
+        .risk-level.low {
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+        }
+
+        .risk-level .score {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .risk-level.high .score { color: #ef4444; }
+        .risk-level.medium .score { color: #f59e0b; }
+        .risk-level.low .score { color: #22c55e; }
+
+        /* 价值展示 */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #e0e7ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
+        }
+
+        .value-card .value-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .value-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        /* 表格 */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table th, .data-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .data-table th {
+            background: #f1f5f9;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .data-table tr:hover {
+            background: #f8fafc;
+        }
+
+        /* 高亮文本 */
+        .highlight {
+            background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .highlight-purple {
+            background: linear-gradient(120deg, #ede9fe 0%, #ddd6fe 100%);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #6d28d9;
+            font-weight: 500;
+        }
+
+        /* 标签 */
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .badge-blue {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-green {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .badge-purple {
+            background: #f3e8ff;
+            color: #7e22ce;
+        }
+
+        /* 导航按钮 */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-dot:hover, .nav-dot.active {
+            background: #6d28d9;
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-dots {
+                display: none;
+            }
+
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .cover h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" onclick="scrollToSection('cover')"></div>
+        <div class="nav-dot" onclick="scrollToSection('overview')"></div>
+        <div class="nav-dot" onclick="scrollToSection('module1')"></div>
+        <div class="nav-dot" onclick="scrollToSection('module2')"></div>
+        <div class="nav-dot" onclick="scrollToSection('timeline')"></div>
+        <div class="nav-dot" onclick="scrollToSection('compliance')"></div>
+        <div class="nav-dot" onclick="scrollToSection('value')"></div>
+    </div>
+
+    <div class="container">
+        <!-- 封面 -->
+        <section id="cover" class="cover">
+            <h1>🤖 AI驱动组织风险预警项目</h1>
+            <p class="subtitle">落地方案汇报 · 2026 Q3落地</p>
+            <div class="meta">
+                <div class="meta-item">📅 项目周期：8周</div>
+                <div class="meta-item">🎯 核心产出：月度+季度报告</div>
+                <div class="meta-item">💰 投入：8-10人/周</div>
+            </div>
+        </section>
+
+        <!-- 项目概述 -->
+        <section id="overview" class="section">
+            <h2 class="section-title"><span class="icon">📋</span>项目概述</h2>
+
+            <div class="card" style="margin-bottom: 30px;">
+                <h3>💡 项目定位</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    打通HR全量数据，通过AI自动识别组织中<span class="highlight-purple">核心人才流失</span>、<span class="highlight-purple">团队健康</span>两大核心风险，
+                    从传统<span class="highlight">「事后救火」</span>升级为<span class="highlight">「事前预警」</span>，
+                    帮助管理层提前干预，降低风险对业务的冲击，支撑公司战略落地。
+                </p>
+            </div>
+
+            <div class="two-columns">
+                <div class="card">
+                    <h3>📊 核心产出</h3>
+                    <ul>
+                        <li><span class="badge badge-blue">月度</span> 《核心人才流失风险清单》</li>
+                        <li><span class="badge badge-green">季度</span> 《团队健康风险预警报告》</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⏱️ 项目周期（2026 Q3）</h3>
+                    <ul>
+                        <li>需求对齐&数据整理：第1-2周</li>
+                        <li>模型训练&开发：第3-6周</li>
+                        <li>灰度测试&迭代：第7-8周</li>
+                        <li>正式上线：Q3第9周开始</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心模块1 -->
+        <section id="module1" class="section">
+            <h2 class="section-title"><span class="icon">👥</span>核心模块1：核心人才流失风险预警</h2>
+            <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 20px;"><span class="badge badge-blue">月度输出</span></p>
+
+            <div class="card" style="margin-bottom: 25px;">
+                <h3>🎯 预警目标</h3>
+                <p>识别公司关键岗位（总监及以上、核心技术/业务岗）高流失风险员工，提前提示主管/HRBP干预，<span class="highlight-purple">将核心人才流失率降低10%-15%</span>。</p>
+            </div>
+
+            <div class="card" style="margin-bottom: 25px;">
+                <h3>🤖 AI建模流程</h3>
+                <ul>
+                    <li><strong>训练数据：</strong>用公司近3年核心员工"离职/在职"历史数据做训练集</li>
+                    <li><strong>模型选择：</strong>基于公司现有大模型底座做微调，或用经典机器学习分类模型（轻量易落地）</li>
+                    <li><strong>输出：</strong>给每个核心员工打「流失风险得分」（0-100分）</li>
+                </ul>
+            </div>
+
+            <h3 style="margin: 30px 0 15px;">📊 风险评分标准</h3>
+            <div class="risk-levels">
+                <div class="risk-level high">
+                    <div class="score">70分+</div>
+                    <div>高风险<br><strong>立刻提示干预</strong></div>
+                </div>
+                <div class="risk-level medium">
+                    <div class="score">50-70分</div>
+                    <div>中风险<br><strong>持续跟踪</strong></div>
+                </div>
+                <div class="risk-level low">
+                    <div class="score">50分以下</div>
+                    <div>低风险<br><strong>正常管理</strong></div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 30px;">
+                <h3>📋 落地规则</h3>
+                <ul>
+                    <li>每月5号前自动生成上月清单</li>
+                    <li>仅对<span class="highlight">部门负责人+HRBP+OD</span>开放对应权限，严格保密</li>
+                    <li>HRBP跟进高风险员工干预，两个月后复评风险得分</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 核心模块2 -->
+        <section id="module2" class="section">
+            <h2 class="section-title"><span class="icon">🏢</span>核心模块2：组织健康风险预警</h2>
+            <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 20px;"><span class="badge badge-green">季度输出</span></p>
+
+            <div class="card" style="margin-bottom: 25px;">
+                <h3>🎯 预警目标</h3>
+                <p>自动识别高风险团队（流动率异常、人效异常、员工负面情绪集中），提示OD/HR提前介入诊断，避免问题扩大影响业务。</p>
+            </div>
+
+            <div class="two-columns">
+                <div class="card">
+                    <h3>📈 基础指标异常识别</h3>
+                    <ul>
+                        <li>团队连续两个季度流动率<span class="highlight">&gt;公司警戒线</span>（默认15%，可调整），标记风险</li>
+                        <li>团队连续两个季度人效<span class="highlight">&lt;公司基线70%</span>，标记风险</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>💬 开放式反馈情感分析</h3>
+                    <ul>
+                        <li>AI自动分析员工调研/谈话中的开放式文本</li>
+                        <li>提炼共性负面问题（目标不清、主管管理问题、流程繁琐等）</li>
+                        <li>负面情绪占比超过<span class="highlight-purple">30%</span>标记风险</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 30px;">
+                <h3>📋 季度输出：《团队健康风险预警报告》</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>模块</th>
+                            <th>内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. 整体概览</strong></td>
+                            <td>全公司高风险团队占比、主要风险分布（业务线/部门）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. 高风险团队明细</strong></td>
+                            <td>具体团队风险详情、问题分析</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. 总结建议</strong></td>
+                            <td>全公司共性风险总结，给到管理层整体优化建议</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 项目推进计划 -->
+        <section id="timeline" class="section">
+            <h2 class="section-title"><span class="icon">📅</span>分阶段项目推进计划</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="week">第1-2周</span>
+                    <h4>📊 需求对齐 & 数据整理</h4>
+                    <p>完成需求调研，确认数据来源，完成历史数据清洗和整理</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="week">第3-4周</span>
+                    <h4>🧪 模型训练 & 基础开发</h4>
+                    <p>流失风险模型训练，团队健康指标逻辑开发，核心功能开发</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="week">第5-6周</span>
+                    <h4>⚙️ 系统开发 & 集成</h4>
+                    <p>报告自动生成功能开发，权限系统开发，与现有HR系统集成</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="week">第7-8周</span>
+                    <h4>🔬 灰度测试 & 迭代优化</h4>
+                    <p>小范围灰度测试，收集反馈迭代优化，完成验收</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="week">Q3第9周起</span>
+                    <h4>🚀 正式上线运行</h4>
+                    <p>按月/按季度自动输出报告，持续监控优化</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 40px;">
+                <h3>💰 资源需求估算</h3>
+                <ul>
+                    <li><strong>总工作量：</strong>合计约 <span class="highlight-purple">8-10人/周</span></li>
+                    <li><strong>模型投入：</strong>复用公司现有大模型底座，无需额外大模型投入</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 权限与合规 -->
+        <section id="compliance" class="section">
+            <h2 class="section-title"><span class="icon">🔒</span>权限 & 合规说明</h2>
+
+            <div class="two-columns">
+                <div class="card">
+                    <h3>👁️ 严格权限控制</h3>
+                    <ul>
+                        <li>仅对应负责人能看对应团队数据</li>
+                        <li>核心员工风险仅<span class="highlight">部门负责人+OD+HRBP</span>可见</li>
+                        <li>全公司只有<span class="highlight">CEO和OD负责人</span>能看全量清单</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🔐 数据安全</h3>
+                    <ul>
+                        <li>所有数据处理都在<span class="highlight-purple">公司内网</span>完成</li>
+                        <li>不对外传输，满足公司数据合规要求</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>🛡️ 隐私保护</h3>
+                    <ul>
+                        <li>不泄露员工个人隐私数据</li>
+                        <li>仅输出风险得分和建议，不公开具体信息</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 预期价值 -->
+        <section id="value" class="section">
+            <h2 class="section-title"><span class="icon">✨</span>预期价值</h2>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">📊</div>
+                    <h3>业务端</h3>
+                    <p>提前识别核心人才流失风险，<strong>降低核心人才流失率10%-15%</strong>，避免核心业务断档</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">👔</div>
+                    <h3>管理端</h3>
+                    <p>帮助管理层<strong>提前发现团队问题</strong>，不用等到问题爆发才处理，提升组织管理效率</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>OD端</h3>
+                    <p>从被动事务处理升级为<strong>主动风险预警</strong>，成为公司战略落地的风险把控者，价值显性化</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结尾 -->
+        <section class="section" style="text-align: center; background: linear-gradient(135deg, #1e3a8a 0%, #6d28d9 100%); color: white;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Q&A</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9;">感谢聆听 · 欢迎交流</p>
+        </section>
+    </div>
+
+    <script>
+        // 导航点滚动
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 滚动时更新导航点状态
+        const sections = ['cover', 'overview', 'module1', 'module2', 'timeline', 'compliance', 'value'];
+        const dots = document.querySelectorAll('.nav-dot');
+
+        window.addEventListener('scroll', () => {
+            let current = 0;
+            sections.forEach((id, index) => {
+                const section = document.getElementById(id);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2) {
+                        current = index;
+                    }
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === current);
+            });
+        });
+    </script>
+</body>
+</html>

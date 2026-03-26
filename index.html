@@ -176,11 +176,7 @@
         </header>
 
         <div class="card-grid" id="pageList">
-            <div class="empty-state" style="grid-column: 1 / -1;">
-                <div class="icon">📭</div>
-                <h2>还没有发布的页面</h2>
-                <p>发布一些页面后再来查看吧！</p>
-            </div>
+            <!-- 页面卡片将在这里生成 -->
         </div>
 
         <footer class="footer">
@@ -190,7 +186,11 @@
 
     <script>
         // 页面列表数据（由 Claude 自动生成）
-        const pages = [];
+        const pages = [
+            { filename: 'card-images.html', title: 'card-images.html' },
+            { filename: 'project-report.html', title: 'project-report.html' },
+            { filename: 'salary-survey.html', title: 'salary-survey.html' }
+        ];
 
         // 生成页面卡片
         function generateCards() {
