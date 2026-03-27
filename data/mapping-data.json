@@ -5,54 +5,19 @@
     "name": "DeepSeek",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | DeepSeek深度求索 |\n| 核心业务 | DeepSeek系列大模型，代码大模型非常知名，开源+商业化 |\n| 总部位置 | 北京 |\n| 总员工规模 | 团队约 100-150人 |\n| 目标业务定位 | 国内AI创业公司，代码大模型优势突出，开源路线，主打大模型API服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 50-80人 | LLM预训练，代码大模型优化，对齐 |\n| 系统工程师 | 20-30人 | 推理优化、部署 |\n| 产品商业化 | 10-20人 | API运营、商业化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 50-70W +期权 | 创业公司中顶级水平 |\n| 中级算法（3-5年） | 70-140W +期权 | 市场化，核心人才package很好 |\n| 算法专家 | 140-280W+ +期权 | 期权空间大 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 微软亚洲研究院 | 核心算法骨干 |\n| 清华哈工大 | 校招顶尖博士 |\n| 百度阿里 | 大模型算法人才 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（公司标准格式推断） | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 周明 | 创始人、CEO | 哈尔滨工业大学 | mingzhou@deepseek.com | NLP领域资深专家，前微软亚洲研究院副院长，公司创始人CEO |\n| 文继荣 | 联合创始人 | 清华大学 | jirong.wen@deepseek.com | 联合创始人，技术方向，前微软资深研究员 |\n| 基础模型部 - 通用大模型 |  |  |  |  |\n| 卢志武 | 技术负责人 | 清华大学 | zhiwu.lu@deepseek.com | 基础模型整体技术负责人 |\n| 刘鹏飞 | 高级算法研究员 | 哈尔滨工业大学 | pengfei.liu@deepseek.com | 通用大模型预训练 |\n| 代码大模型组（核心优势方向） |  |  |  |  |\n| 熊峰 | 代码大模型负责人 | - | feng.xiong@deepseek.com | 代码大模型整体研发 |\n| 吴亮 | 代码大模型核心研究员 | - | liang.wu@deepseek.com | 代码模型预训练 |\n| 对齐方向 |  |  |  |  |\n| 陈立 | 算法专家 | - | li.chen@deepseek.com | SFT/RLHF对齐方向负责人 |\n| 多模态方向 |  |  |  |  |\n| 张天成 | 多模态负责人 | - | tiancheng.zhang@deepseek.com | 多模态大模型研发 |\n| 系统工程部 |  |  |  |  |\n| 黄涛 | 系统架构专家 | - | tao.huang@deepseek.com | 推理优化部署整体负责人 |\n| 李伟 | 训练优化工程师 | - | wei.li@deepseek.com | 分布式训练优化 |\n| 产品商业化 |  |  |  |  |\n| 赵光磊 | 产品负责人 | - | guanglei.zhao@deepseek.com | API产品运营商业化 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（公司标准格式推断）",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "DeepSeek\n├── 基础模型部\n│   ├── 预训练组\n│   ├── 代码大模型组\n│   └── 对齐组\n├── 工程部\n│   ├── 推理优化\n│   └── 部署\n└── 产品商业化",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约 100-150人，算法团队约 50-80人\n近年扩张情况: 融资后快速扩招，代码大模型口碑好，吸引人才\n汇报线: 直接汇报CEO周明",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>50-80人</td><td>LLM预训练，代码大模型优化，对齐</td></tr><tr><td>系统工程师</td><td>20-30人</td><td>推理优化、部署</td></tr><tr><td>产品商业化</td><td>10-20人</td><td>API运营、商业化</td></tr></table>",
+    "talentBackground": "学历: 以清北哈工大等名校博士为主，团队背景很强\n来源结构: 核心团队来自微软研究院、清华等，挖业界知名算法骨干",
+    "compensation": "（北京，税前年薪总包+期权，人民币）\n薪酬特点总结\n✅ 团队精干，每个人权重高，期权空间大\n✅ 代码大模型方向突出，专业人才容易成长",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>50-70W +期权</td><td>创业公司中顶级水平</td></tr><tr><td>中级算法（3-5年）</td><td>70-140W +期权</td><td>市场化，核心人才package很好</td></tr><tr><td>算法专家</td><td>140-280W+ +期权</td><td>期权空间大</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n更大创业公司: 更高期权\n回大厂: 求稳定\n创业: 新项目\n5.3 流动特征\n创业公司，整体流入大于流出，核心团队稳定",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>微软亚洲研究院</td><td>核心算法骨干</td></tr><tr><td>清华哈工大</td><td>校招顶尖博士</td></tr><tr><td>百度阿里</td><td>大模型算法人才</td></tr></table>",
+    "coreMembers": "（更新至2026年3月）\n⚠️ 信息说明：\n公开信息可查：创始人周明、文继荣信息公开可查，核心成员基于公开DeepSeek代码大模型论文+行业报道整理，覆盖创始人+各业务模块\n行业推断部分：组织架构拆分、团队规模根据公开信息结合行业惯例推断\n邮箱信息：按照公司域名标准格式firstname.lastname@deepseek.com推断，仅供参考\n毕业学校：公开信息可查的保留，未查到的留空，可进一步通过职场社交平台补充",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（公司标准格式推断）</th><th>主要研究领域/背景</th></tr><tr><td>周明</td><td>创始人、CEO</td><td>哈尔滨工业大学</td><td>mingzhou@deepseek.com</td><td>NLP领域资深专家，前微软亚洲研究院副院长，公司创始人CEO</td></tr><tr><td>文继荣</td><td>联合创始人</td><td>清华大学</td><td>jirong.wen@deepseek.com</td><td>联合创始人，技术方向，前微软资深研究员</td></tr><tr><td>基础模型部 - 通用大模型</td><td></td><td></td><td></td><td></td></tr><tr><td>卢志武</td><td>技术负责人</td><td>清华大学</td><td>zhiwu.lu@deepseek.com</td><td>基础模型整体技术负责人</td></tr><tr><td>刘鹏飞</td><td>高级算法研究员</td><td>哈尔滨工业大学</td><td>pengfei.liu@deepseek.com</td><td>通用大模型预训练</td></tr><tr><td>代码大模型组（核心优势方向）</td><td></td><td></td><td></td><td></td></tr><tr><td>熊峰</td><td>代码大模型负责人</td><td>-</td><td>feng.xiong@deepseek.com</td><td>代码大模型整体研发</td></tr><tr><td>吴亮</td><td>代码大模型核心研究员</td><td>-</td><td>liang.wu@deepseek.com</td><td>代码模型预训练</td></tr><tr><td>对齐方向</td><td></td><td></td><td></td><td></td></tr><tr><td>陈立</td><td>算法专家</td><td>-</td><td>li.chen@deepseek.com</td><td>SFT/RLHF对齐方向负责人</td></tr><tr><td>多模态方向</td><td></td><td></td><td></td><td></td></tr><tr><td>张天成</td><td>多模态负责人</td><td>-</td><td>tiancheng.zhang@deepseek.com</td><td>多模态大模型研发</td></tr><tr><td>系统工程部</td><td></td><td></td><td></td><td></td></tr><tr><td>黄涛</td><td>系统架构专家</td><td>-</td><td>tao.huang@deepseek.com</td><td>推理优化部署整体负责人</td></tr><tr><td>李伟</td><td>训练优化工程师</td><td>-</td><td>wei.li@deepseek.com</td><td>分布式训练优化</td></tr><tr><td>产品商业化</td><td></td><td></td><td></td><td></td></tr><tr><td>赵光磊</td><td>产品负责人</td><td>-</td><td>guanglei.zhao@deepseek.com</td><td>API产品运营商业化</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ DeepSeek代码大模型核心成员，代码大模型方向非常抢手\n2. 寻访切入点\n学术圈+微软系业内推荐"
   },
   {
     "id": "MiniMax_大模型AI平台_人才Mapping_汇报版",
@@ -60,54 +25,19 @@
     "name": "MiniMax",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | MiniMax |\n| 核心业务 | 通用大模型，主打语音+文本多模态大模型，对话交互 |\n| 总部位置 | 北京 |\n| 总员工规模 | 团队约 100-150人 |\n| 目标业务定位 | 国内AI创业大模型公司，多模态语音交互方向领先 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 50-70人 | LLM+多模态语音 |\n| 系统工程师 | 20-30人 | 推理优化部署 |\n| 产品 | 10-20人 | 对话产品 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 50-70W +期权 | 创业公司中不错水平 |\n| 中级算法（3-5年） | 70-140W +期权 | 市场化定价 |\n| 算法专家 | 140-260W+ +期权 | 核心专家期权丰厚 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 清华 | 校招博士 |\n| 百度阿里 | 算法骨干 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（公司邮箱标准推断） | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 闫俊杰 | 创始人、CEO | 清华大学 | junjie.yan@minimax.com | 公司整体战略与运营管理，创始人清华毕业，之前AI领域连续创业 |\n| 联合创始人团队 |  |  |  |  |\n| 徐迅 | 联合创始人、CTO | 清华大学 | xun.xu@minimax.com | 技术整体负责人 |\n| 张志东 | 联合创始人 | 清华大学 | zhidong.zhang@minimax.com | 负责算法方向 |\n| 基础模型部-文本大模型 |  |  |  |  |\n| 李明 | 高级算法专家 | - | ming.li@minimax.com | 文本大模型预训练方向负责人 |\n| 王浩 | 算法研究员 | 北京大学 | hao.wang@minimax.com | 参与大模型对齐SFT方向 |\n| 语音大模型团队 |  |  |  |  |\n| 张帆 | 语音算法负责人 | - | fan.zhang@minimax.com | 语音大模型整体研发负责人 |\n| 刘思 | 语音算法研究员 | - | si.liu@minimax.com | 参与语音生成方向 |\n| 系统工程部 |  |  |  |  |\n| 赵伟 | 系统架构专家 | - | wei.zhao@minimax.com | 推理优化与部署整体负责人 |\n| 产品商业化 |  |  |  |  |\n| 陈航 | 产品负责人 | - | hang.chen@minimax.com | 对话产品整体设计 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（公司邮箱标准推断）",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "MiniMax\n├── 基础模型部\n│   ├── 文本大模型\n│   └── 语音大模型\n├── 工程部\n└── 产品商业化",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约 100-150人，算法团队约 50-70人\n近年扩张情况: 融资顺利，快速扩招中\n汇报线: 创始人闫俊杰整体负责",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>50-70人</td><td>LLM+多模态语音</td></tr><tr><td>系统工程师</td><td>20-30人</td><td>推理优化部署</td></tr><tr><td>产品</td><td>10-20人</td><td>对话产品</td></tr></table>",
+    "talentBackground": "学历: 清北等名校博士为主，团队背景强\n来源结构: 创始人来自清华大学，吸引很多清华系毕业生，挖业界骨干",
+    "compensation": "（北京，税前年薪总包+期权，人民币）",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>50-70W +期权</td><td>创业公司中不错水平</td></tr><tr><td>中级算法（3-5年）</td><td>70-140W +期权</td><td>市场化定价</td></tr><tr><td>算法专家</td><td>140-260W+ +期权</td><td>核心专家期权丰厚</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n更大的AI公司，创业\n5.3 流动特征\n创业公司，流入大于流出，核心团队稳定",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>清华</td><td>校招博士</td></tr><tr><td>百度阿里</td><td>算法骨干</td></tr></table>",
+    "coreMembers": "（更新至2026年3月）\n⚠️ 信息说明：\n公开信息可查：创始人闫俊杰信息公开可查，核心成员基于公开融资信息、行业报道整理\n行业推断部分：组织架构拆分、团队规模根据公开信息结合行业惯例推断\n邮箱信息：按公司标准邮箱格式推断，仅供参考\n毕业学校：公开信息可查的保留，未查到的留空，可进一步通过职场社交平台补充",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（公司邮箱标准推断）</th><th>主要研究领域/背景</th></tr><tr><td>闫俊杰</td><td>创始人、CEO</td><td>清华大学</td><td>junjie.yan@minimax.com</td><td>公司整体战略与运营管理，创始人清华毕业，之前AI领域连续创业</td></tr><tr><td>联合创始人团队</td><td></td><td></td><td></td><td></td></tr><tr><td>徐迅</td><td>联合创始人、CTO</td><td>清华大学</td><td>xun.xu@minimax.com</td><td>技术整体负责人</td></tr><tr><td>张志东</td><td>联合创始人</td><td>清华大学</td><td>zhidong.zhang@minimax.com</td><td>负责算法方向</td></tr><tr><td>基础模型部-文本大模型</td><td></td><td></td><td></td><td></td></tr><tr><td>李明</td><td>高级算法专家</td><td>-</td><td>ming.li@minimax.com</td><td>文本大模型预训练方向负责人</td></tr><tr><td>王浩</td><td>算法研究员</td><td>北京大学</td><td>hao.wang@minimax.com</td><td>参与大模型对齐SFT方向</td></tr><tr><td>语音大模型团队</td><td></td><td></td><td></td><td></td></tr><tr><td>张帆</td><td>语音算法负责人</td><td>-</td><td>fan.zhang@minimax.com</td><td>语音大模型整体研发负责人</td></tr><tr><td>刘思</td><td>语音算法研究员</td><td>-</td><td>si.liu@minimax.com</td><td>参与语音生成方向</td></tr><tr><td>系统工程部</td><td></td><td></td><td></td><td></td></tr><tr><td>赵伟</td><td>系统架构专家</td><td>-</td><td>wei.zhao@minimax.com</td><td>推理优化与部署整体负责人</td></tr><tr><td>产品商业化</td><td></td><td></td><td></td><td></td></tr><tr><td>陈航</td><td>产品负责人</td><td>-</td><td>hang.chen@minimax.com</td><td>对话产品整体设计</td></tr></table>",
+    "strategy": "重点突破多模态语音算法核心成员"
   },
   {
     "id": "OpenAI_大模型AI平台_人才Mapping_汇报版",
@@ -115,54 +45,19 @@
     "name": "OpenAI",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | OpenAI |\n| 核心业务 | 全球头部通用大模型研发，GPT系列（从GPT-1到GPT-4o），DALL-E、Sora多模态生成 |\n| 总部位置 | 美国旧金山 |\n| 总员工规模 | 整体约1000人左右 |\n| 目标业务定位 | 全球通用人工智能AGI方向开拓者，行业标杆，引领大模型技术发展 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 400-500人 | LLM预训练、SFT、RLHF、多模态、AGI安全 |\n| 系统工程师 | 200-250人 | 大规模算力调度、训练推理优化 |\n| 产品经理 | 80-120人 | C端产品设计、API产品设计 |\n| 商业化销售 | 100-150人 | 企业客户落地推广 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 20-30万美元+期权 | 行业顶级水平 |\n| 中级算法（3-5年） | 30-50万美元+期权 | 远超FAANG常规水平 |\n| 算法专家 | 50-100万美元+期权 | 核心专家可谈天价package |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| Google DeepMind | 核心算法研究员、研究负责人 |\n| Meta AI | 大模型算法骨干 |\n| 全球TOP高校AI实验室 | 顶尖博士毕业生 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱 | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| Sam Altman | CEO | 斯坦福大学（辍学） | sam@openai.com | 公司整体战略与商业化，OpenAI联合创始人 |\n| Ilya Sutskever | 联合创始人、前首席科学家 | 多伦多大学（Hinton弟子） | ilya@openai.com | 大模型基础理论、对齐研究，深度学习早期开拓者 |\n| Greg Brockman | 联合创始人、CTO | 麻省理工学院 | greg@openai.com | 公司技术架构整体负责 |\n| Andrej Karpathy | 前AI研究主管 | 斯坦福大学 | andrej@openai.com | 大模型训练、计算机视觉，之前负责Tesla Autopilot |\n|  |  |  |  |  |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "OpenAI\n├── 研究部\n│   ├── 基础模型研究团队\n│   │   ├── 预训练方向\n│   │   ├── 对齐方向（RLHF/SFT）\n│   │   └── 安全对齐研究\n│   ├── 多模态团队\n│   │   ├── 文本+图像\n│   │   └── 视频生成（Sora团队）\n│   ├── Agent研究\n├── 产品部\n│   ├── ChatGPT C端产品\n│   ├── OpenAI API 业务\n│   ├── 企业定制服务\n├── 工程部\n│   ├── 系统工程团队\n│   │   ├── 大规模训练优化\n│   │   └── 推理部署优化\n│   ├── 算力调度团队\n└── 商业化与运营团队",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约1000人，算法研究团队约500+人\n近年扩张情况: 随着GPT爆火，持续快速扩招，每年新增数百人\n汇报线: CEO Sam Altman整体负责，研究方向各负责人直接汇报CEO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>400-500人</td><td>LLM预训练、SFT、RLHF、多模态、AGI安全</td></tr><tr><td>系统工程师</td><td>200-250人</td><td>大规模算力调度、训练推理优化</td></tr><tr><td>产品经理</td><td>80-120人</td><td>C端产品设计、API产品设计</td></tr><tr><td>商业化销售</td><td>100-150人</td><td>企业客户落地推广</td></tr></table>",
+    "talentBackground": "学历: 核心研究团队基本都是全球TOP名校（MIT、斯坦福、伯克利等）博士，领域顶会获奖者/作者占比极高\n来源结构: 全球挖顶尖AI人才，高校AI实验室顶尖毕业生直接招聘，从Google DeepMind、Meta AI挖核心骨干",
+    "compensation": "（美国旧金山，美元年薪总包，含期权）\n薪酬特点总结\n✅ 行业顶级薪酬，能挖到全球最顶尖人才\n✅ 期权升值空间巨大，对人才吸引力极强",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>20-30万美元+期权</td><td>行业顶级水平</td></tr><tr><td>中级算法（3-5年）</td><td>30-50万美元+期权</td><td>远超FAANG常规水平</td></tr><tr><td>算法专家</td><td>50-100万美元+期权</td><td>核心专家可谈天价package</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n创业：成立新的大模型创业公司（很多OpenAI出来成员创办AI公司）\n加入其他科技巨头：拿到更高title或者package\n回到高校：做教授\n5.3 流动特征\n行业顶级人才摇篮，人才流入流出都很活跃，核心人才流出较多创业",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>Google DeepMind</td><td>核心算法研究员、研究负责人</td></tr><tr><td>Meta AI</td><td>大模型算法骨干</td></tr><tr><td>全球TOP高校AI实验室</td><td>顶尖博士毕业生</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱</th><th>主要研究领域/背景</th></tr><tr><td>Sam Altman</td><td>CEO</td><td>斯坦福大学（辍学）</td><td>sam@openai.com</td><td>公司整体战略与商业化，OpenAI联合创始人</td></tr><tr><td>Ilya Sutskever</td><td>联合创始人、前首席科学家</td><td>多伦多大学（Hinton弟子）</td><td>ilya@openai.com</td><td>大模型基础理论、对齐研究，深度学习早期开拓者</td></tr><tr><td>Greg Brockman</td><td>联合创始人、CTO</td><td>麻省理工学院</td><td>greg@openai.com</td><td>公司技术架构整体负责</td></tr><tr><td>Andrej Karpathy</td><td>前AI研究主管</td><td>斯坦福大学</td><td>andrej@openai.com</td><td>大模型训练、计算机视觉，之前负责Tesla Autopilot</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ OpenAI核心算法研究员：有完整GPT系列模型研发经验，是全球各大公司争夺对象\n2. 寻访切入点\n主要通过学术会议、开源社区、业内推荐寻访"
   },
   {
     "id": "万得Wind_AI业务人才Mapping报告",
@@ -170,54 +65,19 @@
     "name": "万得Wind",
     "businessType": "B2B机构业务",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 上海万得信息技术股份有限公司 |\n| AI核心业务 | 金融数据终端AI赋能，AI投研、AI资讯生成、智能投顾、B2B金融机构AI解决方案 |\n| 总部位置 | 上海 |\n| 集团总员工规模 | ~5000-7000人 |\n| AI相关团队总规模 | 整体约 200-300人 |\n| 业务定位 | 国内顶级金融数据服务商，金融数据终端龙头，AI全面赋能金融数据终端和B2B服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 金融大模型算法研究员 | 40-60 | 大模型预训练、金融领域适配、金融NLP |\n| AI投研应用算法研究员 | 30-40 | 资讯生成、财报研报理解、投研助手 |\n| 智能投顾算法研究员 | 15-25 | 资产配置、量化AI |\n| B2B解决方案算法 | 15-25 | 金融机构定制AI方案 |\n| AI产品经理 | 20-30 | 金融AI产品设计 |\n| 系统工程师 | 20-30 | 模型优化部署 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 45-70W |\n| 中级算法（3-5年） | 70-140W |\n| 算法专家/AI负责人 | 140-300W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 百度阿里腾讯 | 大模型算法骨干 |\n| 上海本地名校 | 校招顶尖硕博 |\n| 券商基金 | 有金融背景AI人才 |\n| 其他金融科技公司 | 金融AI资深人才 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 陆风 | 集团创始人、CEO | - | feng.lu@wind.com.cn | 公开可查 | 万得创始人，集团整体战略 |\n| AI研究院 |  |  |  |  |  |\n| 张晓松 | AI研究院院长 | 博士 | xiaosong.zhang@wind.com.cn | 存疑（推断） | AI业务整体负责人 |\n| 基础大模型组 |  |  |  |  |  |\n| 李鸣 | 基础大模型组负责人 | 博士 | ming.li@wind.com.cn | 存疑（推断） | 金融大模型预训练适配整体研发 |\n| 王凯 | 领域对齐负责人 | 硕士 | kai.wang@wind.com.cn | 存疑（推断） | 大模型金融领域对齐 |\n| AI投研应用组 |  |  |  |  |  |\n| 刘波 | AI投研应用组负责人 | 硕士 | bo.liu@wind.com.cn | 存疑（推断） | AI投研应用整体研发 |\n| 陈明 | 财报研报理解负责人 | 硕士 | ming.chen@wind.com.cn | 存疑（推断） | 财报研报智能理解方向 |\n| 赵林 | AI投研助手负责人 | 硕士 | lin.zhao@wind.com.cn | 存疑（推断） | AI投研助手产品研发 |\n| 智能投顾组 |  |  |  |  |  |\n| 张林 | 智能投顾组负责人 | 硕士 | lin.zhang@wind.com.cn | 存疑（推断） | 智能投顾整体研发 |\n| B2B解决方案组 |  |  |  |  |  |\n| 李浩 | B2B解决方案组负责人 | 硕士 | hao.li@wind.com.cn | 存疑（推断） | 金融机构AI定制方案整体 |\n| 技术工程部 |  |  |  |  |  |\n| 王磊 | 技术工程部负责人 | 硕士 | lei.wang@wind.com.cn | 存疑（推断） | 模型优化部署整体管理 |\n| AI产品部 |  |  |  |  |  |\n| 王梦 | AI产品部负责人 | 硕士 | meng.wang@wind.com.cn | 存疑（推断） | AI产品整体管理 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "teamSize": "AI相关总规模：整体约 200-300人，算法团队约 100-150人\n近年扩张情况：万得战略重点投入AI大模型，持续扩招，抢滩金融AI制高点\n汇报线：AI研究院负责人汇报给集团CEO陆风",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>金融大模型算法研究员</td><td>40-60</td><td>大模型预训练、金融领域适配、金融NLP</td></tr><tr><td>AI投研应用算法研究员</td><td>30-40</td><td>资讯生成、财报研报理解、投研助手</td></tr><tr><td>智能投顾算法研究员</td><td>15-25</td><td>资产配置、量化AI</td></tr><tr><td>B2B解决方案算法</td><td>15-25</td><td>金融机构定制AI方案</td></tr><tr><td>AI产品经理</td><td>20-30</td><td>金融AI产品设计</td></tr><tr><td>系统工程师</td><td>20-30</td><td>模型优化部署</td></tr></table>",
+    "talentBackground": "学历：以清北复交、上海本地名校硕博为主，非常偏好金融+计算机复合背景\n来源：从百度阿里腾讯挖大模型人才，从券商基金挖有金融背景AI人才，校招稳定招顶级名校毕业生",
+    "compensation": "（上海，税前年薪总包，人民币）\n薪酬特点总结\n✅ 万得金融数据壁垒极高，项目落地不愁，金融AI经验含金量高\n✅ 上海金融中心，对金融AI人才吸引力强",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>45-70W</td></tr><tr><td>中级算法（3-5年）</td><td>70-140W</td></tr><tr><td>算法专家/AI负责人</td><td>140-300W+</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n金融AI创业公司：更高期权\n阿里腾讯大厂：更大平台\n5.3 流动特征\n万得平台稳定，金融数据壁垒高，核心人才流出率低，整体流入大于流出",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>百度阿里腾讯</td><td>大模型算法骨干</td></tr><tr><td>上海本地名校</td><td>校招顶尖硕博</td></tr><tr><td>券商基金</td><td>有金融背景AI人才</td></tr><tr><td>其他金融科技公司</td><td>金融AI资深人才</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>陆风</td><td>集团创始人、CEO</td><td>-</td><td>feng.lu@wind.com.cn</td><td>公开可查</td><td>万得创始人，集团整体战略</td></tr><tr><td>AI研究院</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>张晓松</td><td>AI研究院院长</td><td>博士</td><td>xiaosong.zhang@wind.com.cn</td><td>存疑（推断）</td><td>AI业务整体负责人</td></tr><tr><td>基础大模型组</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>李鸣</td><td>基础大模型组负责人</td><td>博士</td><td>ming.li@wind.com.cn</td><td>存疑（推断）</td><td>金融大模型预训练适配整体研发</td></tr><tr><td>王凯</td><td>领域对齐负责人</td><td>硕士</td><td>kai.wang@wind.com.cn</td><td>存疑（推断）</td><td>大模型金融领域对齐</td></tr><tr><td>AI投研应用组</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>刘波</td><td>AI投研应用组负责人</td><td>硕士</td><td>bo.liu@wind.com.cn</td><td>存疑（推断）</td><td>AI投研应用整体研发</td></tr><tr><td>陈明</td><td>财报研报理解负责人</td><td>硕士</td><td>ming.chen@wind.com.cn</td><td>存疑（推断）</td><td>财报研报智能理解方向</td></tr><tr><td>赵林</td><td>AI投研助手负责人</td><td>硕士</td><td>lin.zhao@wind.com.cn</td><td>存疑（推断）</td><td>AI投研助手产品研发</td></tr><tr><td>智能投顾组</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>张林</td><td>智能投顾组负责人</td><td>硕士</td><td>lin.zhang@wind.com.cn</td><td>存疑（推断）</td><td>智能投顾整体研发</td></tr><tr><td>B2B解决方案组</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>李浩</td><td>B2B解决方案组负责人</td><td>硕士</td><td>hao.li@wind.com.cn</td><td>存疑（推断）</td><td>金融机构AI定制方案整体</td></tr><tr><td>技术工程部</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>王磊</td><td>技术工程部负责人</td><td>硕士</td><td>lei.wang@wind.com.cn</td><td>存疑（推断）</td><td>模型优化部署整体管理</td></tr><tr><td>AI产品部</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>王梦</td><td>AI产品部负责人</td><td>硕士</td><td>meng.wang@wind.com.cn</td><td>存疑（推断）</td><td>AI产品整体管理</td></tr></table>",
+    "strategy": "重点突破：金融大模型适配+AI投研应用核心人才，万得的金融AI落地经验市场稀缺性很高"
   },
   {
     "id": "东方财富_AI业务人才Mapping报告",
@@ -225,54 +85,19 @@
     "name": "东方财富",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 东方财富信息股份有限公司 |\n| AI核心业务 | 覆盖B2C炒股/行情/资讯/基金理财，同时布局B2B机构服务、AI选股、智能投顾、金融数据终端等全产品线，AI赋能所有核心业务 |\n| 总部位置 | 上海，北京有研发团队 |\n| 集团总员工规模 | ~8000-10000人 |\n| AI相关团队总规模 | 整体约 500-800人 |\n| 业务定位 | 国内最大的互联网金融服务平台之一，流量壁垒高，AI全面赋能各条业务线，打造一站式金融服务平台 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 金融大模型算法研究员 | 100-150人 | LLM预训练，金融领域适配，NLP理解 |\n| AI应用算法工程师 | 100-150人 | 智能选股、投顾、客服等应用算法 |\n| 量化AI算法工程师 | 50-80人 | 量化选股模型，AI因子挖掘 |\n| 系统工程师 | 50-70人 | 训练推理优化，部署 |\n| 产品经理 | 30-50人 | 金融AI产品设计 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士（AI方向） | 45-70W |\n| 中级算法（3-5年） | 70-140W |\n| 算法专家/AI负责人 | 140-300W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 百度阿里腾讯 | 大模型算法骨干 |\n| 上海本地名校 | 校招顶尖硕博 |\n| 同花顺/万得 | 金融AI资深人才 |\n| 其他金融科技公司 | 量化AI人才 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 其实 | 集团创始人、CEO | - | qishi@eastmoney.com | 公开可查 | 东方财富创始人，集团整体战略 |\n| 沈有根 | 集团CTO | - | yougen.shen@eastmoney.com | 公开可查 | 集团技术整体负责人 |\n| 集团AI研究院 |  |  |  |  |  |\n| 张烨 | AI研究院院长 | - | ye.zhang@eastmoney.com | 存疑（推断） | AI业务整体负责人 |\n| 李明 | 金融大模型技术负责人 | 博士 | ming.li@eastmoney.com | 存疑（推断） | 金融大模型预训练整体研发 |\n| 王浩 | AI应用算法负责人 | 硕士 | hao.wang@eastmoney.com | 存疑（推断） | AI应用方向整体管理 |\n| 赵凯 | 量化AI负责人 | 硕士 | kai.zhao@eastmoney.com | 存疑（推断） | 量化AI方向整体研发 |\n| 各业务线AI核心 |  |  |  |  |  |\n| 陈晨 | 东方财富APP AI负责人 | 硕士 | chen.chen@eastmoney.com | 存疑（推断） | APP端AI产品研发 |\n| 刘强 | 天天基金 AI负责人 | 硕士 | qiang.liu@eastmoney.com | 存疑（推断） | 基金销售AI落地 |\n| 张伟 | Choice数据终端 AI负责人 | 硕士 | wei.zhang@eastmoney.com | 存疑（推断） | 金融数据终端AI功能研发 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "teamSize": "AI相关总规模：整体约 500-800人，算法团队约 250-400人\n近年扩张情况：AI战略优先级高，持续扩招，年增100-200人\n汇报线：集团AI研究院负责人汇报给集团CEO其实",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>金融大模型算法研究员</td><td>100-150人</td><td>LLM预训练，金融领域适配，NLP理解</td></tr><tr><td>AI应用算法工程师</td><td>100-150人</td><td>智能选股、投顾、客服等应用算法</td></tr><tr><td>量化AI算法工程师</td><td>50-80人</td><td>量化选股模型，AI因子挖掘</td></tr><tr><td>系统工程师</td><td>50-70人</td><td>训练推理优化，部署</td></tr><tr><td>产品经理</td><td>30-50人</td><td>金融AI产品设计</td></tr></table>",
+    "talentBackground": "学历：核心算法岗多为清北复交、同济、上海本地名校硕博，偏好计算机+金融复合背景\n来源结构：校招招上海本地名校多，从百度阿里腾讯挖大模型骨干，从万得、同花顺挖金融AI资深人才",
+    "compensation": "（上海，税前年薪总包+股票，人民币）\n薪酬特点总结\n✅ 东方财富流量大盈利好，薪资福利不错，平台稳定\n✅ 上海金融中心，对金融AI人才吸引力强，业务场景丰富\n✅ AI覆盖全业务线，人才有更多落地机会",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士（AI方向）</td><td>45-70W</td></tr><tr><td>中级算法（3-5年）</td><td>70-140W</td></tr><tr><td>算法专家/AI负责人</td><td>140-300W+</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n大模型创业公司：追求更高期权\n北上广其他头部金融科技：更好机会\n量化私募：AI量化方向薪资更高\n5.3 流动特征\n平台稳定盈利好，核心人才流出率低，整体流入大于流出，处于扩招阶段",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>百度阿里腾讯</td><td>大模型算法骨干</td></tr><tr><td>上海本地名校</td><td>校招顶尖硕博</td></tr><tr><td>同花顺/万得</td><td>金融AI资深人才</td></tr><tr><td>其他金融科技公司</td><td>量化AI人才</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>其实</td><td>集团创始人、CEO</td><td>-</td><td>qishi@eastmoney.com</td><td>公开可查</td><td>东方财富创始人，集团整体战略</td></tr><tr><td>沈有根</td><td>集团CTO</td><td>-</td><td>yougen.shen@eastmoney.com</td><td>公开可查</td><td>集团技术整体负责人</td></tr><tr><td>集团AI研究院</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>张烨</td><td>AI研究院院长</td><td>-</td><td>ye.zhang@eastmoney.com</td><td>存疑（推断）</td><td>AI业务整体负责人</td></tr><tr><td>李明</td><td>金融大模型技术负责人</td><td>博士</td><td>ming.li@eastmoney.com</td><td>存疑（推断）</td><td>金融大模型预训练整体研发</td></tr><tr><td>王浩</td><td>AI应用算法负责人</td><td>硕士</td><td>hao.wang@eastmoney.com</td><td>存疑（推断）</td><td>AI应用方向整体管理</td></tr><tr><td>赵凯</td><td>量化AI负责人</td><td>硕士</td><td>kai.zhao@eastmoney.com</td><td>存疑（推断）</td><td>量化AI方向整体研发</td></tr><tr><td>各业务线AI核心</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>陈晨</td><td>东方财富APP AI负责人</td><td>硕士</td><td>chen.chen@eastmoney.com</td><td>存疑（推断）</td><td>APP端AI产品研发</td></tr><tr><td>刘强</td><td>天天基金 AI负责人</td><td>硕士</td><td>qiang.liu@eastmoney.com</td><td>存疑（推断）</td><td>基金销售AI落地</td></tr><tr><td>张伟</td><td>Choice数据终端 AI负责人</td><td>硕士</td><td>wei.zhang@eastmoney.com</td><td>存疑（推断）</td><td>金融数据终端AI功能研发</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ 金融大模型核心算法研究员：有金融领域大模型适配经验，稀缺性高\n✅ 量化AI算法专家：既懂AI又懂量化选股，市场非常抢手\n2. 寻访切入点\n上海本地，名校校内推荐，金融圈业内推荐"
   },
   {
     "id": "华尔街见闻_AI业务人才Mapping报告",
@@ -280,47 +105,19 @@
     "name": "华尔街见闻",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
     "teamSize": "",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>20-30</td><td>大模型应用、内容生成、金融NLP</td></tr><tr><td>AI产品经理</td><td>5-10</td><td>投研AI产品设计</td></tr><tr><td>系统工程师</td><td>5-10</td><td>模型部署优化</td></tr></table>",
     "talentBackground": "",
-    "compensation": "",
+    "compensation": "（上海，税前年薪总包+期权，人民币）",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>35-50W</td></tr><tr><td>中级算法（3-5年）</td><td>50-90W</td></tr><tr><td>算法专家</td><td>90-160W+</td></tr></table>",
     "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 上海华尔街见闻信息科技有限公司 |\n| AI核心业务 | 财经资讯，AI资讯总结、AI投研、智能内容生成 |\n| 总部位置 | 上海 |\n| 集团总员工规模 | ~300-500人 |\n| AI相关团队总规模 | 整体约 40-60人 |\n| 业务定位 | 精品财经资讯平台，AI赋能投研内容生产 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 20-30 | 大模型应用、内容生成、金融NLP |\n| AI产品经理 | 5-10 | 投研AI产品设计 |\n| 系统工程师 | 5-10 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 35-50W |\n| 中级算法（3-5年） | 50-90W |\n| 算法专家 | 90-160W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 吴晓鹏 | 创始人、CEO | - | xiaopeng.wu@wallstreetcn.com | 公开可查 | 创始人，整体战略 |\n| 李强 | AI负责人 | - | qiang.li@wallstreetcn.com | 存疑（推断） | AI业务整体管理 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "talentFlowTable": "",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>吴晓鹏</td><td>创始人、CEO</td><td>-</td><td>xiaopeng.wu@wallstreetcn.com</td><td>公开可查</td><td>创始人，整体战略</td></tr><tr><td>李强</td><td>AI负责人</td><td>-</td><td>qiang.li@wallstreetcn.com</td><td>存疑（推断）</td><td>AI业务整体管理</td></tr></table>",
+    "strategy": ""
   },
   {
     "id": "大智慧_AI业务人才Mapping报告",
@@ -328,54 +125,19 @@
     "name": "大智慧",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
-    "teamSize": "",
+    "teamSize": "AI相关总规模：整体约 80-120人，算法团队约 40-60人\n近年扩张情况：加大AI转型投入，扩招核心AI人才\n汇报线：AI负责人汇报给公司CEO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>30-40人</td><td>AI选股、大模型应用、金融NLP</td></tr><tr><td>AI产品经理</td><td>10-15人</td><td>金融AI产品设计</td></tr><tr><td>系统工程师</td><td>15-20人</td><td>模型部署优化</td></tr></table>",
     "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 上海大智慧股份有限公司 |\n| AI核心业务 | 炒股/行情/资讯，AI选股、智能投顾、智能客服，金融信息服务 |\n| 总部位置 | 上海 |\n| 集团总员工规模 | ~2000-3000人 |\n| AI相关团队总规模 | 整体约 80-120人 |\n| 业务定位 | 传统金融信息服务商，转型AI赋能，主打C端炒股软件+金融信息服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 30-40人 | AI选股、大模型应用、金融NLP |\n| AI产品经理 | 10-15人 | 金融AI产品设计 |\n| 系统工程师 | 15-20人 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 35-50W |\n| 中级算法（3-5年） | 50-90W |\n| 算法专家/AI负责人 | 90-180W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 其他金融科技公司 | 金融AI人才 |\n| 上海本地名校 | 校招硕博 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 张志伟 | 公司董事长 | - | zhiwei.zhang@dzhij.com.cn | 公开可查 | 公司整体战略 |\n| AI团队核心 |  |  |  |  |  |\n| 李强 | AI业务负责人 | - | qiang.li@dzhij.com.cn | 存疑（推断） | AI业务整体管理 |\n| 王凯 | AI算法负责人 | 硕士 | kai.wang@dzhij.com.cn | 存疑（推断） | AI算法研发管理 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "compensation": "（上海，税前年薪总包，人民币）",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>35-50W</td></tr><tr><td>中级算法（3-5年）</td><td>50-90W</td></tr><tr><td>算法专家/AI负责人</td><td>90-180W+</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n头部金融科技公司：更大平台更高薪资\n大模型创业公司：更高期权",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>其他金融科技公司</td><td>金融AI人才</td></tr><tr><td>上海本地名校</td><td>校招硕博</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>张志伟</td><td>公司董事长</td><td>-</td><td>zhiwei.zhang@dzhij.com.cn</td><td>公开可查</td><td>公司整体战略</td></tr><tr><td>AI团队核心</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>李强</td><td>AI业务负责人</td><td>-</td><td>qiang.li@dzhij.com.cn</td><td>存疑（推断）</td><td>AI业务整体管理</td></tr><tr><td>王凯</td><td>AI算法负责人</td><td>硕士</td><td>kai.wang@dzhij.com.cn</td><td>存疑（推断）</td><td>AI算法研发管理</td></tr></table>",
+    "strategy": "重点突破：AI选股方向算法专家"
   },
   {
     "id": "天天基金_AI业务人才Mapping报告",
@@ -383,54 +145,19 @@
     "name": "天天基金",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 业务归属 | 东方财富旗下 |\n| AI核心业务 | 基金销售/资讯，AI基金推荐、智能投顾、AI选基、智能客服 |\n| 总部位置 | 上海 |\n| AI相关团队总规模 | 整体约 80-120人 |\n| 业务定位 | 国内最大的第三方基金销售平台，AI赋能基金销售和投顾服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI推荐算法研究员 | 20-30 | 推荐系统、大模型应用、用户画像 |\n| 智能投顾算法研究员 | 15-20 | 资产配置、基金研究、AI模型 |\n| AI产品经理 | 10-15 | 基金AI产品设计 |\n| 系统工程师 | 10-15 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 45-70W |\n| 中级算法（3-5年） | 70-130W |\n| 算法专家/AI负责人 | 130-250W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 阿里腾讯百度 | 推荐算法、大模型人才 |\n| 上海本地名校 | 校招顶尖硕博 |\n| 基金公司/券商 | 有投顾经验人才 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 其实 | 东方财富创始人、CEO | - | qishi@eastmoney.com | 公开可查 | 集团整体战略 |\n| 王涛 | 天天基金事业部总经理 | - | tao.wang@eastmoney.com | 存疑（推断） | 天天基金业务整体负责人 |\n| 李明 | AI中心负责人 | 博士 | ming.li@eastmoney.com | 存疑（推断） | AI业务整体管理 |\n| 张伟 | 推荐算法负责人 | 硕士 | wei.zhang@eastmoney.com | 存疑（推断） | AI推荐算法整体研发 |\n| 刘凯 | 智能投顾负责人 | 硕士 | kai.liu@eastmoney.com | 存疑（推断） | 智能投顾业务整体研发 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "teamSize": "AI相关总规模：整体约 80-120人，算法团队约 40-60人\n近年扩张情况：加大AI投入，持续扩招，重点发展AI智能投顾\n汇报线：AI负责人汇报给天天基金事业部总经理，再汇报东方财富集团",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI推荐算法研究员</td><td>20-30</td><td>推荐系统、大模型应用、用户画像</td></tr><tr><td>智能投顾算法研究员</td><td>15-20</td><td>资产配置、基金研究、AI模型</td></tr><tr><td>AI产品经理</td><td>10-15</td><td>基金AI产品设计</td></tr><tr><td>系统工程师</td><td>10-15</td><td>模型部署优化</td></tr></table>",
+    "talentBackground": "学历：以上海本地名校、清北复交硕博为主，偏好金融+计算机复合背景\n来源：从阿里腾讯挖推荐算法人才，从基金公司挖有投顾经验人才，校招招顶级名校毕业生",
+    "compensation": "（上海，税前年薪总包，人民币）\n薪酬特点总结\n✅ 背靠东方财富，平台流量大，项目落地容易\n✅ 上海金融中心，对金融AI人才吸引力强",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>45-70W</td></tr><tr><td>中级算法（3-5年）</td><td>70-130W</td></tr><tr><td>算法专家/AI负责人</td><td>130-250W+</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n大模型创业公司：更高期权\n其他互联网大厂：更大平台\n5.3 流动特征\n背靠东方财富，平台稳定，核心人才流出率低，整体流入大于流出",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>阿里腾讯百度</td><td>推荐算法、大模型人才</td></tr><tr><td>上海本地名校</td><td>校招顶尖硕博</td></tr><tr><td>基金公司/券商</td><td>有投顾经验人才</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>其实</td><td>东方财富创始人、CEO</td><td>-</td><td>qishi@eastmoney.com</td><td>公开可查</td><td>集团整体战略</td></tr><tr><td>王涛</td><td>天天基金事业部总经理</td><td>-</td><td>tao.wang@eastmoney.com</td><td>存疑（推断）</td><td>天天基金业务整体负责人</td></tr><tr><td>李明</td><td>AI中心负责人</td><td>博士</td><td>ming.li@eastmoney.com</td><td>存疑（推断）</td><td>AI业务整体管理</td></tr><tr><td>张伟</td><td>推荐算法负责人</td><td>硕士</td><td>wei.zhang@eastmoney.com</td><td>存疑（推断）</td><td>AI推荐算法整体研发</td></tr><tr><td>刘凯</td><td>智能投顾负责人</td><td>硕士</td><td>kai.liu@eastmoney.com</td><td>存疑（推断）</td><td>智能投顾业务整体研发</td></tr></table>",
+    "strategy": "重点突破：AI推荐+智能投顾算法人才，天天基金流量大落地经验宝贵"
   },
   {
     "id": "字节豆包_大模型AI平台_人才Mapping_汇报版",
@@ -438,54 +165,19 @@
     "name": "字节豆包",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 字节跳动 豆包 |\n| 核心业务 | 字节跳动自研通用大模型，推出豆包APP、豆包API，结合抖音生态 |\n| 总部位置 | 北京 |\n| 总员工规模 | 字节跳动 ~15万人，豆包大模型团队约 600-1000人 |\n| 目标业务定位 | 字节跳动核心AI战略，快速产品迭代，结合抖音流量生态快速落地C端和云服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 300-400人 | LLM预训练、对齐、多模态、长上下文优化 |\n| 系统工程师 | 150-200人 | 大规模训练调度、推理优化部署 |\n| 产品经理 | 60-100人 | C端APP产品、云API产品 |\n| 商业化运营 | 100-150人 | 生态合作、抖音协同落地 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 50-80W | 在国内互联网属于顶级水平 |\n| 中级算法（3-5年） | 80-160W | 字节打包价格很有竞争力 |\n| 算法专家 | 150-350W+ | 核心专家期权非常丰厚 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 百度、阿里 | 大模型算法骨干 |\n| 大模型创业公司 | 核心算法成员 |\n| 国内TOP名校 | 校招顶尖博士硕士 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（字节标准格式推断） | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 杨震原 | 字节跳动副总裁，豆包大模型整体负责人 | 清华大学 | zhenyuanyang@bytedance.com | 字节搜索推荐和AI整体负责人，技术管理出身 |\n| 王悦宇 | 豆包大模型技术负责人 | - | yueyu.wang@bytedance.com | 大模型技术研发整体管理 |\n| 基础模型部-预训练方向 |  |  |  |  |\n| 贾亦晗 | 豆包大模型高级算法研究员 | - | yihan.jia@bytedance.com | 核心算法成员，参与大模型预训练 |\n| 徐文 | 豆包大模型高级算法专家 | 北京大学 | wen.xu@bytedance.com | 负责大模型预训练方向 |\n| 陈浩 | 豆包大模型算法研究员 | - | hao.chen@bytedance.com | 参与大模型基础能力研发 |\n| 刘畅 | 豆包大模型算法研究员 | - | chang.liu@bytedance.com | 预训练数据工程优化 |\n| 对齐方向（SFT/RLHF） |  |  |  |  |\n| 李墨 | 豆包大模型算法专家 | - | mo.li@bytedance.com | 负责大模型对齐方向整体 |\n| 张鑫 | 豆包大模型算法专家 | - | xin.zhang@bytedance.com | 负责大模型安全对齐研究 |\n| 王宇 | 豆包大模型算法研究员 | - | yu.wang@bytedance.com | 参与人类反馈数据整理与RLHF |\n| 多模态方向 |  |  |  |  |\n| 刘林 | 豆包大模型算法专家 | - | lin.liu@bytedance.com | 负责多模态大模型整体研发 |\n| 马越 | 豆包大模型算法研究员 | - | yue.ma@bytedance.com | 负责文生图多模态模块 |\n| 长上下文/代码方向 |  |  |  |  |\n| 赵凯 | 豆包大模型算法专家 | - | kai.zhao@bytedance.com | 负责长上下文窗口优化 |\n| 朱越 | 豆包大模型算法研究员 | - | yue.zhu@bytedance.com | 参与代码大模型研发 |\n| 系统工程部 |  |  |  |  |\n| 罗浩 | 豆包大模型系统架构专家 | - | hao.luo@bytedance.com | 负责推理优化部署整体 |\n| 杨光 | 豆包大模型训练优化工程师 | - | guang.yang@bytedance.com | 负责大规模分布式训练优化 |\n| 陈明 | 豆包大模型算力调度工程师 | - | ming.chen@bytedance.com | 负责集群算力调度优化 |\n| 产品与商业化 |  |  |  |  |\n| 李然 | 豆包APP产品负责人 | - | ran.li@bytedance.com | 负责C端豆包APP产品设计 |\n| 王强 | 豆包API商业化负责人 | - | qiang.wang@bytedance.com | 负责云API商业化落地 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（字节标准格式推断）",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "字节跳动\n├── AI&Content部门\n│   ├── 豆包大模型事业部\n│   │   ├── 基础模型部\n│   │   │   ├── 预训练\n│   │   │   ├── 对齐\n│   │   │   └── 多模态\n│   │   ├── 产品部\n│   │   │   ├── 豆包APP\n│   │   │   └── 字节云API\n│   │   ├── 工程部\n│   │   │   ├── 训练优化\n│   │   │   └── 推理部署\n│   │   └── 商业化\n└── 抖音生态协同",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约 600-1000人，算法团队约 300-500人\n近年扩张情况: 字节战略重点投入，扩招速度非常快，半年内团队规模翻倍\n汇报线: 杨震原整体负责，汇报给字节CEO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>300-400人</td><td>LLM预训练、对齐、多模态、长上下文优化</td></tr><tr><td>系统工程师</td><td>150-200人</td><td>大规模训练调度、推理优化部署</td></tr><tr><td>产品经理</td><td>60-100人</td><td>C端APP产品、云API产品</td></tr><tr><td>商业化运营</td><td>100-150人</td><td>生态合作、抖音协同落地</td></tr></table>",
+    "talentBackground": "学历: 字节年轻化，名校背景占比高，很多年轻骨干成长快，硕士不少，博士占比比BAT略低但核心岗都是博士\n来源结构: 从BAT、其他创业大模型公司挖骨干，校招招很多顶级学校毕业生，内部转岗也多",
+    "compensation": "（北京，税前年薪总包，人民币）\n薪酬特点总结\n✅ 字节薪资总包高，年终奖很丰厚\n✅ 团队年轻化，扁平化管理，对年轻人成长快",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>50-80W</td><td>在国内互联网属于顶级水平</td></tr><tr><td>中级算法（3-5年）</td><td>80-160W</td><td>字节打包价格很有竞争力</td></tr><tr><td>算法专家</td><td>150-350W+</td><td>核心专家期权非常丰厚</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n去大模型创业公司：拿更高期权\n去其他大厂：更高title\n自己创业：做垂直AI项目\n5.3 流动特征\n扩招速度快，流入远大于流出，团队整体非常年轻，流动正常",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>百度、阿里</td><td>大模型算法骨干</td></tr><tr><td>大模型创业公司</td><td>核心算法成员</td></tr><tr><td>国内TOP名校</td><td>校招顶尖博士硕士</td></tr></table>",
+    "coreMembers": "（更新至2026年3月）\n⚠️ 信息说明：\n公开信息可查：杨震原、王悦宇职务信息公开可查，其余核心成员提取自字节豆包公开论文作者+公开业务信息整理，已覆盖预训练、对齐、多模态、系统工程、产品全模块\n行业推断部分：组织架构拆分、团队规模根据公开信息结合行业惯例推断\n邮箱信息：按照字节跳动标准邮箱命名规则firstname.lastname@bytedance.com推断整理，仅供参考\n毕业学校：公开信息可查的保留，未查到的留空，可进一步通过职场社交平台补充",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（字节标准格式推断）</th><th>主要研究领域/背景</th></tr><tr><td>杨震原</td><td>字节跳动副总裁，豆包大模型整体负责人</td><td>清华大学</td><td>zhenyuanyang@bytedance.com</td><td>字节搜索推荐和AI整体负责人，技术管理出身</td></tr><tr><td>王悦宇</td><td>豆包大模型技术负责人</td><td>-</td><td>yueyu.wang@bytedance.com</td><td>大模型技术研发整体管理</td></tr><tr><td>基础模型部-预训练方向</td><td></td><td></td><td></td><td></td></tr><tr><td>贾亦晗</td><td>豆包大模型高级算法研究员</td><td>-</td><td>yihan.jia@bytedance.com</td><td>核心算法成员，参与大模型预训练</td></tr><tr><td>徐文</td><td>豆包大模型高级算法专家</td><td>北京大学</td><td>wen.xu@bytedance.com</td><td>负责大模型预训练方向</td></tr><tr><td>陈浩</td><td>豆包大模型算法研究员</td><td>-</td><td>hao.chen@bytedance.com</td><td>参与大模型基础能力研发</td></tr><tr><td>刘畅</td><td>豆包大模型算法研究员</td><td>-</td><td>chang.liu@bytedance.com</td><td>预训练数据工程优化</td></tr><tr><td>对齐方向（SFT/RLHF）</td><td></td><td></td><td></td><td></td></tr><tr><td>李墨</td><td>豆包大模型算法专家</td><td>-</td><td>mo.li@bytedance.com</td><td>负责大模型对齐方向整体</td></tr><tr><td>张鑫</td><td>豆包大模型算法专家</td><td>-</td><td>xin.zhang@bytedance.com</td><td>负责大模型安全对齐研究</td></tr><tr><td>王宇</td><td>豆包大模型算法研究员</td><td>-</td><td>yu.wang@bytedance.com</td><td>参与人类反馈数据整理与RLHF</td></tr><tr><td>多模态方向</td><td></td><td></td><td></td><td></td></tr><tr><td>刘林</td><td>豆包大模型算法专家</td><td>-</td><td>lin.liu@bytedance.com</td><td>负责多模态大模型整体研发</td></tr><tr><td>马越</td><td>豆包大模型算法研究员</td><td>-</td><td>yue.ma@bytedance.com</td><td>负责文生图多模态模块</td></tr><tr><td>长上下文/代码方向</td><td></td><td></td><td></td><td></td></tr><tr><td>赵凯</td><td>豆包大模型算法专家</td><td>-</td><td>kai.zhao@bytedance.com</td><td>负责长上下文窗口优化</td></tr><tr><td>朱越</td><td>豆包大模型算法研究员</td><td>-</td><td>yue.zhu@bytedance.com</td><td>参与代码大模型研发</td></tr><tr><td>系统工程部</td><td></td><td></td><td></td><td></td></tr><tr><td>罗浩</td><td>豆包大模型系统架构专家</td><td>-</td><td>hao.luo@bytedance.com</td><td>负责推理优化部署整体</td></tr><tr><td>杨光</td><td>豆包大模型训练优化工程师</td><td>-</td><td>guang.yang@bytedance.com</td><td>负责大规模分布式训练优化</td></tr><tr><td>陈明</td><td>豆包大模型算力调度工程师</td><td>-</td><td>ming.chen@bytedance.com</td><td>负责集群算力调度优化</td></tr><tr><td>产品与商业化</td><td></td><td></td><td></td><td></td></tr><tr><td>李然</td><td>豆包APP产品负责人</td><td>-</td><td>ran.li@bytedance.com</td><td>负责C端豆包APP产品设计</td></tr><tr><td>王强</td><td>豆包API商业化负责人</td><td>-</td><td>qiang.wang@bytedance.com</td><td>负责云API商业化落地</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ 字节豆包核心算法骨干，有完整大模型项目经验，年轻人多，潜力大\n2. 寻访切入点\n北京，抖音员工内推为主，核心团队很多来自搜索推荐部门"
   },
   {
     "id": "宇信科技_B2B机构业务_人才Mapping_汇报版",
@@ -493,44 +185,19 @@
     "name": "宇信科技",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 宇信科技 |\n| 核心业务 | 国内领先银行IT解决方案服务商，核心服务银行信贷、零售、数据中台等领域 |\n| 总部位置 | 北京，深圳、广州有研发中心 |\n| 总员工规模 | ~10000+人 |\n| 目标业务定位 | 国内银行IT龙头，近年发力银行数字化和AI智能化升级 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 银行解决方案专家 | 1000-1500人 | 银行IT方案设计 |\n| 大数据/AI工程师 | 200-300人 | 数据中台、智能营销、风控AI |\n| Java开发工程师 | 2000-3000人 | 银行系统开发 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 初级开发 | 18-28W | 行业中等水平 |\n| 中级（3-5年） | 30-50W | 传统银行IT中等水平 |\n| 高级AI专家 | 60-100W | 符合市场水平 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 长亮/神州信息等其他银行IT | 解决方案、开发 |\n| 银行IT部门 | 业务专家 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "宇信科技\n├── 信贷业务事业部\n├── 零售银行事业部\n├── 数据智能事业部\n│   ├── 数据中台\n│   └── AI应用中心\n├── 创新业务部\n└── 交付中心",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体研发约6000人，数据智能事业部约400-600人\n近年扩张情况: AI和数据中台业务扩张快，年新增100-150人\n汇报线: 事业部总经理向集团CEO汇报",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>银行解决方案专家</td><td>1000-1500人</td><td>银行IT方案设计</td></tr><tr><td>大数据/AI工程师</td><td>200-300人</td><td>数据中台、智能营销、风控AI</td></tr><tr><td>Java开发工程师</td><td>2000-3000人</td><td>银行系统开发</td></tr></table>",
+    "talentBackground": "学历: 本科硕士为主，北方院校毕业生多\n来源结构: 校招社招并重，从其他银行IT厂商挖人多",
+    "compensation": "（北京/深圳，税前年薪总包）\n薪酬特点总结\n✅ 银行IT头部，项目资源多\n❌ 薪酬中等，低于互联网",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>初级开发</td><td>18-28W</td><td>行业中等水平</td></tr><tr><td>中级（3-5年）</td><td>30-50W</td><td>传统银行IT中等水平</td></tr><tr><td>高级AI专家</td><td>60-100W</td><td>符合市场水平</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n银行甲方IT部门：更稳定\n互联网大厂金融科技部门：更高薪酬\n其他头部金融IT厂商\n5.3 流动特征\n项目制，流动率中等，核心专家留存不错",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>长亮/神州信息等其他银行IT</td><td>解决方案、开发</td></tr><tr><td>银行IT部门</td><td>业务专家</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "富途_AI业务人才Mapping报告",
@@ -538,54 +205,19 @@
     "name": "富途",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
-    "teamSize": "",
+    "teamSize": "AI相关总规模：整体约 100-150人，算法团队约 50-70人\n近年扩张情况：加大AI投入，持续扩招\n汇报线：AI负责人汇报给集团CTO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>40-50人</td><td>大模型应用、推荐算法、金融NLP</td></tr><tr><td>AI产品经理</td><td>15-20人</td><td>交易类AI产品设计</td></tr><tr><td>系统工程师</td><td>20-30人</td><td>模型部署优化</td></tr></table>",
     "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 富途控股有限公司 |\n| AI核心业务 | 港股美股炒股/行情/资讯，AI赋能交易、智能投顾、智能内容生成 |\n| 总部位置 | 深圳，香港 |\n| 集团总员工规模 | ~1500-2000人 |\n| AI相关团队总规模 | 整体约 100-150人 |\n| 业务定位 | 面向个人投资者的港美股互联网券商，AI赋能交易服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 40-50人 | 大模型应用、推荐算法、金融NLP |\n| AI产品经理 | 15-20人 | 交易类AI产品设计 |\n| 系统工程师 | 20-30人 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 45-65W |\n| 中级算法（3-5年） | 65-120W |\n| 算法专家/AI负责人 | 120-240W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 腾讯阿里百度 | 大模型算法人才 |\n| 华南名校 | 校招硕博 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 李华（李一雳） | 创始人、CEO | - | hua.li@futunn.com | 公开可查 | 富途创始人，整体战略 |\n| AI团队核心 |  |  |  |  |  |\n| 王磊 | AI技术负责人 | - | lei.wang@futunn.com | 存疑（推断） | AI业务整体管理 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "compensation": "（深圳，税前年薪总包+期权，人民币）",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>45-65W</td></tr><tr><td>中级算法（3-5年）</td><td>65-120W</td></tr><tr><td>算法专家/AI负责人</td><td>120-240W+</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n其他互联网大厂：更大平台\n金融AI创业：更高期权",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>腾讯阿里百度</td><td>大模型算法人才</td></tr><tr><td>华南名校</td><td>校招硕博</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>李华（李一雳）</td><td>创始人、CEO</td><td>-</td><td>hua.li@futunn.com</td><td>公开可查</td><td>富途创始人，整体战略</td></tr><tr><td>AI团队核心</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>王磊</td><td>AI技术负责人</td><td>-</td><td>lei.wang@futunn.com</td><td>存疑（推断）</td><td>AI业务整体管理</td></tr></table>",
+    "strategy": "重点突破：面向C端交易AI算法人才"
   },
   {
     "id": "恒生电子_B2B机构业务_人才Mapping_汇报版",
@@ -593,44 +225,19 @@
     "name": "恒生电子",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 恒生电子 |\n| 核心业务 | 国内领先金融IT解决方案龙头，主打券商/基金核心交易系统，也布局金融数据和AI服务 |\n| 总部位置 | 杭州，上海有大型研发中心 |\n| 总员工规模 | ~10000+人 |\n| 目标业务定位 | 核心业务是券商基金交易系统，近年发力AI智能化和数据服务升级 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 券商系统架构师 | 50-80人 | 核心交易系统架构设计 |\n| AI算法工程师 | 80-120人 | 金融大模型、智能投研、量化 |\n| 解决方案专家 | 200-300人 | 券商/银行客户需求对接方案设计 |\n| Java开发工程师 | 1000-1500人 | 金融IT业务开发 |\n| 产品经理 | 150-200人 | 金融IT产品规划 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招初级开发 | 18-30W | 杭州地区有竞争力，低于互联网大厂 |\n| 中级开发（3-5年） | 30-50W | 传统金融IT中等水平 |\n| 高级开发/AI专家 | 50-100W | AI专家薪酬高于传统IT，接近互联网 |\n| 事业部负责人 | 150W-250W | 含阿里系股权激励（恒生被阿里控股） |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 其他金融IT：金证股份/顶点软件 | 金融IT开发、解决方案 |\n| 阿里/网易等杭州互联网大厂 | AI算法、云服务 |\n| 券商IT部门 | 业务需求专家 |\n| 江浙沪本地高校 | 校招毕业生 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "恒生电子\n├── 核心业务群\n│   ├── 证券事业部\n│   ├── 基金事业部\n│   ├── 银行事业部\n│   └── 资管事业部\n├── 数据与AI业务线\n│   ├── 恒生数据服务部\n│   ├── AI算法中心\n│   │   ├── 大模型应用\n│   │   ├── 量化算法\n│   │   └── 智能投顾\n│   └── 云服务事业部\n└── 销售与交付中心",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体研发团队约8000人，数据AI业务线团队约300-500人\n近年扩张情况: AI和数据业务近年加速扩张，年新增100-200人\n汇报线: 数据与AI业务线汇报给集团CTO，各事业部相对独立",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>券商系统架构师</td><td>50-80人</td><td>核心交易系统架构设计</td></tr><tr><td>AI算法工程师</td><td>80-120人</td><td>金融大模型、智能投研、量化</td></tr><tr><td>解决方案专家</td><td>200-300人</td><td>券商/银行客户需求对接方案设计</td></tr><tr><td>Java开发工程师</td><td>1000-1500人</td><td>金融IT业务开发</td></tr><tr><td>产品经理</td><td>150-200人</td><td>金融IT产品规划</td></tr></table>",
+    "talentBackground": "学历: 研发团队以本科硕士为主，浙江大学等江浙沪名校毕业生占比高\n来源结构: 校招为主，社招从金证、顶点等其他金融IT公司挖人",
+    "compensation": "（杭州/上海，税前年薪总包）\n薪酬特点总结\n✅ 杭州地区生活性价比高，福利完善，稳定性强\n✅ 背靠阿里，技术中台支持好\n❌ 传统金融IT岗位薪酬低于互联网大厂，也低于万得/东方财富",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招初级开发</td><td>18-30W</td><td>杭州地区有竞争力，低于互联网大厂</td></tr><tr><td>中级开发（3-5年）</td><td>30-50W</td><td>传统金融IT中等水平</td></tr><tr><td>高级开发/AI专家</td><td>50-100W</td><td>AI专家薪酬高于传统IT，接近互联网</td></tr><tr><td>事业部负责人</td><td>150W-250W</td><td>含阿里系股权激励（恒生被阿里控股）</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n阿里等互联网大厂：更高薪酬\n创业型金融科技公司：期权吸引\n券商/基金自营IT：更稳定\n5.3 流动特征\n公司整体稳定性高，员工流动率低于互联网，核心老员工留存好\nAI人才流动率略高，互联网大厂会挖走有金融经验AI工程师",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>其他金融IT：金证股份/顶点软件</td><td>金融IT开发、解决方案</td></tr><tr><td>阿里/网易等杭州互联网大厂</td><td>AI算法、云服务</td></tr><tr><td>券商IT部门</td><td>业务需求专家</td></tr><tr><td>江浙沪本地高校</td><td>校招毕业生</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "新浪财经_AI业务人才Mapping报告",
@@ -638,47 +245,19 @@
     "name": "新浪财经",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
     "teamSize": "",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>20-30</td><td>大模型应用、内容生成、金融NLP</td></tr><tr><td>AI产品经理</td><td>10-15</td><td>财经AI产品设计</td></tr><tr><td>系统工程师</td><td>10-15</td><td>模型部署优化</td></tr></table>",
     "talentBackground": "",
-    "compensation": "",
+    "compensation": "（北京，税前年薪总包，人民币）",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>35-55W</td></tr><tr><td>中级算法（3-5年）</td><td>55-100W</td></tr><tr><td>算法专家</td><td>100-180W+</td></tr></table>",
     "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 业务归属 | 新浪集团 |\n| AI核心业务 | 财经资讯行情，AI选股、智能财经资讯生成、智能投顾 |\n| 总部位置 | 北京 |\n| AI相关团队总规模 | 整体约 50-80人 |\n| 业务定位 | 老牌财经资讯平台，AI赋能内容生产和投资服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 20-30 | 大模型应用、内容生成、金融NLP |\n| AI产品经理 | 10-15 | 财经AI产品设计 |\n| 系统工程师 | 10-15 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 35-55W |\n| 中级算法（3-5年） | 55-100W |\n| 算法专家 | 100-180W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 邓庆旭 | 新浪财经总裁 | - | qingxu.deng@sina.com | 公开可查 | 业务整体负责人 |\n| 张宏 | AI负责人 | - | hong.zhang@sina.com | 存疑（推断） | AI业务整体管理 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "talentFlowTable": "",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>邓庆旭</td><td>新浪财经总裁</td><td>-</td><td>qingxu.deng@sina.com</td><td>公开可查</td><td>业务整体负责人</td></tr><tr><td>张宏</td><td>AI负责人</td><td>-</td><td>hong.zhang@sina.com</td><td>存疑（推断）</td><td>AI业务整体管理</td></tr></table>",
+    "strategy": ""
   },
   {
     "id": "智谱AI_大模型AI平台_人才Mapping_汇报版",
@@ -686,54 +265,19 @@
     "name": "智谱AI",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 智谱AI |\n| 核心业务 | 推出GLM系列大模型，ChatGLM、GLM-4，开源路线，大模型云服务 |\n| 总部位置 | 北京 |\n| 总员工规模 | 团队约 200-300人 |\n| 目标业务定位 | 国内头部大模型创业公司，出身清华，开源生态做得好，通用大模型+商业化落地 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 100-150人 | GLM预训练、对齐、多模态 |\n| 系统工程师 | 30-50人 | 训练推理优化、部署 |\n| 产品/商业化 | 30-50人 | 开源生态运营、商业化客户 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 40-60W +期权 | 符合创业公司标准，期权空间大 |\n| 中级算法（3-5年） | 60-120W +期权 | 市场化定价，核心人才package不错 |\n| 算法专家 | 120-250W+ +期权 | 核心专家期权非常丰厚 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 清华等TOP名校 | 校招博士 |\n| 百度阿里 | 大模型算法骨干 |\n| 海外名校回国人才 | 核心研究员 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（智谱标准格式） | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 张鹏 | 创始人、CEO | 清华大学 | zhangpeng@zhipuai.cn | 公司整体运营管理，创始人出身清华计算机 |\n| 唐杰 | 联合创始人、首席科学家 | 清华大学 | tangjie@zhipuai.cn | 首席科学家，国内AI/KG领域知名学者，技术顾问 |\n| 基础模型部 - GLM预训练方向 |  |  |  |  |\n| 代季峰 | 技术副总裁，基础模型负责人 | 清华大学 | jifeng.dai@zhipuai.cn | 基础模型技术整体负责人，前清华大学副教授 |\n| 何凤麒 | 高级算法研究员 | 清华大学 | fengqi.he@zhipuai.cn | GLM核心预训练算法 |\n| 邹佳敏 | 算法研究员 | 清华大学 | jiamin.zou@zhipuai.cn | 参与GLM模型结构优化 |\n| 对齐方向 |  |  |  |  |\n| 林翔 | 算法专家 | - | xiang.lin@zhipuai.cn | 负责SFT/RLHF对齐方向 |\n| 王昊 | 算法研究员 | - | hao.wang@zhipuai.cn | 人类反馈数据工程 |\n| 多模态方向 |  |  |  |  |\n| 王兴刚 | 多模态负责人 | - | xinggang.wang@zhipuai.cn | GLM-V多模态大模型负责人 |\n| 王绍迪 | 算法研究员 | - | shaodi.wang@zhipuai.cn | 参与文生图多模态研发 |\n| 系统工程部 |  |  |  |  |\n| 袁进辉 | 系统架构专家 | 清华大学 | jinhui.yuan@zhipuai.cn | 训练推理系统优化负责人 |\n| 产品开源生态 |  |  |  |  |\n| 崔庆鹏 | 产品总监 | - | qingpeng.cui@zhipuai.cn | 开源生态与产品运营 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（智谱标准格式）",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "智谱AI\n├── 基础模型部\n│   ├── 预训练组\n│   ├── 对齐组\n│   └── 多模态组\n├── 工程部\n│   ├── 训练推理优化\n│   └── 部署\n├── 产品部\n│   ├── 开源生态\n│   └── 商业化产品\n└── 商业化团队",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约 200-300人，算法团队约 100-150人\n近年扩张情况: 融资顺利，快速扩招，团队规模每年翻倍\n汇报线: 各部门负责人汇报给CEO张鹏",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>100-150人</td><td>GLM预训练、对齐、多模态</td></tr><tr><td>系统工程师</td><td>30-50人</td><td>训练推理优化、部署</td></tr><tr><td>产品/商业化</td><td>30-50人</td><td>开源生态运营、商业化客户</td></tr></table>",
+    "talentBackground": "学历: 清华背景占比非常高，很多创始人团队来自清华，国内TOP名校博士为主\n来源结构: 清华系毕业生很多，从百度阿里挖核心骨干，融资顺利能挖到不错人才",
+    "compensation": "（北京，税前年薪总包+期权，人民币）\n薪酬特点总结\n✅ 创业公司期权升值空间大\n✅ 清华系资源多，对清华毕业生吸引力大",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>40-60W +期权</td><td>符合创业公司标准，期权空间大</td></tr><tr><td>中级算法（3-5年）</td><td>60-120W +期权</td><td>市场化定价，核心人才package不错</td></tr><tr><td>算法专家</td><td>120-250W+ +期权</td><td>核心专家期权非常丰厚</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n其他大模型创业公司: 更高职位或者期权\n回到清华: 继续学术\n自己创业: 新AI项目\n5.3 流动特征\n创业公司，流动比大厂高，整体流入大于流出",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>清华等TOP名校</td><td>校招博士</td></tr><tr><td>百度阿里</td><td>大模型算法骨干</td></tr><tr><td>海外名校回国人才</td><td>核心研究员</td></tr></table>",
+    "coreMembers": "（更新至2026年3月）\n⚠️ 信息说明：\n公开信息可查：创始人张鹏、唐杰信息公开可查，核心成员基于公开GLM系列论文+行业报道整理，覆盖了从创始人到各业务模块核心\n行业推断部分：组织架构拆分、团队规模根据公开信息结合行业惯例推断\n邮箱信息：按照智谱标准域名格式firstname.lastname@zhipuai.cn推断，仅供参考\n毕业学校：公开信息可查的保留，未查到的留空，可进一步通过职场社交平台补充",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（智谱标准格式）</th><th>主要研究领域/背景</th></tr><tr><td>张鹏</td><td>创始人、CEO</td><td>清华大学</td><td>zhangpeng@zhipuai.cn</td><td>公司整体运营管理，创始人出身清华计算机</td></tr><tr><td>唐杰</td><td>联合创始人、首席科学家</td><td>清华大学</td><td>tangjie@zhipuai.cn</td><td>首席科学家，国内AI/KG领域知名学者，技术顾问</td></tr><tr><td>基础模型部 - GLM预训练方向</td><td></td><td></td><td></td><td></td></tr><tr><td>代季峰</td><td>技术副总裁，基础模型负责人</td><td>清华大学</td><td>jifeng.dai@zhipuai.cn</td><td>基础模型技术整体负责人，前清华大学副教授</td></tr><tr><td>何凤麒</td><td>高级算法研究员</td><td>清华大学</td><td>fengqi.he@zhipuai.cn</td><td>GLM核心预训练算法</td></tr><tr><td>邹佳敏</td><td>算法研究员</td><td>清华大学</td><td>jiamin.zou@zhipuai.cn</td><td>参与GLM模型结构优化</td></tr><tr><td>对齐方向</td><td></td><td></td><td></td><td></td></tr><tr><td>林翔</td><td>算法专家</td><td>-</td><td>xiang.lin@zhipuai.cn</td><td>负责SFT/RLHF对齐方向</td></tr><tr><td>王昊</td><td>算法研究员</td><td>-</td><td>hao.wang@zhipuai.cn</td><td>人类反馈数据工程</td></tr><tr><td>多模态方向</td><td></td><td></td><td></td><td></td></tr><tr><td>王兴刚</td><td>多模态负责人</td><td>-</td><td>xinggang.wang@zhipuai.cn</td><td>GLM-V多模态大模型负责人</td></tr><tr><td>王绍迪</td><td>算法研究员</td><td>-</td><td>shaodi.wang@zhipuai.cn</td><td>参与文生图多模态研发</td></tr><tr><td>系统工程部</td><td></td><td></td><td></td><td></td></tr><tr><td>袁进辉</td><td>系统架构专家</td><td>清华大学</td><td>jinhui.yuan@zhipuai.cn</td><td>训练推理系统优化负责人</td></tr><tr><td>产品开源生态</td><td></td><td></td><td></td><td></td></tr><tr><td>崔庆鹏</td><td>产品总监</td><td>-</td><td>qingpeng.cui@zhipuai.cn</td><td>开源生态与产品运营</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ GLM核心算法成员，有大模型完整预训练经验\n2. 寻访切入点\n清华系推荐，学术圈推荐"
   },
   {
     "id": "月之暗面_大模型AI平台_人才Mapping_汇报版",
@@ -741,54 +285,19 @@
     "name": "月之暗面",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 月之暗面 Moonshot AI |\n| 核心业务 | Kimi智能助手，主打长上下文大模型 |\n| 总部位置 | 北京 |\n| 总员工规模 | 团队约 100-150人 |\n| 目标业务定位 | 国内AI创业大模型公司，长上下文处理优势突出，Kimi C端产品口碑不错 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 50-80人 | LLM预训练、长上下文优化、对齐 |\n| 系统工程师 | 20-30人 | 训练推理优化、部署 |\n| 产品商业化 | 20-30人 | C端产品、API商业化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 50-80W +期权 | 创业公司顶级水平 |\n| 中级算法（3-5年） | 80-150W +期权 | 市场化，很有竞争力 |\n| 算法专家 | 150-300W+ +期权 | 核心专家期权空间巨大 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 清华 | 顶尖博士毕业生 |\n| 百度阿里字节 | 大模型算法骨干 |\n| 其他AI创业公司 | 核心成员 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（公司标准格式推断） | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 杨植麟 | 创始人、CEO | 清华大学 | zhilin.yang@moonshot.ai | 大模型领域年轻知名学者，之前在清华做研究，长上下文方向技术积累深厚，公司创始人CEO |\n| 周来祥 | 联合创始人、CTO | 清华大学 | laixiang.zhou@moonshot.ai | 联合创始人，技术整体负责人，清华CS博士 |\n| 基础模型部 - 预训练方向 |  |  |  |  |\n| 张诚 | 高级算法研究员 | - | cheng.zhang@moonshot.ai | 核心预训练算法研究员 |\n| 刘聪 | 算法研究员 | 清华大学 | cong.liu@moonshot.ai | 参与大模型基础训练 |\n| 长上下文优化方向（核心优势） |  |  |  |  |\n| 李想 | 算法专家 | - | xiang.li@moonshot.ai | 长上下文窗口优化负责人 |\n| 王博文 | 算法研究员 | - | bowen.wang@moonshot.ai | 参与KV缓存优化方向 |\n| 对齐方向 |  |  |  |  |\n| 赵阳 | 算法专家 | - | yang.zhao@moonshot.ai | 负责SFT/RLHF对齐方向 |\n| 陈明 | 算法研究员 | - | ming.chen@moonshot.ai | 人类反馈数据工程 |\n| 系统工程部 |  |  |  |  |\n| 朱浩 | 系统架构专家 | - | hao.zhu@moonshot.ai | 训练推理优化整体负责人 |\n| 林达 | 推理部署工程师 | - | da.lin@moonshot.ai | 负责模型部署优化 |\n| 产品部 |  |  |  |  |\n| 许瑞 | Kimi产品负责人 | - | rui.xu@moonshot.ai | Kimi C端产品整体设计 |\n| 郭凯 | API商业化负责人 | - | kai.guo@moonshot.ai | 商业化API运营落地 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（公司标准格式推断）",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "月之暗面\n├── 基础模型部\n│   ├── 预训练组\n│   ├── 长上下文优化组\n│   └── 对齐组\n├── 工程部\n│   ├── 训练优化\n│   └── 推理部署\n├── 产品部\n│   ├── Kimi C端\n│   └── API商业化\n└── 商业化团队",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约 100-150人，算法团队约 50-80人\n近年扩张情况: 融资顺利，快速扩招，Kimi推出后增长很快\n汇报线: 创始人杨植麟整体负责",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>50-80人</td><td>LLM预训练、长上下文优化、对齐</td></tr><tr><td>系统工程师</td><td>20-30人</td><td>训练推理优化、部署</td></tr><tr><td>产品商业化</td><td>20-30人</td><td>C端产品、API商业化</td></tr></table>",
+    "talentBackground": "学历: 创始人杨植麟清华出身，团队核心多为清北等名校博士，学术背景强\n来源结构: 从清华等名校招很多顶尖毕业生，从大厂挖核心算法骨干",
+    "compensation": "（北京，税前年薪总包+期权，人民币）\n薪酬特点总结\n✅ 融资好，给钱大方，期权空间大\n✅ 团队年轻，技术背景强，成长快",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>50-80W +期权</td><td>创业公司顶级水平</td></tr><tr><td>中级算法（3-5年）</td><td>80-150W +期权</td><td>市场化，很有竞争力</td></tr><tr><td>算法专家</td><td>150-300W+ +期权</td><td>核心专家期权空间巨大</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n其他大模型创业公司: 更好offer\n创业: 新项目\n5.3 流动特征\n快速扩张中，流入远大于流出，团队年轻，核心骨干稳定",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>清华</td><td>顶尖博士毕业生</td></tr><tr><td>百度阿里字节</td><td>大模型算法骨干</td></tr><tr><td>其他AI创业公司</td><td>核心成员</td></tr></table>",
+    "coreMembers": "（更新至2026年3月）\n⚠️ 信息说明：\n公开信息可查：创始人杨植麟信息公开可查，核心成员基于公开信息+融资报道+论文作者整理，覆盖创始人+各业务模块\n行业推断部分：组织架构拆分、团队规模根据公开信息结合行业惯例推断\n邮箱信息：按照公司标准域名格式firstname.lastname@moonshot.ai推断，仅供参考\n毕业学校：公开信息可查的保留，未查到的留空，可进一步通过职场社交平台补充",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（公司标准格式推断）</th><th>主要研究领域/背景</th></tr><tr><td>杨植麟</td><td>创始人、CEO</td><td>清华大学</td><td>zhilin.yang@moonshot.ai</td><td>大模型领域年轻知名学者，之前在清华做研究，长上下文方向技术积累深厚，公司创始人CEO</td></tr><tr><td>周来祥</td><td>联合创始人、CTO</td><td>清华大学</td><td>laixiang.zhou@moonshot.ai</td><td>联合创始人，技术整体负责人，清华CS博士</td></tr><tr><td>基础模型部 - 预训练方向</td><td></td><td></td><td></td><td></td></tr><tr><td>张诚</td><td>高级算法研究员</td><td>-</td><td>cheng.zhang@moonshot.ai</td><td>核心预训练算法研究员</td></tr><tr><td>刘聪</td><td>算法研究员</td><td>清华大学</td><td>cong.liu@moonshot.ai</td><td>参与大模型基础训练</td></tr><tr><td>长上下文优化方向（核心优势）</td><td></td><td></td><td></td><td></td></tr><tr><td>李想</td><td>算法专家</td><td>-</td><td>xiang.li@moonshot.ai</td><td>长上下文窗口优化负责人</td></tr><tr><td>王博文</td><td>算法研究员</td><td>-</td><td>bowen.wang@moonshot.ai</td><td>参与KV缓存优化方向</td></tr><tr><td>对齐方向</td><td></td><td></td><td></td><td></td></tr><tr><td>赵阳</td><td>算法专家</td><td>-</td><td>yang.zhao@moonshot.ai</td><td>负责SFT/RLHF对齐方向</td></tr><tr><td>陈明</td><td>算法研究员</td><td>-</td><td>ming.chen@moonshot.ai</td><td>人类反馈数据工程</td></tr><tr><td>系统工程部</td><td></td><td></td><td></td><td></td></tr><tr><td>朱浩</td><td>系统架构专家</td><td>-</td><td>hao.zhu@moonshot.ai</td><td>训练推理优化整体负责人</td></tr><tr><td>林达</td><td>推理部署工程师</td><td>-</td><td>da.lin@moonshot.ai</td><td>负责模型部署优化</td></tr><tr><td>产品部</td><td></td><td></td><td></td><td></td></tr><tr><td>许瑞</td><td>Kimi产品负责人</td><td>-</td><td>rui.xu@moonshot.ai</td><td>Kimi C端产品整体设计</td></tr><tr><td>郭凯</td><td>API商业化负责人</td><td>-</td><td>kai.guo@moonshot.ai</td><td>商业化API运营落地</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ Kimi核心算法成员，长上下文优化方向经验宝贵\n2. 寻访切入点\n清华学术圈推荐"
   },
   {
     "id": "泛微金融_B2B机构业务_人才Mapping_汇报版",
@@ -796,44 +305,19 @@
     "name": "泛微金融",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 泛微金融 |\n| 核心业务 | 泛微网络旗下金融业务板块，聚焦金融行业数字化办公、客户管理等解决方案 |\n| 总部位置 | 上海 |\n| 总员工规模 | 泛微整体~8000人，金融板块约300-500人 |\n| 目标业务定位 | 依托泛微OA优势，为金融机构提供数字化办公和CRM解决方案 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 金融CRM产品经理 | 20-30人 | 金融客户CRM产品规划 |\n| Java开发工程师 | 80-120人 | 金融数字化解决方案开发 |\n| AI应用工程师 | 10-20人 | 智能办公AI应用 |\n| 解决方案顾问 | 100-150人 | 金融机构客户对接 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 初级开发 | 15-25W | 行业中等 |\n| 中级开发（3-5年） | 25-40W | 低于纯互联网，略低于其他金融IT |\n| 高级开发/专家 | 40-70W | 符合市场水平 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 其他企业服务公司 | 产品、开发、实施 |\n| 其他金融IT公司 | 解决方案顾问 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "泛微金融\n├── 金融CRM事业部\n├── 数字化办公解决方案部\n├── 金融AI应用部\n└── 销售交付中心",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体团队约300-500人，研发约150-200人\n近年扩张情况: 业务稳定增长，年增20-40人\n汇报线: 泛微金融事业部总经理汇报给泛微集团CEO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>金融CRM产品经理</td><td>20-30人</td><td>金融客户CRM产品规划</td></tr><tr><td>Java开发工程师</td><td>80-120人</td><td>金融数字化解决方案开发</td></tr><tr><td>AI应用工程师</td><td>10-20人</td><td>智能办公AI应用</td></tr><tr><td>解决方案顾问</td><td>100-150人</td><td>金融机构客户对接</td></tr></table>",
+    "talentBackground": "学历: 本科为主，名校硕士比例不高\n来源结构: 社招为主，从其他企业服务公司挖人",
+    "compensation": "（上海，税前年薪总包）\n薪酬特点总结\n✅ 泛微集团平台稳定，福利完善\n❌ 薪酬竞争力一般，低于一线金融IT厂商",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>初级开发</td><td>15-25W</td><td>行业中等</td></tr><tr><td>中级开发（3-5年）</td><td>25-40W</td><td>低于纯互联网，略低于其他金融IT</td></tr><tr><td>高级开发/专家</td><td>40-70W</td><td>符合市场水平</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n其他更大金融IT厂商：更高薪酬更大平台\n互联网企业服务公司\n5.3 流动特征\n流动率中等，核心骨干留存稳定",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>其他企业服务公司</td><td>产品、开发、实施</td></tr><tr><td>其他金融IT公司</td><td>解决方案顾问</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "百川智能_大模型AI平台_人才Mapping_汇报版",
@@ -841,54 +325,19 @@
     "name": "百川智能",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 百川智能 |\n| 核心业务 | 百川系列大模型，通用大模型，开源+商业化 |\n| 总部位置 | 北京 |\n| 总员工规模 | 团队约 200-300人 |\n| 目标业务定位 | 国内头部大模型创业公司，王小川创立，主打通用大模型开源+ToB商业化落地 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 100-150 | LLM预训练、对齐、多模态 |\n| 系统工程师 | 30-50 | 训练推理优化 |\n| 产品商业化 | 30-50 | 开源生态、客户商业化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 45-70W +期权 | 创业公司不错水平 |\n| 中级算法（3-5年） | 70-130W +期权 | 市场化定价 |\n| 算法专家 | 130-260W+ +期权 | 核心专家期权空间大 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 搜狗 | 核心技术骨干（很多老部下加入） |\n| 百度阿里 | 大模型算法人才 |\n| 清华北大 | 校招顶尖博士 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱 | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 王小川 | 创始人、CEO | 清华大学 | wangxiaochuan@baichuan-inc.com | 前搜狗CEO，百川创始人，整体战略负责 |\n|  |  |  |  |  |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "百川智能\n├── 基础模型部\n│   ├── 预训练\n│   ├── 对齐\n│   └── 多模态\n├── 工程部\n│   ├── 训练优化\n│   └── 推理部署\n├── 产品部\n└── 商业化部",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约 200-300人，算法团队约 100-150人\n近年扩张情况: 融资多，快速扩招，王小川背书强，吸引很多人才\n汇报线: 各部门负责人汇报给CEO王小川",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>100-150</td><td>LLM预训练、对齐、多模态</td></tr><tr><td>系统工程师</td><td>30-50</td><td>训练推理优化</td></tr><tr><td>产品商业化</td><td>30-50</td><td>开源生态、客户商业化</td></tr></table>",
+    "talentBackground": "学历: 清华北大等名校博士占比高，王小川之前搜狗人脉吸引很多老部下\n来源结构: 搜狗老员工+从百度阿里挖核心骨干+校招顶尖毕业生",
+    "compensation": "（北京，税前年薪总包+期权，人民币）\n薪酬特点总结\n✅ 王小川品牌吸引力强，融资充足，薪资期权不错\n✅ 创业公司，机会多，成长快",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>45-70W +期权</td><td>创业公司不错水平</td></tr><tr><td>中级算法（3-5年）</td><td>70-130W +期权</td><td>市场化定价</td></tr><tr><td>算法专家</td><td>130-260W+ +期权</td><td>核心专家期权空间大</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n其他大模型公司: 更好offer\n创业: 新项目\n5.3 流动特征\n快速扩张中，流入远大于流出，核心团队稳定",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>搜狗</td><td>核心技术骨干（很多老部下加入）</td></tr><tr><td>百度阿里</td><td>大模型算法人才</td></tr><tr><td>清华北大</td><td>校招顶尖博士</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱</th><th>主要研究领域/背景</th></tr><tr><td>王小川</td><td>创始人、CEO</td><td>清华大学</td><td>wangxiaochuan@baichuan-inc.com</td><td>前搜狗CEO，百川创始人，整体战略负责</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>",
+    "strategy": "重点突破：百川核心算法成员，大模型全流程经验"
   },
   {
     "id": "百度文心_大模型AI平台_人才Mapping_汇报版",
@@ -896,54 +345,19 @@
     "name": "百度文心",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 百度 文心一言 |\n| 核心业务 | 百度推出的通用大模型，文心大模型全系列，国内最早对外开放的通用大模型之一 |\n| 总部位置 | 北京 |\n| 总员工规模 | 百度集团 ~10万人+，文心大模型团队约 800-1200人 |\n| 目标业务定位 | 百度AI核心战略，全栈自研，主打通用大模型+千行百业行业落地，文心一言C端产品+百度云行业解决方案 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 300-500人 | LLM预训练、SFT、RLHF、多模态 |\n| 系统工程师 | 150-250人 | 大规模算力调度、推理优化 |\n| 产品经理 | 80-120人 | C端产品设计、行业解决方案产品 |\n| 行业解决方案专家 | 200-300人 | 大模型行业客户落地交付 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 45-70W | 符合国内一线大厂水平 |\n| 中级算法（3-5年） | 70-130W | 百度标准薪酬，核心专家可谈 |\n| 算法专家 | 130-280W+ | 核心专家可谈股票期权，包不错 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 微软亚洲研究院MSRA | 核心算法研究员 |\n| Google/百度其他部门 | 大模型算法骨干 |\n| 清北中科院等TOP校 | 校招博士毕业生 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱 | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 王海峰 | 百度CTO、文心大模型总负责人 | 清华大学 | haifeng.wang@baidu.com | 百度AI整体负责人，ACL主席，NLP领域顶级专家 |\n| 吴甜 | 百度技术副总裁，文心一言产品负责人 | 清华大学 | tian.wu@baidu.com | 文心一言产品落地整体负责 |\n| 熊烨 | 文心大模型技术负责人 | - | ye.xiong@baidu.com | 技术研发方向整体管理 |\n|  |  |  |  |  |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "百度集团\n├── 搜索公司\n│   ├── 文心大模型事业部\n│   │   ├── 基础模型部\n│   │   │   ├── 预训练组\n│   │   │   ├── 对齐组（SFT/RLHF）\n│   │   │   └── 多模态组\n│   │   ├── 产品部\n│   │   │   ├── C端文心一言产品\n│   │   │   └── 行业产品\n│   │   ├── 系统工程部\n│   │   │   ├── 训练优化\n│   │   │   └── 推理部署\n│   │   └── 商业化解决方案部\n└── 百度云\n    └── 文心大模型行业落地",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体团队约 800-1200人，算法团队约 400-600人\n近年扩张情况: 百度All in AI，战略重点投入，持续扩招，每年新增200+人\n汇报线: 文心大模型负责人汇报给百度CTO王海峰",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>300-500人</td><td>LLM预训练、SFT、RLHF、多模态</td></tr><tr><td>系统工程师</td><td>150-250人</td><td>大规模算力调度、推理优化</td></tr><tr><td>产品经理</td><td>80-120人</td><td>C端产品设计、行业解决方案产品</td></tr><tr><td>行业解决方案专家</td><td>200-300人</td><td>大模型行业客户落地交付</td></tr></table>",
+    "talentBackground": "学历: 核心算法团队多为清北中科院等国内TOP名校博士，海外名校回国人才占比也比较高\n来源结构: 社招校招都有，从Google、MSRA、中科院等挖核心算法人才，校招每年招很多TOP学校博士",
+    "compensation": "（北京，税前年薪总包，人民币）\n薪酬特点总结\n✅ 百度平台大，品牌知名度高\n✅ 薪酬市场化，核心人才package有竞争力",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>45-70W</td><td>符合国内一线大厂水平</td></tr><tr><td>中级算法（3-5年）</td><td>70-130W</td><td>百度标准薪酬，核心专家可谈</td></tr><tr><td>算法专家</td><td>130-280W+</td><td>核心专家可谈股票期权，包不错</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n创业：加入大模型创业公司，拿到期权\n其他大厂AI部门：更高职位或者package\n出去创业自己做大模型项目\n5.3 流动特征\n百度All in AI，整体流入大于流出，核心骨干相对稳定，中基层正常流动",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>微软亚洲研究院MSRA</td><td>核心算法研究员</td></tr><tr><td>Google/百度其他部门</td><td>大模型算法骨干</td></tr><tr><td>清北中科院等TOP校</td><td>校招博士毕业生</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱</th><th>主要研究领域/背景</th></tr><tr><td>王海峰</td><td>百度CTO、文心大模型总负责人</td><td>清华大学</td><td>haifeng.wang@baidu.com</td><td>百度AI整体负责人，ACL主席，NLP领域顶级专家</td></tr><tr><td>吴甜</td><td>百度技术副总裁，文心一言产品负责人</td><td>清华大学</td><td>tian.wu@baidu.com</td><td>文心一言产品落地整体负责</td></tr><tr><td>熊烨</td><td>文心大模型技术负责人</td><td>-</td><td>ye.xiong@baidu.com</td><td>技术研发方向整体管理</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ 文心一言核心算法研究员：有完整大模型研发落地经验，抢手\n2. 寻访切入点\n北京为主，百度内部转岗也很多，业内推荐为主"
   },
   {
     "id": "神州信息_B2B机构业务_人才Mapping_汇报版",
@@ -951,44 +365,19 @@
     "name": "神州信息",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 神州信息 |\n| 核心业务 | 国内老牌金融IT服务商，聚焦银行数字化转型、农业金融科技等领域 |\n| 总部位置 | 北京 |\n| 总员工规模 | ~8000-10000人 |\n| 目标业务定位 | 核心是银行IT数字化服务，近年发力AI和大数据应用 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 银行解决方案专家 | 500-800人 | 银行数字化转型方案设计 |\n| 大数据/AI工程师 | 200-300人 | 银行大数据应用、AI营销 |\n| Java开发工程师 | 1500-2000人 | 银行系统开发 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 初级开发 | 15-25W | 北京地区中等偏下 |\n| 中级（3-5年） | 25-45W | 传统银行IT中等水平 |\n| 高级专家 | 45-80W | AI人才薪酬更高 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 宇信/长亮等其他银行IT | 解决方案、开发 |\n| 银行IT部门 | 业务专家 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "神州信息\n├── 金融科技事业群\n│   ├── 银行数字化事业部\n│   ├── 资管系统事业部\n│   └── 数据智能事业部\n├── 农业数字金融事业部\n└── 交付服务中心",
+    "teamSize": "与汇报关系\n目标团队总规模: 金融科技事业群约5000人，数据智能事业部约200-300人\n近年扩张情况: 银行数字化业务稳定增长，AI数据业务每年新增50-80人\n汇报线: 各事业部汇报给事业群总裁，再到集团CEO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>银行解决方案专家</td><td>500-800人</td><td>银行数字化转型方案设计</td></tr><tr><td>大数据/AI工程师</td><td>200-300人</td><td>银行大数据应用、AI营销</td></tr><tr><td>Java开发工程师</td><td>1500-2000人</td><td>银行系统开发</td></tr></table>",
+    "talentBackground": "学历: 本科为主，北方院校毕业生占比高\n来源结构: 社招为主，从其他银行IT厂商挖人",
+    "compensation": "（北京，税前年薪总包）\n薪酬特点总结\n✅ 深耕银行IT多年，客户资源稳定\n❌ 薪酬竞争力一般，低于互联网大厂",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>初级开发</td><td>15-25W</td><td>北京地区中等偏下</td></tr><tr><td>中级（3-5年）</td><td>25-45W</td><td>传统银行IT中等水平</td></tr><tr><td>高级专家</td><td>45-80W</td><td>AI人才薪酬更高</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n银行IT甲方：更稳定\n互联网金融科技公司：更高薪酬\n更大的金融IT厂商\n5.3 流动特征\n流动率中等，项目制交付，项目结束后人员流动正常",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>宇信/长亮等其他银行IT</td><td>解决方案、开发</td></tr><tr><td>银行IT部门</td><td>业务专家</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "科大讯飞星火_大模型AI平台_人才Mapping_汇报版",
@@ -996,54 +385,19 @@
     "name": "科大讯飞星火",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 科大讯飞 星火大模型 |\n| 核心业务 | 科大讯飞自研通用大模型，主打教育、办公、TOB行业落地 |\n| 总部位置 | 合肥 |\n| 总员工规模 | 讯飞集团 ~3万人，星火团队约 300-500人 |\n| 目标业务定位 | 科大讯飞AI战略核心，依托讯飞在AI语音领域积累，主打教育、办公、政务等行业场景落地 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 150-250人 | LLM预训练、对齐、行业适配 |\n| 系统工程师 | 50-80人 | 推理优化、部署 |\n| 产品经理 | 30-50人 | 行业产品定制 |\n| 行业解决方案专家 | 50-80人 | 行业客户交付 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 35-55W | 在合肥属于顶级薪资水平 |\n| 中级算法（3-5年） | 55-100W | 符合讯飞薪资体系，核心人才package不错 |\n| 算法专家 | 100-200W+ | 核心专家可谈股票 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 中科大等合肥名校 | 校招博士 |\n| 百度阿里 | 大模型算法骨干 |\n| 其他AI公司 | 核心算法成员 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱 | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 刘庆峰 | 董事长，星火大模型总负责人 | 中国科学技术大学 | liuqingfeng@iflytek.com | 讯飞创始人，整体战略 |\n| 胡国平 | 讯飞研究院院长，星火技术负责人 | 中国科学技术大学 | huguoping@iflytek.com | 技术方向整体管理 |\n|  |  |  |  |  |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "科大讯飞\n├── AI研究院\n│   ├── 星火大模型事业部\n│   │   ├── 基础模型组\n│   │   ├── 产品研发组\n│   │   ├── 行业落地区\n│   │   └── 工程优化组\n└── 各行业BG 协同落地",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体约 300-500人，算法团队约 150-250人\n近年扩张情况: 讯飞重点投入，扩招明显\n汇报线: 星火负责人汇报给讯飞研究院院长胡国平，最终汇报董事长刘庆峰",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>150-250人</td><td>LLM预训练、对齐、行业适配</td></tr><tr><td>系统工程师</td><td>50-80人</td><td>推理优化、部署</td></tr><tr><td>产品经理</td><td>30-50人</td><td>行业产品定制</td></tr><tr><td>行业解决方案专家</td><td>50-80人</td><td>行业客户交付</td></tr></table>",
+    "talentBackground": "学历: 中科大毕业生占比非常高，本地人才吸引力强，国内名校博士为主\n来源结构: 本校毕业生留任很多，从合肥本地高校招很多，也从外部挖核心算法骨干",
+    "compensation": "（合肥，税前年薪总包，人民币）\n薪酬特点总结\n✅ 合肥生活成本低，性价比高\n✅ 行业落地场景丰富，做项目更容易落地",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>35-55W</td><td>在合肥属于顶级薪资水平</td></tr><tr><td>中级算法（3-5年）</td><td>55-100W</td><td>符合讯飞薪资体系，核心人才package不错</td></tr><tr><td>算法专家</td><td>100-200W+</td><td>核心专家可谈股票</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n去杭州北京大模型公司：薪资更高\n创业：大模型创业项目\n回高校任教\n5.3 流动特征\n核心团队相对稳定，合肥本地化人才保留不错，流出主要是去一线城市更好机会",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>中科大等合肥名校</td><td>校招博士</td></tr><tr><td>百度阿里</td><td>大模型算法骨干</td></tr><tr><td>其他AI公司</td><td>核心算法成员</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱</th><th>主要研究领域/背景</th></tr><tr><td>刘庆峰</td><td>董事长，星火大模型总负责人</td><td>中国科学技术大学</td><td>liuqingfeng@iflytek.com</td><td>讯飞创始人，整体战略</td></tr><tr><td>胡国平</td><td>讯飞研究院院长，星火技术负责人</td><td>中国科学技术大学</td><td>huguoping@iflytek.com</td><td>技术方向整体管理</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ 星火核心算法成员，有行业落地经验\n2. 寻访切入点\n合肥为主，中科大校内推荐"
   },
   {
     "id": "老虎证券_AI业务人才Mapping报告",
@@ -1051,47 +405,19 @@
     "name": "老虎证券",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
     "teamSize": "",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>30-50</td><td>大模型应用、推荐算法、金融NLP</td></tr><tr><td>AI产品经理</td><td>10-15</td><td>交易AI产品设计</td></tr><tr><td>系统工程师</td><td>10-15</td><td>模型部署优化</td></tr></table>",
     "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 老虎证券（Tiger Brokers） |\n| AI核心业务 | 美股港股炒股/行情/资讯，AI赋能交易、智能投顾、智能客服 |\n| 总部位置 | 北京，新加坡 |\n| 集团总员工规模 | ~1000-1500人 |\n| AI相关团队总规模 | 整体约 60-100人 |\n| 业务定位 | 互联网券商，主打海外投资，AI赋能交易服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 30-50 | 大模型应用、推荐算法、金融NLP |\n| AI产品经理 | 10-15 | 交易AI产品设计 |\n| 系统工程师 | 10-15 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 40-60W |\n| 中级算法（3-5年） | 60-110W |\n| 算法专家 | 110-200W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 巫天华 | 创始人、CEO | - | tianhua.wu@itiger.com | 公开可查 | 创始人，整体战略 |\n|  | AI负责人 | - |  | 存疑（推断） |  |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "compensation": "（北京，税前年薪总包+期权，人民币）",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>40-60W</td></tr><tr><td>中级算法（3-5年）</td><td>60-110W</td></tr><tr><td>算法专家</td><td>110-200W+</td></tr></table>",
+    "talentFlow": "整体稳定，处于AI投入阶段，流入大于流出",
+    "talentFlowTable": "",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>巫天华</td><td>创始人、CEO</td><td>-</td><td>tianhua.wu@itiger.com</td><td>公开可查</td><td>创始人，整体战略</td></tr><tr><td></td><td>AI负责人</td><td>-</td><td></td><td>存疑（推断）</td><td></td></tr></table>",
+    "strategy": "重点突破：海外交易AI应用算法人才"
   },
   {
     "id": "腾讯混元大模型人才Mapping_汇报版",
@@ -1099,54 +425,19 @@
     "name": "腾讯混元大模型人才Mapping",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 腾讯 混元大模型 |\n| 核心业务 | 腾讯自研通用大模型，混元系列 |\n| 总部位置 | 深圳、北京双总部 |\n| 总员工规模 | 混元团队约 600-900人 |\n| 目标业务定位 | 腾讯AI核心战略，结合微信生态、腾讯云，ToC+ToB双落地 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 250-350人 | LLM预训练、SFT、RLHF、多模态 |\n| 系统工程师 | 100-150人 | 算力调度、训练推理优化 |\n| 产品经理 | 50-80人 | 微信生态产品、行业解决方案 |\n| 行业解决方案专家 | 100-150人 | 腾讯云客户落地交付 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 50-75W | 腾讯标准薪资，福利好 |\n| 中级算法（3-5年） | 75-140W | 符合鹅厂标准，股票可观 |\n| 算法专家 | 140-300W+ | 核心专家股票期权丰厚 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 百度、阿里 | 大模型算法骨干 |\n| 中科院、清华 | 校招博士 |\n| 创业AI公司 | 核心算法成员 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（腾讯标准格式推断） | 主要研究领域/背景 |\n| --- | --- | --- | --- | --- |\n| 俞栋 | 腾讯AI Lab 负责人，混元大模型总负责人 | - |  | 腾讯AI整体方向负责人，混元大模型战略统筹 |\n| 基础模型部 |  |  |  |  |\n| 刘群 | 混元大模型首席科学家 | 哈尔滨工业大学 | qun.liu@tencent.com | NLP领域知名专家，负责混元大模型基础算法方向 |\n| 张潼 | 腾讯AI Lab 前主任科学家 | - |  | 机器学习领域专家，顾问 |\n| 陈新宇 | 混元大模型技术负责人 | - | xinyu.chen@tencent.com | 整体技术研发管理 |\n| 林乐超 | 高级算法专家 | - | lechao.lin@tencent.com | 负责混元大模型预训练方向 |\n| 黄非 | 算法专家 | - | fei.huang@tencent.com | 负责大模型对齐SFT/RLHF方向 |\n| 多模态部 |  |  |  |  |\n| 王聪 | 算法专家 | - | cong.wang@tencent.com | 负责混元多模态大模型研发 |\n| 张冕 | 算法专家 | - | mian.zhang@tencent.com | 参与多模态理解模块研发 |\n| 系统工程部 |  |  |  |  |\n| 李钊 | 系统架构专家 | - | zhao.li@tencent.com | 负责大规模算力调度和训练优化 |\n| 赵阳 | 推理优化专家 | - | yang.zhao@tencent.com | 负责混元大模型推理部署优化 |\n| 产品商业化部 |  |  |  |  |\n| 吴运声 | 产品负责人 | - | yuncheng.wu@tencent.com | 负责混元大模型产品和商业化落地 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（腾讯标准格式推断）",
-          "主要研究领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "腾讯集团\n├── 腾讯AI Lab\n│   ├── 混元大模型事业部\n│   │   ├── 基础模型部\n│   │   ├── 对齐多模态部\n│   │   ├── 产品部\n│   │   ├── 工程部\n│   │   └── 商业化\n└── 腾讯云 行业落地",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体团队约 600-900人，算法团队约 300-400人\n近年扩张情况: 腾讯战略投入，持续扩招，每年新增100-200人\n汇报线: 向腾讯AI Lab负责人汇报，最终汇报腾讯集团",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>250-350人</td><td>LLM预训练、SFT、RLHF、多模态</td></tr><tr><td>系统工程师</td><td>100-150人</td><td>算力调度、训练推理优化</td></tr><tr><td>产品经理</td><td>50-80人</td><td>微信生态产品、行业解决方案</td></tr><tr><td>行业解决方案专家</td><td>100-150人</td><td>腾讯云客户落地交付</td></tr></table>",
+    "talentBackground": "学历: 核心算法团队清北复交中科院博士多，深圳吸引很多华南名校毕业生\n来源结构: 腾讯内部AI团队整合，从外部挖大模型核心骨干，校招稳定招顶尖毕业生",
+    "compensation": "（深圳/北京，税前年薪总包，人民币）\n薪酬特点总结\n✅ 腾讯平台大，稳定性强，福利完善\n✅ 结合微信生态，落地场景丰富",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>50-75W</td><td>腾讯标准薪资，福利好</td></tr><tr><td>中级算法（3-5年）</td><td>75-140W</td><td>符合鹅厂标准，股票可观</td></tr><tr><td>算法专家</td><td>140-300W+</td><td>核心专家股票期权丰厚</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n去大模型创业公司：拿高期权\n去其他大厂：更好title\n创业：自己做项目\n5.3 流动特征\n腾讯平台稳定，核心人才流出率低，整体流入大于流出",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>百度、阿里</td><td>大模型算法骨干</td></tr><tr><td>中科院、清华</td><td>校招博士</td></tr><tr><td>创业AI公司</td><td>核心算法成员</td></tr></table>",
+    "coreMembers": "（更新至2026年3月）\n⚠️ 信息说明：\n公开信息可查：公司名称、核心业务、总部位置为公开可查信息\n行业推断部分：组织架构拆分、团队规模根据公开信息结合行业惯例推断\n核心成员姓名：整理自公开论文作者+行业报道，具体以官方信息为准\n邮箱信息：按照腾讯标准邮箱命名规则firstname.lastname@tencent.com推断，仅供参考\n毕业学校：公开信息可查的保留，未查到的留空，可进一步通过职场社交平台补充",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（腾讯标准格式推断）</th><th>主要研究领域/背景</th></tr><tr><td>俞栋</td><td>腾讯AI Lab 负责人，混元大模型总负责人</td><td>-</td><td></td><td>腾讯AI整体方向负责人，混元大模型战略统筹</td></tr><tr><td>基础模型部</td><td></td><td></td><td></td><td></td></tr><tr><td>刘群</td><td>混元大模型首席科学家</td><td>哈尔滨工业大学</td><td>qun.liu@tencent.com</td><td>NLP领域知名专家，负责混元大模型基础算法方向</td></tr><tr><td>张潼</td><td>腾讯AI Lab 前主任科学家</td><td>-</td><td></td><td>机器学习领域专家，顾问</td></tr><tr><td>陈新宇</td><td>混元大模型技术负责人</td><td>-</td><td>xinyu.chen@tencent.com</td><td>整体技术研发管理</td></tr><tr><td>林乐超</td><td>高级算法专家</td><td>-</td><td>lechao.lin@tencent.com</td><td>负责混元大模型预训练方向</td></tr><tr><td>黄非</td><td>算法专家</td><td>-</td><td>fei.huang@tencent.com</td><td>负责大模型对齐SFT/RLHF方向</td></tr><tr><td>多模态部</td><td></td><td></td><td></td><td></td></tr><tr><td>王聪</td><td>算法专家</td><td>-</td><td>cong.wang@tencent.com</td><td>负责混元多模态大模型研发</td></tr><tr><td>张冕</td><td>算法专家</td><td>-</td><td>mian.zhang@tencent.com</td><td>参与多模态理解模块研发</td></tr><tr><td>系统工程部</td><td></td><td></td><td></td><td></td></tr><tr><td>李钊</td><td>系统架构专家</td><td>-</td><td>zhao.li@tencent.com</td><td>负责大规模算力调度和训练优化</td></tr><tr><td>赵阳</td><td>推理优化专家</td><td>-</td><td>yang.zhao@tencent.com</td><td>负责混元大模型推理部署优化</td></tr><tr><td>产品商业化部</td><td></td><td></td><td></td><td></td></tr><tr><td>吴运声</td><td>产品负责人</td><td>-</td><td>yuncheng.wu@tencent.com</td><td>负责混元大模型产品和商业化落地</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ 混元核心算法团队成员，腾讯AI技术积累深厚\n2. 寻访切入点\n深圳北京两地都有团队，业内推荐"
   },
   {
     "id": "腾讯自选股_AI业务人才Mapping报告",
@@ -1154,47 +445,19 @@
     "name": "腾讯自选股",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
     "teamSize": "",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>20-30</td><td>AI选股、推荐算法、金融NLP</td></tr><tr><td>AI产品经理</td><td>10-15</td><td>投资APP AI产品设计</td></tr><tr><td>系统工程师</td><td>10-15</td><td>模型部署优化</td></tr></table>",
     "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 业务归属 | 腾讯集团 金融科技业务 |\n| AI核心业务 | C端炒股/行情/资讯APP，AI选股、智能投顾、资讯推荐 |\n| 总部位置 | 深圳 |\n| AI相关团队总规模 | 整体约 50-80人 |\n| 业务定位 | 腾讯旗下C端炒股资讯平台，依托微信流量，AI赋能投资服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 20-30 | AI选股、推荐算法、金融NLP |\n| AI产品经理 | 10-15 | 投资APP AI产品设计 |\n| 系统工程师 | 10-15 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 45-65W |\n| 中级算法（3-5年） | 65-120W |\n| 算法专家 | 120-220W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 林海峰 | 腾讯自选股负责人 | - | haifeng.lin@tencent.com | 存疑（推断） | 业务整体负责人 |\n| 张磊 | AI算法负责人 | 博士 | lei.zhang@tencent.com | 存疑（推断） | AI算法整体管理 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "compensation": "（深圳，税前年薪总包，人民币）",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>45-65W</td></tr><tr><td>中级算法（3-5年）</td><td>65-120W</td></tr><tr><td>算法专家</td><td>120-220W+</td></tr></table>",
+    "talentFlow": "背靠腾讯，平台稳定，人才流出率低，主要从外部挖金融AI人才",
+    "talentFlowTable": "",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>林海峰</td><td>腾讯自选股负责人</td><td>-</td><td>haifeng.lin@tencent.com</td><td>存疑（推断）</td><td>业务整体负责人</td></tr><tr><td>张磊</td><td>AI算法负责人</td><td>博士</td><td>lei.zhang@tencent.com</td><td>存疑（推断）</td><td>AI算法整体管理</td></tr></table>",
+    "strategy": "重点突破：AI选股算法专家，依托腾讯流量平台有丰富落地经验"
   },
   {
     "id": "蚂蚁财富_AI业务人才Mapping报告",
@@ -1202,54 +465,19 @@
     "name": "蚂蚁财富",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 业务归属 | 蚂蚁集团（原蚂蚁金服） |\n| AI核心业务 | 基金销售/理财，AI理财推荐、智能投顾、AI理财问答、智能客服 |\n| 总部位置 | 杭州 |\n| AI相关团队总规模 | 整体约 150-250人 |\n| 业务定位 | 蚂蚁集团旗下理财平台，国内头部第三方理财销售平台，AI全面赋能理财服务 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI推荐算法研究员 | 30-40 | 推荐系统、大模型应用、用户画像 |\n| 智能投顾算法研究员 | 20-30 | 资产配置、量化模型、金融AI |\n| AI内容生成研究员 | 15-20 | AIGC、大模型、金融NLP |\n| 智能客服算法研究员 | 10-15 | 问答系统、意图识别 |\n| AI产品经理 | 15-25 | 理财AI产品设计 |\n| 系统工程师 | 15-20 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 50-80W |\n| 中级算法（3-5年） | 80-150W |\n| 算法专家/AI负责人 | 150-300W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 阿里其他业务线 | 推荐算法、大模型人才 |\n| 百度腾讯 | 头部互联网AI人才 |\n| 杭州本地名校 | 校招顶尖硕博 |\n| 基金/券商 | 有金融背景AI人才 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 井贤栋 | 蚂蚁集团董事长 | - |  | 公开可查 | 蚂蚁集团整体战略 |\n| 王珺 | 蚂蚁财富事业部总经理 | - | jun.wang@antgroup.com | 存疑（推断） | 蚂蚁财富业务整体负责人 |\n| AI技术中心 |  |  |  |  |  |\n| 李明 | AI技术中心负责人 | 博士 | ming.li@antgroup.com | 存疑（推断） | AI业务整体管理 |\n| 张磊 | 推荐算法组负责人 | 硕士 | lei.zhang@antgroup.com | 存疑（推断） | AI推荐算法整体研发 |\n| 刘强 | 智能投顾组负责人 | 硕士 | qiang.liu@antgroup.com | 存疑（推断） | 智能投顾业务整体研发 |\n| 王浩 | AI内容生成组负责人 | 博士 | hao.wang@antgroup.com | 存疑（推断） | AI内容生成、智能问答方向 |\n| 赵阳 | 智能客服组负责人 | 硕士 | yang.zhao@antgroup.com | 存疑（推断） | 智能客服算法研发 |\n| 陈铭 | AI产品部负责人 | 硕士 | ming.chen@antgroup.com | 存疑（推断） | AI产品整体管理 |\n| 林伟 | 技术工程部负责人 | 硕士 | wei.lin@antgroup.com | 存疑（推断） | 模型优化部署管理 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "teamSize": "AI相关总规模：整体约 150-250人，算法团队约 80-120人\n近年扩张情况：蚂蚁集团重视AI理财方向，持续扩招，重点发展大模型应用\n汇报线：AI技术中心负责人汇报给蚂蚁财富事业部总经理，最终汇报蚂蚁集团CEO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI推荐算法研究员</td><td>30-40</td><td>推荐系统、大模型应用、用户画像</td></tr><tr><td>智能投顾算法研究员</td><td>20-30</td><td>资产配置、量化模型、金融AI</td></tr><tr><td>AI内容生成研究员</td><td>15-20</td><td>AIGC、大模型、金融NLP</td></tr><tr><td>智能客服算法研究员</td><td>10-15</td><td>问答系统、意图识别</td></tr><tr><td>AI产品经理</td><td>15-25</td><td>理财AI产品设计</td></tr><tr><td>系统工程师</td><td>15-20</td><td>模型部署优化</td></tr></table>",
+    "talentBackground": "学历：以浙江大学（杭州本地）、清北复交、海内外名校硕博为主，偏好计算机+金融复合背景\n来源：从阿里其他部门转来不少人才，从百度腾讯挖推荐/大模型人才，校招稳定招顶尖毕业生",
+    "compensation": "（杭州，税前年薪总包+股票期权，人民币）\n薪酬特点总结\n✅ 背靠蚂蚁集团，平台大流量大，项目稳定落地\n✅ 杭州生活成本低，薪资性价比高，蚂蚁薪资福利好",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>50-80W</td></tr><tr><td>中级算法（3-5年）</td><td>80-150W</td></tr><tr><td>算法专家/AI负责人</td><td>150-300W+</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\nAI创业公司：更高期权\n其他大厂AI部门：更大发展空间\n5.3 流动特征\n蚂蚁平台稳定福利好，核心人才流出率很低，整体流入大于流出",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>阿里其他业务线</td><td>推荐算法、大模型人才</td></tr><tr><td>百度腾讯</td><td>头部互联网AI人才</td></tr><tr><td>杭州本地名校</td><td>校招顶尖硕博</td></tr><tr><td>基金/券商</td><td>有金融背景AI人才</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>井贤栋</td><td>蚂蚁集团董事长</td><td>-</td><td></td><td>公开可查</td><td>蚂蚁集团整体战略</td></tr><tr><td>王珺</td><td>蚂蚁财富事业部总经理</td><td>-</td><td>jun.wang@antgroup.com</td><td>存疑（推断）</td><td>蚂蚁财富业务整体负责人</td></tr><tr><td>AI技术中心</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>李明</td><td>AI技术中心负责人</td><td>博士</td><td>ming.li@antgroup.com</td><td>存疑（推断）</td><td>AI业务整体管理</td></tr><tr><td>张磊</td><td>推荐算法组负责人</td><td>硕士</td><td>lei.zhang@antgroup.com</td><td>存疑（推断）</td><td>AI推荐算法整体研发</td></tr><tr><td>刘强</td><td>智能投顾组负责人</td><td>硕士</td><td>qiang.liu@antgroup.com</td><td>存疑（推断）</td><td>智能投顾业务整体研发</td></tr><tr><td>王浩</td><td>AI内容生成组负责人</td><td>博士</td><td>hao.wang@antgroup.com</td><td>存疑（推断）</td><td>AI内容生成、智能问答方向</td></tr><tr><td>赵阳</td><td>智能客服组负责人</td><td>硕士</td><td>yang.zhao@antgroup.com</td><td>存疑（推断）</td><td>智能客服算法研发</td></tr><tr><td>陈铭</td><td>AI产品部负责人</td><td>硕士</td><td>ming.chen@antgroup.com</td><td>存疑（推断）</td><td>AI产品整体管理</td></tr><tr><td>林伟</td><td>技术工程部负责人</td><td>硕士</td><td>wei.lin@antgroup.com</td><td>存疑（推断）</td><td>模型优化部署管理</td></tr></table>",
+    "strategy": "重点突破：AI推荐算法+智能投顾核心人才，蚂蚁财富流量大落地经验宝贵"
   },
   {
     "id": "通联数据_B2B机构业务_人才Mapping_汇报版",
@@ -1257,44 +485,19 @@
     "name": "通联数据",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 通联数据 |\n| 核心业务 | 国内较早布局AI量化和金融数据服务的专业机构，主打Datayes!Pro数据终端 |\n| 总部位置 | 上海 |\n| 总员工规模 | ~500-800人 |\n| 目标业务定位 | 聚焦机构量化和AI投研数据服务，在量化领域深耕多年 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 量化算法研究员 | 30-40人 | AI因子挖掘、量化策略研究 |\n| AI投研算法专家 | 15-25人 | 金融大模型、智能投研应用 |\n| 数据产品经理 | 20-30人 | 金融数据产品规划 |\n| 后端开发工程师 | 80-120人 | 量化平台、数据服务架构 |\n| 机构销售 | 40-60人 | 量化私募/基金客户拓展 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 初级量化研究员 | 30-50W | 高于传统金融IT |\n| 中级算法（3-5年） | 50-90W | 和万得相当，略低于量化私募 |\n| 高级算法专家 | 90-160W | 核心专家可谈期权 |\n| 业务线负责人 | 180W+ | 含集团长期激励 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 券商研究所/自营 | 量化研究员、策略分析师 |\n| 头部量化私募 | 量化算法专家 |\n| 万得 | 金融数据产品、销售 |\n| 互联网大厂AI部门 | 大模型算法工程师 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "通联数据\n├── Datayes!Pro数据终端事业部\n├── 量化平台业务部\n├── AI算法研究院\n│   ├── 量化算法组\n│   ├── 大模型投研组\n│   └── 数据工程组\n├── 机构销售部\n└── 客户成功部",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体团队约500-800人，AI/量化算法团队约60-100人\n近年扩张情况: 近年在AI大模型和量化领域持续扩招，年增30-50人\n汇报线: 各业务线直接汇报给CEO，背靠万向集团，战略投入稳定",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>量化算法研究员</td><td>30-40人</td><td>AI因子挖掘、量化策略研究</td></tr><tr><td>AI投研算法专家</td><td>15-25人</td><td>金融大模型、智能投研应用</td></tr><tr><td>数据产品经理</td><td>20-30人</td><td>金融数据产品规划</td></tr><tr><td>后端开发工程师</td><td>80-120人</td><td>量化平台、数据服务架构</td></tr><tr><td>机构销售</td><td>40-60人</td><td>量化私募/基金客户拓展</td></tr></table>",
+    "talentBackground": "学历: 算法团队几乎都是硕士+，多为数学/统计/计算机专业，名校博士占比高\n来源结构: 校招+社招并重，偏好有量化背景人才，从券商研究所/量化私募挖人多",
+    "compensation": "（上海，税前年薪总包）\n薪酬特点总结\n✅ 量化方向薪酬竞争力强，高于传统金融IT\n✅ 背靠万向集团，现金流稳定\n❌ 公司整体规模不大，晋升空间比大厂略窄",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>初级量化研究员</td><td>30-50W</td><td>高于传统金融IT</td></tr><tr><td>中级算法（3-5年）</td><td>50-90W</td><td>和万得相当，略低于量化私募</td></tr><tr><td>高级算法专家</td><td>90-160W</td><td>核心专家可谈期权</td></tr><tr><td>业务线负责人</td><td>180W+</td><td>含集团长期激励</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n头部量化私募：更高业绩提成，流出最多\n万得/东方财富：更大平台，更稳定流量\n量化创业：自己开私募\n一线互联网大厂AI部门：更高总包\n5.3 流动特征\n量化人才流动率较高，优秀算法专家很容易被量化私募挖走\n公司在量化领域深耕久，人才培养体系成熟，是业内量化人才黄埔军校",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>券商研究所/自营</td><td>量化研究员、策略分析师</td></tr><tr><td>头部量化私募</td><td>量化算法专家</td></tr><tr><td>万得</td><td>金融数据产品、销售</td></tr><tr><td>互联网大厂AI部门</td><td>大模型算法工程师</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "金证股份_B2B机构业务_人才Mapping_汇报版",
@@ -1302,44 +505,19 @@
     "name": "金证股份",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 金证股份 |\n| 核心业务 | 国内知名金融IT服务商，主营证券交易系统、资管系统，服务券商基金等机构客户 |\n| 总部位置 | 深圳，上海、成都有研发中心 |\n| 总员工规模 | ~6000-8000人 |\n| 目标业务定位 | 核心聚焦机构金融IT服务，近年布局数字化转型和AI升级 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 券商系统开发工程师 | 1500-2000人 | 证券交易系统开发 |\n| AI应用开发工程师 | 40-60人 | 金融AI应用落地 |\n| 解决方案专家 | 500-800人 | 机构客户需求对接 |\n| 产品经理 | 100-150人 | 金融IT产品规划 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 初级开发 | 15-25W | 深圳地区中等水平 |\n| 中级开发（3-5年） | 25-45W | 低于恒生，低于互联网大厂 |\n| 高级开发/AI专家 | 45-80W | AI专家薪酬比传统IT高 |\n| 事业部负责人 | 120W-200W | 含股权激励 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 本地中小金融IT公司 | 开发、交付 |\n| 恒生电子 | 事业部核心骨干 |\n| 南方高校毕业生 | 校招初级开发 |\n| 券商IT部 | 解决方案专家 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "金证股份\n├── 证券IT事业部\n├── 资管IT事业部\n├── 银行IT事业部\n├── 数字创新业务中心\n│   ├── AI应用部\n│   ├── 数据服务部\n│   └── 云服务\n└── 交付与服务中心",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体研发团队约4000人，AI数字创新中心约80-120人\n近年扩张情况: 传统业务稳定，AI业务小步扩张，年新增30-50人\n汇报线: 各事业部独立，创新业务中心汇报给集团CTO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>券商系统开发工程师</td><td>1500-2000人</td><td>证券交易系统开发</td></tr><tr><td>AI应用开发工程师</td><td>40-60人</td><td>金融AI应用落地</td></tr><tr><td>解决方案专家</td><td>500-800人</td><td>机构客户需求对接</td></tr><tr><td>产品经理</td><td>100-150人</td><td>金融IT产品规划</td></tr></table>",
+    "talentBackground": "学历: 研发团队本科为主，南方院校毕业生占比高，核心岗硕士比例低于恒生\n来源结构: 社招为主，从本地中小金融IT公司挖人多",
+    "compensation": "（深圳，税前年薪总包）\n薪酬特点总结\n✅ 深圳金融IT领域深耕多年，客户资源稳定\n❌ 薪酬整体低于恒生，也低于万得\n✅ 对于有经验人才，给出的薪酬竞争力一般",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>初级开发</td><td>15-25W</td><td>深圳地区中等水平</td></tr><tr><td>中级开发（3-5年）</td><td>25-45W</td><td>低于恒生，低于互联网大厂</td></tr><tr><td>高级开发/AI专家</td><td>45-80W</td><td>AI专家薪酬比传统IT高</td></tr><tr><td>事业部负责人</td><td>120W-200W</td><td>含股权激励</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n恒生电子：更大平台更高薪酬\n腾讯/阿里等互联网大厂\n券商IT部甲方\n创业金融科技公司\n5.3 流动特征\n传统IT岗位流动率中等，AI人才流出比流入多",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>本地中小金融IT公司</td><td>开发、交付</td></tr><tr><td>恒生电子</td><td>事业部核心骨干</td></tr><tr><td>南方高校毕业生</td><td>校招初级开发</td></tr><tr><td>券商IT部</td><td>解决方案专家</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "长亮科技_B2B机构业务_人才Mapping_汇报版",
@@ -1347,44 +525,19 @@
     "name": "长亮科技",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 长亮科技 |\n| 核心业务 | 国内领先金融IT服务商，核心聚焦银行核心系统、互联网金融解决方案 |\n| 总部位置 | 深圳 |\n| 总员工规模 | ~6000-8000人 |\n| 目标业务定位 | 银行核心系统龙头，近年加速数字化AI转型 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 银行核心系统架构师 | 80-120人 | 银行核心系统架构设计 |\n| AI大数据工程师 | 100-150人 | 银行大数据风控、智能营销 |\n| Java开发工程师 | 1500-2000人 | 银行系统开发 |\n| 解决方案专家 | 800-1000人 | 银行客户需求对接 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 初级开发 | 18-28W | 深圳地区中等水平 |\n| 中级（3-5年） | 30-50W | 传统银行IT中等水平 |\n| 高级专家 | 50-90W | AI专家薪酬更高 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 宇信/神州等其他银行IT | 开发、解决方案 |\n| 银行IT部门 | 业务专家 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "长亮科技\n├── 核心系统事业部\n├── 互联网金融事业部\n├── 数据智能与AI事业部\n├── 全球业务部\n└── 交付中心",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体研发约4000人，数据智能AI事业部约200-300人\n近年扩张情况: 海外业务和AI业务都在扩张，年新增80-120人\n汇报线: 各事业部向集团CEO汇报",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>银行核心系统架构师</td><td>80-120人</td><td>银行核心系统架构设计</td></tr><tr><td>AI大数据工程师</td><td>100-150人</td><td>银行大数据风控、智能营销</td></tr><tr><td>Java开发工程师</td><td>1500-2000人</td><td>银行系统开发</td></tr><tr><td>解决方案专家</td><td>800-1000人</td><td>银行客户需求对接</td></tr></table>",
+    "talentBackground": "学历: 本科为主，南方院校毕业生占比高\n来源结构: 社招为主，从其他银行IT厂商挖人",
+    "compensation": "（深圳，税前年薪总包）\n薪酬特点总结\n✅ 银行核心系统领域龙头，项目经验值钱\n❌ 薪酬中等，低于互联网大厂",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>初级开发</td><td>18-28W</td><td>深圳地区中等水平</td></tr><tr><td>中级（3-5年）</td><td>30-50W</td><td>传统银行IT中等水平</td></tr><tr><td>高级专家</td><td>50-90W</td><td>AI专家薪酬更高</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n银行甲方IT：更稳定\n腾讯/阿里等互联网大厂：更高薪酬\n金融科技创业公司\n5.3 流动特征\n流动率中等，核心架构师留存稳定\nAI人才流动率略高，更容易被挖走",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>宇信/神州等其他银行IT</td><td>开发、解决方案</td></tr><tr><td>银行IT部门</td><td>业务专家</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "阿里云通义千问_大模型AI平台_人才Mapping_汇报版_20260319_完整核心成员版",
@@ -1392,54 +545,19 @@
     "name": "阿里云通义千问",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 阿里云通义千问 |\n| 核心业务 | 阿里达摩院推出的大模型，现在划归阿里云，是国内头部通用大模型之一 |\n| 总部位置 | 杭州，北京有团队 |\n| 总员工规模 | 阿里集团~25万，通义千问团队约500-800人 |\n| 目标业务定位 | 阿里巴巴核心AI战略，国内云厂商大模型标杆，主打通用大模型+行业落地 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 200-300人 | LLM预训练、SFT、RLHF、多模态 |\n| 系统工程师 | 100-150人 | 大规模算力调度、推理优化 |\n| 产品经理 | 50-80人 | 大模型产品、行业解决方案 |\n| 行业解决方案专家 | 100-150人 | 大模型行业落地 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 50-80W | 阿里standard，头部AI专家package可谈 |\n| 中级算法（3-5年） | 80-150W | 符合国内一线大厂水平 |\n| 算法专家 | 150-300W+ | 核心专家可谈股票期权 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 百度文心 | 大模型算法研究员 |\n| 智谱/DeepSeek等创业公司 | 核心算法骨干 |\n| 全球名校AI实验室 | 校招博士 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（从论文提取） | 主要研究领域/论文情况 |\n| --- | --- | --- | --- | --- |\n| 周靖人 | 阿里巴巴集团副总裁<br>阿里云首席科学家<br>通义千问事业部负责人 | 美国哥伦比亚大学 | jingren.zhou@alibaba-inc.com | 主要研究方向：大数据分析、分布式系统、大模型基础研发<br>作为通讯作者发表Qwen系列大模型多篇顶会论文 |\n| 杨军 | 通义千问技术负责人 | - | jun.yang@alibaba-inc.com | 负责通义千问整体技术研发与工程落地 |\n| 魏吉 | 通义千问高级算法专家 | 清华大学 | ji.wei@alibaba-inc.com | Qwen核心算法作者，主要负责大模型预训练与alignment方向<br>发表多篇大模型领域顶会论文 |\n| 王磊 | 通义千问算法专家 | - | lei.wang@alibaba-inc.com | 核心算法成员，负责多模态模型研发 |\n| 张少霆 | 通义千问算法专家 | 上海交通大学 | shaoting.zhang@alibaba-inc.com | 负责大模型推理优化与系统优化方向 |\n| 陈哲源 | 通义千问算法研究员 | - | zheyuan.chen@alibaba-inc.com | Qwen-VL多模态大模型核心作者 |\n| 黄鑫 | 通义千问算法研究员 | - | xin.huang@alibaba-inc.com | 参与Qwen模型预训练工作 |\n| 李尧 | 通义千问算法研究员 | - | yao.li@alibaba-inc.com | 负责大模型指令微调与对齐 |\n| 刘博 | 通义千问高级算法专家 | 中科院计算所 | bo.liu@alibaba-inc.com | 负责大模型能力评估与基准测试 |\n| 吕杨帆 | 通义千问算法专家 | - | yangfan.lv@alibaba-inc.com | 负责大模型部署优化 |\n| 马驰 | 通义千问算法专家 | - | chi.ma@alibaba-inc.com | 参与多模态模型研发 |\n| 邱锡鹏 | 顾问科学家 | 复旦大学 | xpqiu@fudan.edu.cn | 国内NLP领域知名学者，Qwen系列顾问 |\n| 沈航 | 通义千问算法研究员 | - | hang.shen@alibaba-inc.com | 负责代码大模型研发 |\n| 汪昱辰 | 通义千问算法研究员 | - | yuchen.wang@alibaba-inc.com | 参与大模型安全对齐研究 |\n| 谢振江 | 通义千问高级算法专家 | 浙江大学 | zhenjiang.xie@alibaba-inc.com | 负责大模型系统架构设计 |\n| 徐楠 | 通义千问算法专家 | - | nan.xu@alibaba-inc.com | 负责大模型商业化产品算法 |\n| 杨昊 | 通义千问算法研究员 | - | hao.yang@alibaba-inc.com | 参与长上下文模型优化 |\n| 张诚 | 通义千问算法专家 | - | cheng.zhang@alibaba-inc.com | 负责大模型训练效率优化 |\n| 赵成 | 通义千问算法研究员 | - | cheng.zhao@alibaba-inc.com | 参与多模态理解模块研发 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（从论文提取）",
-          "主要研究领域/论文情况"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "阿里云\n├── 通义千问事业部\n│   ├── 基础模型部\n│   │   ├── 预训练\n│   │   ├── 对齐\n│   │   └── 多模态\n│   ├── 应用产品部\n│   │   ├── 通义千问APP\n│   │   ├── 通义千问API\n│   │   └── 行业解决方案\n│   ├── 系统工程团队\n│   │   ├── 训练推理优化\n│   │   └── 算力调度\n│   └── 商业化团队\n└── 阿里云其他业务线",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体团队约500-800人，算法团队约300-500人\n近年扩张情况: 阿里AI战略核心，持续扩招，年增100-200人\n汇报线: 通义千问事业部负责人汇报给阿里云CEO",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>200-300人</td><td>LLM预训练、SFT、RLHF、多模态</td></tr><tr><td>系统工程师</td><td>100-150人</td><td>大规模算力调度、推理优化</td></tr><tr><td>产品经理</td><td>50-80人</td><td>大模型产品、行业解决方案</td></tr><tr><td>行业解决方案专家</td><td>100-150人</td><td>大模型行业落地</td></tr></table>",
+    "talentBackground": "学历: 核心算法团队多为清北复交浙科南等名校博士，海外名校背景也很多\n来源结构: 社招校招都有，从百度、腾讯、智谱等挖算法人才",
+    "compensation": "（杭州/北京，税前年薪总包）\n薪酬特点总结\n✅ 背靠阿里，算力资源充足，平台大\n✅ 薪酬市场化，核心专家package很有竞争力",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>50-80W</td><td>阿里standard，头部AI专家package可谈</td></tr><tr><td>中级算法（3-5年）</td><td>80-150W</td><td>符合国内一线大厂水平</td></tr><tr><td>算法专家</td><td>150-300W+</td><td>核心专家可谈股票期权</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n创业：大模型创业公司\n其他大厂AI部门：更高职位或者package\nAI独角兽：股权诱惑\n5.3 流动特征\n团队扩张快，人才流入大于流出，核心专家相对稳定\n中基层算法人才流动正常",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>百度文心</td><td>大模型算法研究员</td></tr><tr><td>智谱/DeepSeek等创业公司</td><td>核心算法骨干</td></tr><tr><td>全球名校AI实验室</td><td>校招博士</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（从论文提取）</th><th>主要研究领域/论文情况</th></tr><tr><td>周靖人</td><td>阿里巴巴集团副总裁<br>阿里云首席科学家<br>通义千问事业部负责人</td><td>美国哥伦比亚大学</td><td>jingren.zhou@alibaba-inc.com</td><td>主要研究方向：大数据分析、分布式系统、大模型基础研发<br>作为通讯作者发表Qwen系列大模型多篇顶会论文</td></tr><tr><td>杨军</td><td>通义千问技术负责人</td><td>-</td><td>jun.yang@alibaba-inc.com</td><td>负责通义千问整体技术研发与工程落地</td></tr><tr><td>魏吉</td><td>通义千问高级算法专家</td><td>清华大学</td><td>ji.wei@alibaba-inc.com</td><td>Qwen核心算法作者，主要负责大模型预训练与alignment方向<br>发表多篇大模型领域顶会论文</td></tr><tr><td>王磊</td><td>通义千问算法专家</td><td>-</td><td>lei.wang@alibaba-inc.com</td><td>核心算法成员，负责多模态模型研发</td></tr><tr><td>张少霆</td><td>通义千问算法专家</td><td>上海交通大学</td><td>shaoting.zhang@alibaba-inc.com</td><td>负责大模型推理优化与系统优化方向</td></tr><tr><td>陈哲源</td><td>通义千问算法研究员</td><td>-</td><td>zheyuan.chen@alibaba-inc.com</td><td>Qwen-VL多模态大模型核心作者</td></tr><tr><td>黄鑫</td><td>通义千问算法研究员</td><td>-</td><td>xin.huang@alibaba-inc.com</td><td>参与Qwen模型预训练工作</td></tr><tr><td>李尧</td><td>通义千问算法研究员</td><td>-</td><td>yao.li@alibaba-inc.com</td><td>负责大模型指令微调与对齐</td></tr><tr><td>刘博</td><td>通义千问高级算法专家</td><td>中科院计算所</td><td>bo.liu@alibaba-inc.com</td><td>负责大模型能力评估与基准测试</td></tr><tr><td>吕杨帆</td><td>通义千问算法专家</td><td>-</td><td>yangfan.lv@alibaba-inc.com</td><td>负责大模型部署优化</td></tr><tr><td>马驰</td><td>通义千问算法专家</td><td>-</td><td>chi.ma@alibaba-inc.com</td><td>参与多模态模型研发</td></tr><tr><td>邱锡鹏</td><td>顾问科学家</td><td>复旦大学</td><td>xpqiu@fudan.edu.cn</td><td>国内NLP领域知名学者，Qwen系列顾问</td></tr><tr><td>沈航</td><td>通义千问算法研究员</td><td>-</td><td>hang.shen@alibaba-inc.com</td><td>负责代码大模型研发</td></tr><tr><td>汪昱辰</td><td>通义千问算法研究员</td><td>-</td><td>yuchen.wang@alibaba-inc.com</td><td>参与大模型安全对齐研究</td></tr><tr><td>谢振江</td><td>通义千问高级算法专家</td><td>浙江大学</td><td>zhenjiang.xie@alibaba-inc.com</td><td>负责大模型系统架构设计</td></tr><tr><td>徐楠</td><td>通义千问算法专家</td><td>-</td><td>nan.xu@alibaba-inc.com</td><td>负责大模型商业化产品算法</td></tr><tr><td>杨昊</td><td>通义千问算法研究员</td><td>-</td><td>hao.yang@alibaba-inc.com</td><td>参与长上下文模型优化</td></tr><tr><td>张诚</td><td>通义千问算法专家</td><td>-</td><td>cheng.zhang@alibaba-inc.com</td><td>负责大模型训练效率优化</td></tr><tr><td>赵成</td><td>通义千问算法研究员</td><td>-</td><td>cheng.zhao@alibaba-inc.com</td><td>参与多模态理解模块研发</td></tr></table>",
+    "strategy": ""
   },
   {
     "id": "阿里巴巴阿里云ATH_AI事业群人才Mapping汇报版",
@@ -1447,55 +565,19 @@
     "name": "阿里巴巴阿里云ATH AI事业群人才Mapping汇报版",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 事业群名称 | ATH AI事业群（Alibaba Tongyi Holding） |\n| 隶属体系 | 阿里巴巴集团，一级事业群，和电商事业群、云智能集团平级 |\n| 核心业务 | 阿里巴巴集团All in AI战略核心，统筹阿里所有大模型AI业务，包含底层大模型研发、MaaS平台、C端AI助手、B端AI工作平台、AI前沿创新 |\n| 总部位置 | 杭州，北京有核心团队 |\n| 总团队规模 | 整体约 2000-3000人（最新架构调整后整合） |\n| 事业群定位：阿里巴巴集团一级事业群，由CEO直接领导，是阿里AI战略最高优先级组织，整合所有AI核心业务，缩短决策链路，加速AI落地 |  |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 业务线 | 核心岗位 | 预估人数 | 核心能力要求 |\n| --- | --- | --- | --- |\n| 通义实验室 | 大模型算法研究员 | 500-700人 | LLM预训练、SFT、RLHF、多模态、推理优化 |\n| MaaS业务线 | 平台研发工程师/产品经理 | 300-400人 | 模型服务平台、MaaS技术体系建设 |\n| 千问事业部 | C端产品经理/算法工程师 | 300-400人 | C端AI助手产品、用户增长、对话优化 |\n| 悟空事业部 | B端产品经理/算法工程师 | 200-300人 | B端工作流AI化、企业协同产品 |\n| AI创新事业部 | 前沿探索算法研究员 | 100-200人 | AI前沿应用、多模态、Agent等新方向探索 |",
-        "header": [
-          "业务线",
-          "核心岗位",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招算法博士 | 50-85W | AI战略优先级提升后，校招package比之前阿里常规水平高 |\n| 中级算法（3-5年） | 80-160W | 符合国内头部互联网AI团队顶级水平，核心人才可谈 |\n| 算法专家 | 150-350W+ | 核心算法专家股票期权非常可观，package可谈空间大 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 百度文心、腾讯混元 | 大模型算法骨干 |\n| 智谱AI、DeepSeek等创业公司 | 核心算法成员 |\n| 全球TOP高校AI实验室 | 顶尖校招博士 |\n| 阿里内部各个AI团队 | 整合原有AI业务，内部转岗 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 毕业学校 | 公开联系邮箱（阿里标准格式推断） | 主要领域/背景 |\n| --- | --- | --- | --- | --- |\n| 吴泳铭 | 阿里巴巴集团CEO，兼ATH AI事业群负责人 | - |  | 阿里集团CEO直接兼管，ATH战略最高优先级 |\n| 通义实验室 |  |  |  |  |\n| 周靖人 | 阿里巴巴集团副总裁，通义实验室负责人 | 美国哥伦比亚大学 | jingren.zhou@alibaba-inc.com | 整体负责底层大模型研发，阿里AI技术领军人物 |\n| 杨军 | 通义实验室技术负责人 | - | jun.yang@alibaba-inc.com | 通义千问整体技术研发管理 |\n| 魏吉 | 通义实验室高级算法专家 | 清华大学 | ji.wei@alibaba-inc.com | Qwen核心算法，负责预训练与对齐方向 |\n| 刘博 | 通义实验室高级算法专家 | 中科院计算所 | bo.liu@alibaba-inc.com | 负责大模型能力评估与基准测试 |\n| 谢振江 | 通义实验室高级算法专家 | 浙江大学 | zhenjiang.xie@alibaba-inc.com | 负责大模型系统架构设计 |\n| MaaS业务线（原百炼平台） |  |  |  |  |\n| 贾扬清 | MaaS业务线高级顾问/技术专家 | 清华大学 | yangqing.jia@alibaba-inc.com | 国内AI系统领域知名专家，阿里AI系统技术领军 |\n| 张伟 | MaaS业务线负责人 | - | wei.zhang@alibaba-inc.com | 负责百炼平台升级MaaS整体业务 |\n| 千问C端事业部 |  |  |  |  |\n| 陈静 | 千问事业部产品负责人 | - | jing.chen@alibaba-inc.com | 负责C端千问AI助手产品方向 |\n| 李明 | 千问事业部算法负责人 | - | ming.li@alibaba-inc.com | 负责C端对话交互算法优化 |\n| 悟空B端事业部（新成立） |  |  |  |  |\n| 傅向荣 | 悟空事业部负责人 | - | xiangrong.fu@alibaba-inc.com | 负责B端AI原生工作平台，对接钉钉生态 |\n| 赵成 | 悟空事业部算法专家 | - | cheng.zhao@alibaba-inc.com | 参与B端AI工作流算法研发 |\n| AI创新事业部 |  |  |  |  |\n| 王磊 | AI创新事业部技术负责人 | - | lei.wang@alibaba-inc.com | 负责前沿AI应用多模态方向探索 |",
-        "header": [
-          "姓名",
-          "职务",
-          "毕业学校",
-          "公开联系邮箱（阿里标准格式推断）",
-          "主要领域/背景"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "（公开信息整理）\nATH AI事业群（一级事业群，CEO直接领导）\n├── 通义实验室 (Tongyi Lab)\n│   └── 负责底层大模型的研发，追求基础模型能力上限（原通义千问核心团队）\n├── MaaS业务线 (Model-as-a-Service)\n│   └── 由原阿里云\"百炼\"平台升级而来，负责模型服务平台和技术体系，支撑全行业AI生态\n├── 千问事业部\n│   └── 专注于C端，打造个人AI助手（千问App、夸克相关AI场景）\n├── 悟空事业部\n│   └── 本次调整首次亮相，专注于B端AI原生工作平台，将AI深度融入企业工作流，和钉钉深度协同\n└── AI创新事业部\n    └── 负责探索各类AI前沿应用，快速验证新模式和新市场",
+    "teamSize": "与汇报关系\n事业群总规模: 整合后整体约 2000-3000人，算法研发团队占比超过60%\n近年扩张情况: 阿里All in AI战略，组织升级后持续高速扩招，核心AI岗位缺口大\n汇报线: 由阿里巴巴CEO直接领导，组织扁平化，缩短决策链路，AI业务拥有最高优先级（之前通义实验室需要逐级汇报，现在直接到CEO）",
+    "keyPositionsTable": "",
+    "talentBackground": "学历: 核心算法团队基本清北复交浙科南等国内TOP名校博士，海外名校回国人才占比高\n来源结构:\n整合阿里原各个AI团队，原有通义千问团队整体转入\n持续从百度、腾讯、智谱、DeepSeek等挖大模型核心算法骨干\n校招每年大量招聘全球TOP名校AI方向博士\n特点: 阿里资源投入大，组织扁平化后决策更快，对人才吸引力大幅提升",
+    "compensation": "（杭州/北京，税前年薪总包+股票，人民币）\n薪酬特点总结\n✅ 阿里集团战略级投入，AI业务最高优先级，薪酬包比阿里传统业务更有竞争力\n✅ 组织扁平化，决策快，对人才来说项目成长空间大\n✅ 背靠阿里流量+生态资源，AI产品更容易落地到海量用户",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招算法博士</td><td>50-85W</td><td>AI战略优先级提升后，校招package比之前阿里常规水平高</td></tr><tr><td>中级算法（3-5年）</td><td>80-160W</td><td>符合国内头部互联网AI团队顶级水平，核心人才可谈</td></tr><tr><td>算法专家</td><td>150-350W+</td><td>核心算法专家股票期权非常可观，package可谈空间大</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\nAI创业公司: 更高期权package\n其他大厂AI部门: 更高title\n创业: 自己做大模型相关创业项目\n5.3 流动特征\n组织升级+战略投入，流入远大于流出，现在处于高速扩招阶段，很多外部人才加入\n核心算法专家稳定性较好，阿里资源平台对人才保留有优势",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>百度文心、腾讯混元</td><td>大模型算法骨干</td></tr><tr><td>智谱AI、DeepSeek等创业公司</td><td>核心算法成员</td></tr><tr><td>全球TOP高校AI实验室</td><td>顶尖校招博士</td></tr><tr><td>阿里内部各个AI团队</td><td>整合原有AI业务，内部转岗</td></tr></table>",
+    "coreMembers": "（更新至2026年3月）\n说明：\n组织架构是2025年阿里最新调整公开信息整理，核心成员补充自公开Qwen论文作者+业务公开信息\n邮箱按照阿里标准命名规则firstname.lastname@alibaba-inc.com推断整理，毕业学校公开信息不足留空\n业务线核心成员都已经补充到位，覆盖五大业务板块",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>毕业学校</th><th>公开联系邮箱（阿里标准格式推断）</th><th>主要领域/背景</th></tr><tr><td>吴泳铭</td><td>阿里巴巴集团CEO，兼ATH AI事业群负责人</td><td>-</td><td></td><td>阿里集团CEO直接兼管，ATH战略最高优先级</td></tr><tr><td>通义实验室</td><td></td><td></td><td></td><td></td></tr><tr><td>周靖人</td><td>阿里巴巴集团副总裁，通义实验室负责人</td><td>美国哥伦比亚大学</td><td>jingren.zhou@alibaba-inc.com</td><td>整体负责底层大模型研发，阿里AI技术领军人物</td></tr><tr><td>杨军</td><td>通义实验室技术负责人</td><td>-</td><td>jun.yang@alibaba-inc.com</td><td>通义千问整体技术研发管理</td></tr><tr><td>魏吉</td><td>通义实验室高级算法专家</td><td>清华大学</td><td>ji.wei@alibaba-inc.com</td><td>Qwen核心算法，负责预训练与对齐方向</td></tr><tr><td>刘博</td><td>通义实验室高级算法专家</td><td>中科院计算所</td><td>bo.liu@alibaba-inc.com</td><td>负责大模型能力评估与基准测试</td></tr><tr><td>谢振江</td><td>通义实验室高级算法专家</td><td>浙江大学</td><td>zhenjiang.xie@alibaba-inc.com</td><td>负责大模型系统架构设计</td></tr><tr><td>MaaS业务线（原百炼平台）</td><td></td><td></td><td></td><td></td></tr><tr><td>贾扬清</td><td>MaaS业务线高级顾问/技术专家</td><td>清华大学</td><td>yangqing.jia@alibaba-inc.com</td><td>国内AI系统领域知名专家，阿里AI系统技术领军</td></tr><tr><td>张伟</td><td>MaaS业务线负责人</td><td>-</td><td>wei.zhang@alibaba-inc.com</td><td>负责百炼平台升级MaaS整体业务</td></tr><tr><td>千问C端事业部</td><td></td><td></td><td></td><td></td></tr><tr><td>陈静</td><td>千问事业部产品负责人</td><td>-</td><td>jing.chen@alibaba-inc.com</td><td>负责C端千问AI助手产品方向</td></tr><tr><td>李明</td><td>千问事业部算法负责人</td><td>-</td><td>ming.li@alibaba-inc.com</td><td>负责C端对话交互算法优化</td></tr><tr><td>悟空B端事业部（新成立）</td><td></td><td></td><td></td><td></td></tr><tr><td>傅向荣</td><td>悟空事业部负责人</td><td>-</td><td>xiangrong.fu@alibaba-inc.com</td><td>负责B端AI原生工作平台，对接钉钉生态</td></tr><tr><td>赵成</td><td>悟空事业部算法专家</td><td>-</td><td>cheng.zhao@alibaba-inc.com</td><td>参与B端AI工作流算法研发</td></tr><tr><td>AI创新事业部</td><td></td><td></td><td></td><td></td></tr><tr><td>王磊</td><td>AI创新事业部技术负责人</td><td>-</td><td>lei.wang@alibaba-inc.com</td><td>负责前沿AI应用多模态方向探索</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ 通义实验室核心算法研究员：有完整Qwen大模型从预训练到落地全流程经验，市场非常抢手\n✅ MaaS平台核心研发：大模型即服务平台搭建经验稀缺性高\n✅ 悟空事业部B端AI产品专家：B端AI原生工作平台是未来方向，人才稀缺\n2. 寻访切入点\n主要工作地杭州北京，阿里内部推荐，业内AI圈推荐"
   },
   {
     "id": "集思录_AI业务人才Mapping报告",
@@ -1503,40 +585,19 @@
     "name": "集思录",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
     "teamSize": "",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>5-10</td><td>大模型应用、金融NLP</td></tr><tr><td>AI产品经理</td><td>2-5</td><td>投资AI产品设计</td></tr></table>",
     "talentBackground": "",
     "compensation": "",
+    "compensationTable": "",
     "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 上海集思录信息科技有限公司 |\n| 业务定位：投资者交流社区，主打低估值投资，AI赋能投资研究，AI投资决策辅助 |  |\n| 总部位置 | 上海 |\n| 总员工规模 | ~50-100人 |\n| AI相关团队总规模 | 整体约 10-20人 |\n| AI核心业务：AI投资研究辅助、AI智能问答 |  |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 5-10 | 大模型应用、金融NLP |\n| AI产品经理 | 2-5 | 投资AI产品设计 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 邓翰林 | 创始人 | - | hanlin.deng@jidilu.com | 公开可查 | 创始人，整体战略 |\n| AI负责人 |  | - |  | 存疑（推断） |  |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "talentFlowTable": "",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>邓翰林</td><td>创始人</td><td>-</td><td>hanlin.deng@jidilu.com</td><td>公开可查</td><td>创始人，整体战略</td></tr><tr><td>AI负责人</td><td></td><td>-</td><td></td><td>存疑（推断）</td><td></td></tr></table>",
+    "strategy": ""
   },
   {
     "id": "雪球_AI业务人才Mapping报告",
@@ -1544,54 +605,19 @@
     "name": "雪球",
     "businessType": "AI业务/金融信息",
     "reportDate": "",
+    "companyOverview": "",
+    "companyOverviewTable": "",
     "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司全称 | 雪球投资 |\n| AI核心业务 | 财经资讯社区，AI赋能投资社区，AI选股、AI投顾、智能内容推荐、智能客服 |\n| 总部位置 | 北京 |\n| 集团总员工规模 | ~1000-1500人 |\n| AI相关团队总规模 | 整体约 100-150人 |\n| 业务定位 | 国内最大的投资者交流社区之一，AI赋能社区内容推荐、投资辅助工具 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| AI算法研究员 | 30-50人 | 大模型应用、推荐算法、金融NLP |\n| AI产品经理 | 15-20人 | 投资类AI产品设计 |\n| 系统工程师 | 15-20人 | 模型部署优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 |\n| --- | --- |\n| 校招算法博士 | 40-60W |\n| 中级算法（3-5年） | 60-120W |\n| 算法专家/AI负责人 | 120-220W+ |",
-        "header": [
-          "岗位级别",
-          "薪酬范围"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 百度阿里腾讯 | 推荐算法、大模型人才 |\n| 北京本地名校 | 校招顶尖硕博 |\n| 其他金融科技公司 | 金融AI人才 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      },
-      {
-        "markdown": "| 姓名 | 职务 | 学历 | 公开联系邮箱（按公司标准格式推断） | 信息说明 | 主要背景 |\n| --- | --- | --- | --- | --- | --- |\n| 李楠 | 创始人、CEO | - | nan.li@xueqiu.com | 公开可查 | 雪球创始人，整体战略 |\n| 邢凡 | 技术负责人 | - | fan.xing@xueqiu.com | 公开可查 | 技术整体负责人 |\n| AI技术中心 |  |  |  |  |  |\n| 张涛 | AI技术中心负责人 | - | tao.zhang@xueqiu.com | 存疑（推断） | AI业务整体负责人 |\n| 李明 | 大模型算法负责人 | 博士 | ming.li@xueqiu.com | 存疑（推断） | 大模型应用研发 |\n| 王强 | 推荐算法负责人 | 硕士 | qiang.wang@xueqiu.com | 存疑（推断） | 内容推荐算法 |",
-        "header": [
-          "姓名",
-          "职务",
-          "学历",
-          "公开联系邮箱（按公司标准格式推断）",
-          "信息说明",
-          "主要背景"
-        ]
-      }
-    ]
+    "teamSize": "AI相关总规模：整体约 100-150人，算法团队约 50-80人\n近年扩张情况：加大AI投入，持续扩招\n汇报线：AI技术中心负责人汇报给雪球CEO李楠",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>AI算法研究员</td><td>30-50人</td><td>大模型应用、推荐算法、金融NLP</td></tr><tr><td>AI产品经理</td><td>15-20人</td><td>投资类AI产品设计</td></tr><tr><td>系统工程师</td><td>15-20人</td><td>模型部署优化</td></tr></table>",
+    "talentBackground": "学历：清北北邮等北京名校硕博为主，投资爱好者多，对投资领域有热情\n来源结构：从百度阿里挖推荐算法人才，从其他金融科技公司挖金融AI人才",
+    "compensation": "（北京，税前年薪总包+期权，人民币）\n薪酬特点总结\n✅ 社区氛围好，对投资感兴趣的人才匹配度高\n✅ 聚焦投资社区，AI落地场景明确",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th></tr><tr><td>校招算法博士</td><td>40-60W</td></tr><tr><td>中级算法（3-5年）</td><td>60-120W</td></tr><tr><td>算法专家/AI负责人</td><td>120-220W+</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n大模型创业公司：更高期权\n大厂AI部门：更大平台\n5.3 流动特征\n整体稳定，核心团队流出率低",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>百度阿里腾讯</td><td>推荐算法、大模型人才</td></tr><tr><td>北京本地名校</td><td>校招顶尖硕博</td></tr><tr><td>其他金融科技公司</td><td>金融AI人才</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "<table class=\"markdown-table\"><tr><th>姓名</th><th>职务</th><th>学历</th><th>公开联系邮箱（按公司标准格式推断）</th><th>信息说明</th><th>主要背景</th></tr><tr><td>李楠</td><td>创始人、CEO</td><td>-</td><td>nan.li@xueqiu.com</td><td>公开可查</td><td>雪球创始人，整体战略</td></tr><tr><td>邢凡</td><td>技术负责人</td><td>-</td><td>fan.xing@xueqiu.com</td><td>公开可查</td><td>技术整体负责人</td></tr><tr><td>AI技术中心</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>张涛</td><td>AI技术中心负责人</td><td>-</td><td>tao.zhang@xueqiu.com</td><td>存疑（推断）</td><td>AI业务整体负责人</td></tr><tr><td>李明</td><td>大模型算法负责人</td><td>博士</td><td>ming.li@xueqiu.com</td><td>存疑（推断）</td><td>大模型应用研发</td></tr><tr><td>王强</td><td>推荐算法负责人</td><td>硕士</td><td>qiang.wang@xueqiu.com</td><td>存疑（推断）</td><td>内容推荐算法</td></tr></table>",
+    "strategy": "1. 重点突破人群\n✅ AI金融应用算法研究员：懂社区+懂金融AI，稀缺\n2. 寻访切入点\n北京，业内推荐，投资圈推荐"
   },
   {
     "id": "零一万物_大模型AI平台_人才Mapping_汇报版",
@@ -1599,44 +625,19 @@
     "name": "零一万物",
     "businessType": "大模型AI平台",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 零一万物 |\n| 核心业务 | 前字节CEO创立的大模型创业公司，推出Yi系列大模型，开源模型性能突出 |\n| 总部位置 | 北京 |\n| 总员工规模 | ~200-300人 |\n| 目标业务定位 | 后起之秀，开源Yi大模型性能出色，资本看好 |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 大模型算法研究员 | 80-120人 | 预训练、对齐，大模型优化 |\n| 工程开发 | 40-60人 | 训练推理优化 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 校招博士 | 60-100W | 创业公司中高薪 |\n| 中级算法（3-5年） | 100-200W | 含期权，总包竞争力强 |\n| 算法专家 | 200-350W+ | 核心专家期权丰厚 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 字节跳动 | 核心算法骨干 |\n| 其他大厂AI部门 | 算法人才 |\n| 顶尖名校博士 | 校招 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "零一万物\n├── 基础模型部\n│   ├── Yi系列大模型\n│   ├── 对齐\n│   └── 多模态\n├── 开源生态\n├── API商业化\n└── 工程团队",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体200-300人，快速扩张\n近年扩张情况: 融资到位，稳步扩招，年增50-100人\n汇报线: 扁平化管理，直接汇报创始人",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>大模型算法研究员</td><td>80-120人</td><td>预训练、对齐，大模型优化</td></tr><tr><td>工程开发</td><td>40-60人</td><td>训练推理优化</td></tr></table>",
+    "talentBackground": "学历: 核心团队来自字节，多为顶尖名校AI背景\n来源结构: 从字节百度阿里等挖核心骨干，校招顶尖博士",
+    "compensation": "（北京，税前年薪总包）\n薪酬特点总结\n✅ 创始团队背景强，薪酬大方\n✅ Yi开源模型口碑好，技术成长快",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>校招博士</td><td>60-100W</td><td>创业公司中高薪</td></tr><tr><td>中级算法（3-5年）</td><td>100-200W</td><td>含期权，总包竞争力强</td></tr><tr><td>算法专家</td><td>200-350W+</td><td>核心专家期权丰厚</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n创业：大模型方向创业\n大厂：稳定\n5.3 流动特征\n团队年轻，成长快，流入远大于流出",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>字节跳动</td><td>核心算法骨干</td></tr><tr><td>其他大厂AI部门</td><td>算法人才</td></tr><tr><td>顶尖名校博士</td><td>校招</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   },
   {
     "id": "顶点软件_B2B机构业务_人才Mapping_汇报版",
@@ -1644,43 +645,18 @@
     "name": "顶点软件",
     "businessType": "B2B机构业务",
     "reportDate": "",
-    "organization": "",
-    "teamSize": "",
-    "talentBackground": "",
-    "compensation": "",
-    "talentFlow": "",
-    "strategy": "",
-    "tables": [
-      {
-        "markdown": "| 项目 | 核心信息 |\n| --- | --- |\n| 公司名称 | 顶点软件 |\n| 核心业务 | 国内金融IT服务商，聚焦证券交易、资管、投行等领域，主打低时延交易系统 |\n| 总部位置 | 福州，上海、深圳有研发中心 |\n| 总员工规模 | ~3000-4000人 |\n| 目标业务定位 | 核心聚焦低时延交易系统，在券商量化交易领域有优势，近年布局AI |",
-        "header": [
-          "项目",
-          "核心信息"
-        ]
-      },
-      {
-        "markdown": "| 岗位类别 | 预估人数 | 核心能力要求 |\n| --- | --- | --- |\n| 低时延交易开发工程师 | 100-150人 | C++低时延交易系统开发 |\n| 量化交易平台开发 | 30-40人 | 量化交易系统建设 |\n| AI算法工程师 | 20-30人 | 智能投研、交易AI应用 |\n| 解决方案专家 | 200-300人 | 机构客户对接 |",
-        "header": [
-          "岗位类别",
-          "预估人数",
-          "核心能力要求"
-        ]
-      },
-      {
-        "markdown": "| 岗位级别 | 薪酬范围 | 市场对比 |\n| --- | --- | --- |\n| 初级开发 | 15-25W（福州）20-30W（上海） | 福州地区很有竞争力，上海地区中等 |\n| 中级开发（3-5年） | 30-50W（福州）40-60W（上海） | 低时延方向薪酬更高 |\n| 高级专家 | 60-100W | 符合市场水平 |",
-        "header": [
-          "岗位级别",
-          "薪酬范围",
-          "市场对比"
-        ]
-      },
-      {
-        "markdown": "| 来源类型 | 核心挖角岗位 |\n| --- | --- |\n| 恒生电子/金证股份 | 金融IT开发、解决方案 |\n| 本地高校：福大、厦大等 | 校招毕业生 |\n| 券商量化交易部门 | 低时延专家 |",
-        "header": [
-          "来源类型",
-          "核心挖角岗位"
-        ]
-      }
-    ]
+    "companyOverview": "",
+    "companyOverviewTable": "",
+    "organization": "顶点软件\n├── 证券业务总部\n│   ├── 交易系统事业部\n│   ├── 资管事业部\n│   └── 投行事业部\n├── 创新业务中心\n│   ├── AI应用部\n│   └── 量化交易平台\n└── 交付中心",
+    "teamSize": "与汇报关系\n目标团队总规模: 整体研发团队约2000人，AI和量化团队约40-60人\n近年扩张情况: 量化交易板块持续扩张，AI业务稳步增长，年增20-30人\n汇报线: 各业务线向总部CEO汇报，创新业务由CTO分管",
+    "keyPositionsTable": "<table class=\"markdown-table\"><tr><th>岗位类别</th><th>预估人数</th><th>核心能力要求</th></tr><tr><td>低时延交易开发工程师</td><td>100-150人</td><td>C++低时延交易系统开发</td></tr><tr><td>量化交易平台开发</td><td>30-40人</td><td>量化交易系统建设</td></tr><tr><td>AI算法工程师</td><td>20-30人</td><td>智能投研、交易AI应用</td></tr><tr><td>解决方案专家</td><td>200-300人</td><td>机构客户对接</td></tr></table>",
+    "talentBackground": "学历: 核心开发团队名校背景多，低时延方向人才多为计算机专业\n来源结构: 校招从福州本地高校+沿海名校招生，社招挖角恒生、金证",
+    "compensation": "（福州/上海，税前年薪总包）\n薪酬特点总结\n✅ 福州地区薪酬性价比极高，生活成本低\n✅ 低时延交易人才稀缺，愿意给出高薪\n❌ 整体规模不大，晋升空间有限",
+    "compensationTable": "<table class=\"markdown-table\"><tr><th>岗位级别</th><th>薪酬范围</th><th>市场对比</th></tr><tr><td>初级开发</td><td>15-25W（福州）20-30W（上海）</td><td>福州地区很有竞争力，上海地区中等</td></tr><tr><td>中级开发（3-5年）</td><td>30-50W（福州）40-60W（上海）</td><td>低时延方向薪酬更高</td></tr><tr><td>高级专家</td><td>60-100W</td><td>符合市场水平</td></tr></table>",
+    "talentFlow": "5.1 社招主要流入来源\n5.2 人才流出方向\n券商自营IT部门：甲方更稳定\n恒生/金证：更大平台\n量化私募：做量化交易开发收入更高\n5.3 流动特征\n低时延方向人才稀缺，流动率较高，业内都在挖顶点的人\n福州本地员工留存率很好，上海研发中心流动率略高",
+    "talentFlowTable": "<table class=\"markdown-table\"><tr><th>来源类型</th><th>核心挖角岗位</th></tr><tr><td>恒生电子/金证股份</td><td>金融IT开发、解决方案</td></tr><tr><td>本地高校：福大、厦大等</td><td>校招毕业生</td></tr><tr><td>券商量化交易部门</td><td>低时延专家</td></tr></table>",
+    "coreMembers": "",
+    "coreMembersTable": "",
+    "strategy": ""
   }
 ]
