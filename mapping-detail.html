@@ -255,6 +255,33 @@
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
+        .markdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .markdown-table th,
+        .markdown-table td {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        .markdown-table th {
+            background: rgba(102, 126, 234, 0.15);
+            font-weight: 600;
+            color: #e4e4e7;
+        }
+
+        .markdown-table td {
+            color: #d4d4d8;
+        }
+
+        .markdown-table tr:nth-child(even) td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
         .save-status {
             position: fixed;
             bottom: 24px;
@@ -343,6 +370,11 @@
                 flex: 1;
                 justify-content: center;
             }
+
+            .markdown-table {
+                display: block;
+                overflow-x: auto;
+            }
         }
     </style>
 </head>
@@ -396,16 +428,13 @@
             { key: 'compensation', title: '薪酬特点', icon: '💰' },
             { key: 'talentFlow', title: '人才流动', icon: '🔄' },
             { key: 'strategy', title: '寻访策略', icon: '🎯' },
-            { key: 'rawContent', title: '原始内容', icon: '📄' },
         ];
 
-        // 获取URL参数
         function getUrlParam(name) {
             const params = new URLSearchParams(window.location.search);
             return params.get(name);
         }
 
-        // 加载数据
         async function loadData() {
             try {
                 const response = await fetch('data/mapping-data.json');
@@ -434,7 +463,6 @@
             }
         }
 
-        // 加载本地编辑
         function loadLocalEdits() {
             const saved = localStorage.getItem(`mapping_edits_${companyData.id}`);
             if (saved) {
@@ -447,7 +475,6 @@
             }
         }
 
-        // 保存到本地
         function saveLocalEdits() {
             const edits = {};
             sections.forEach(s => {
@@ -462,7 +489,6 @@
             }
         }
 
-        // 显示未找到
         function showNotFound() {
             document.getElementById('mainContent').innerHTML = `
                 <div class="not-found">
@@ -473,7 +499,6 @@
             `;
         }
 
-        // 获取业务类型样式类
         function getBusinessTypeClass(type) {
             if (type === '大模型AI平台') return '';
             if (type === 'B2B机构业务') return 'b2b';
@@ -481,12 +506,75 @@
             return '';
         }
 
-        // 渲染页面
+        function parseMarkdownTable(md) {
+            if (!md) return null;
+            const lines = md.trim().split('\n').filter(l => l.trim());
+            if (lines.length < 2) return null;
+
+            const rows = [];
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (i === 1 && line.includes('|---')) continue;
+                const cells = line.split('|').map(c => c.trim()).filter(c => c !== '');
+                if (cells.length > 0) rows.push(cells);
+            }
+            return rows;
+        }
+
+        function renderTable(tableData) {
+            if (!tableData || tableData.length < 1) return '';
+
+            const headerRow = tableData[0];
+            const bodyRows = tableData.slice(1);
+
+            return `
+                <table class="markdown-table">
+                    <thead>
+                        <tr>
+                            ${headerRow.map(h => `<th>${escapeHtml(h)}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${bodyRows.map(row => `
+                            <tr>
+                                ${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
         function renderPage() {
             document.getElementById('companyName').textContent = companyData.name;
             const typeEl = document.getElementById('businessType');
             typeEl.textContent = companyData.businessType;
             typeEl.className = 'business-type ' + getBusinessTypeClass(companyData.businessType);
+
+            let tablesHtml = '';
+            if (companyData.tables && companyData.tables.length > 0) {
+                tablesHtml = `
+                    <div class="section-card">
+                        <div class="section-header">
+                            <div class="section-title">
+                                <span class="section-icon">📊</span>
+                                数据表格
+                            </div>
+                        </div>
+                        <div class="section-body">
+                            <div style="display: grid; gap: 24px;">
+                                ${companyData.tables.map((t, i) => {
+                                    const parsed = parseMarkdownTable(t.markdown);
+                                    if (parsed) {
+                                        return `<div>${renderTable(parsed)}</div>`;
+                                    }
+                                    return `<pre class="section-content">${escapeHtml(t.markdown)}</pre>`;
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
 
             document.getElementById('mainContent').innerHTML = `
                 <div class="info-bar">
@@ -503,11 +591,11 @@
                 </div>
                 <div class="content-grid">
                     ${sections.map(s => renderSection(s)).join('')}
+                    ${tablesHtml}
                 </div>
             `;
         }
 
-        // 渲染单个区块
         function renderSection(section) {
             const isEditing = editingSections.has(section.key);
             const value = companyData[section.key] || '';
@@ -536,7 +624,6 @@
             `;
         }
 
-        // 切换编辑模式
         function toggleEdit(key) {
             if (editingSections.has(key)) {
                 editingSections.delete(key);
@@ -548,7 +635,6 @@
             sectionEl.outerHTML = renderSection(section);
         }
 
-        // 更新字段
         function updateField(key) {
             const textarea = document.getElementById(`textarea-${key}`);
             if (textarea) {
@@ -557,7 +643,6 @@
             }
         }
 
-        // 自动保存
         let autoSaveTimer = null;
         function autoSaveField(key) {
             clearTimeout(autoSaveTimer);
@@ -566,7 +651,6 @@
             }, 500);
         }
 
-        // 撤销更改
         function revertChanges() {
             if (!confirm('确定要撤销所有更改吗？这将恢复到原始数据。')) {
                 return;
@@ -578,7 +662,6 @@
             showSaveStatus('已撤销', false);
         }
 
-        // 保存全部更改
         function saveAllChanges() {
             sections.forEach(s => {
                 if (editingSections.has(s.key)) {
@@ -589,13 +672,12 @@
             showSaveStatus('已保存到本地浏览器', false);
 
             setTimeout(() => {
-                if (confirm('是否导出完整的 JSON 文件？\n\n（注意：GitHub Pages 无法直接保存文件，需要手动更新 data/mapping-data.json）')) {
+                if (confirm('是否导出完整的 JSON 文件？\\n\\n（注意：GitHub Pages 无法直接保存文件，需要手动更新 data/mapping-data.json）')) {
                     exportFullJson();
                 }
             }, 500);
         }
 
-        // 导出完整 JSON
         function exportFullJson() {
             const index = allData.findIndex(d => d.id === companyData.id);
             if (index >= 0) {
@@ -611,7 +693,6 @@
             URL.revokeObjectURL(url);
         }
 
-        // 显示保存状态
         function showSaveStatus(message, isError = false) {
             const el = document.getElementById('saveStatus');
             el.innerHTML = `<span>${isError ? '⚠️' : '✓'}</span> ${message}`;
@@ -621,7 +702,6 @@
             }, 3000);
         }
 
-        // HTML转义
         function escapeHtml(text) {
             if (!text) return '';
             const div = document.createElement('div');
