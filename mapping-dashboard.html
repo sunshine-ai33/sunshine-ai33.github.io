@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人才Mapping报告 - 仪表盘</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.9rem;
+            color: #a1a1aa;
+        }
+
+        .stat-badge {
+            background: rgba(102, 126, 234, 0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: #818cf8;
+            font-weight: 600;
+        }
+
+        .back-link {
+            color: #a1a1aa;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #e4e4e7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 32px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 280px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px 12px 44px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #e4e4e7;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #71717a;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #a1a1aa;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e4e4e7;
+        }
+
+        .filter-btn.active {
+            background: rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+            color: #818cf8;
+        }
+
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .company-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .company-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .company-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .company-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #f4f4f5;
+            margin-bottom: 4px;
+        }
+
+        .business-type {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(102, 126, 234, 0.2);
+            color: #818cf8;
+            font-size: 0.75rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .business-type.b2b {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .business-type.finance {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+
+        .business-type.other {
+            background: rgba(156, 163, 175, 0.2);
+            color: #9ca3af;
+        }
+
+        .report-date {
+            font-size: 0.85rem;
+            color: #71717a;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .info-label {
+            color: #71717a;
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            color: #d4d4d8;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .card-footer {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .has-data {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .data-tag {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 4px;
+            color: #a1a1aa;
+        }
+
+        .view-btn {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .view-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 40px;
+            color: #71717a;
+        }
+
+        .empty-state .icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state h2 {
+            color: #a1a1aa;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .company-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                flex-direction: column;
+            }
+
+            .search-box {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <a href="index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回首页
+                </a>
+            </div>
+            <h1>🏢 人才Mapping报告库</h1>
+            <div class="header-meta">
+                <span class="stat-badge" id="totalCount">0 家公司</span>
+                <span id="lastUpdate"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filters">
+            <div class="search-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="搜索公司名称...">
+            </div>
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="大模型AI平台">大模型AI平台</button>
+                <button class="filter-btn" data-filter="B2B机构业务">B2B机构业务</button>
+                <button class="filter-btn" data-filter="AI业务/金融信息">AI业务/金融信息</button>
+                <button class="filter-btn" data-filter="其他">其他</button>
+            </div>
+        </div>
+
+        <div class="company-grid" id="companyGrid">
+            <!-- 公司卡片将在这里生成 -->
+        </div>
+    </div>
+
+    <script>
+        let allData = [];
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        // 加载数据
+        async function loadData() {
+            try {
+                const response = await fetch('data/mapping-data.json');
+                allData = await response.json();
+                renderCompanies();
+                updateStats();
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('companyGrid').innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">⚠️</div>
+                        <h2>数据加载失败</h2>
+                        <p>请确保 mapping-data.json 文件存在</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 更新统计
+        function updateStats() {
+            document.getElementById('totalCount').textContent = `${allData.length} 家公司`;
+            const dates = allData.map(d => d.reportDate).filter(d => d);
+            if (dates.length > 0) {
+                document.getElementById('lastUpdate').textContent = `最新: ${dates.sort().pop()}`;
+            }
+        }
+
+        // 获取业务类型样式类
+        function getBusinessTypeClass(type) {
+            if (type === '大模型AI平台') return '';
+            if (type === 'B2B机构业务') return 'b2b';
+            if (type === 'AI业务/金融信息') return 'finance';
+            return 'other';
+        }
+
+        // 检查是否有数据
+        function getDataTags(company) {
+            const tags = [];
+            if (company.organization) tags.push('组织架构');
+            if (company.teamSize) tags.push('团队规模');
+            if (company.talentBackground) tags.push('人才背景');
+            if (company.compensation) tags.push('薪酬特点');
+            if (company.talentFlow) tags.push('人才流动');
+            if (company.strategy) tags.push('寻访策略');
+            return tags;
+        }
+
+        // 过滤公司
+        function getFilteredCompanies() {
+            return allData.filter(company => {
+                const matchesFilter = currentFilter === 'all' || company.businessType === currentFilter;
+                const matchesSearch = searchQuery === '' ||
+                    company.name.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+        }
+
+        // 渲染公司卡片
+        function renderCompanies() {
+            const grid = document.getElementById('companyGrid');
+            const companies = getFilteredCompanies();
+
+            if (companies.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">🔍</div>
+                        <h2>没有找到匹配的公司</h2>
+                        <p>尝试调整筛选条件或搜索关键词</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = companies.map((company, index) => {
+                const tags = getDataTags(company);
+                return `
+                    <div class="company-card" onclick="viewDetail('${company.id}')" style="animation-delay: ${index * 0.05}s">
+                        <div class="card-header">
+                            <div>
+                                <div class="company-name">${escapeHtml(company.name)}</div>
+                                <span class="business-type ${getBusinessTypeClass(company.businessType)}">${escapeHtml(company.businessType)}</span>
+                            </div>
+                        </div>
+                        ${company.reportDate ? `<div class="report-date">📅 ${escapeHtml(company.reportDate)}</div>` : ''}
+                        <div class="card-content">
+                            ${company.teamSize ? `
+                                <div class="info-row">
+                                    <span class="info-label">团队规模:</span>
+                                    <span class="info-value">${escapeHtml(company.teamSize.substring(0, 100))}...</span>
+                                </div>
+                            ` : ''}
+                            ${company.talentBackground ? `
+                                <div class="info-row">
+                                    <span class="info-label">人才背景:</span>
+                                    <span class="info-value">${escapeHtml(company.talentBackground.substring(0, 100))}...</span>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="card-footer">
+                            <div class="has-data">
+                                ${tags.map(tag => `<span class="data-tag">${tag}</span>`).join('')}
+                            </div>
+                            <button class="view-btn">查看详情 →</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 查看详情
+        function viewDetail(id) {
+            window.location.href = `mapping-detail.html?id=${encodeURIComponent(id)}`;
+        }
+
+        // HTML转义
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // 事件监听
+        document.addEventListener('DOMContentLoaded', () => {
+            // 搜索
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                renderCompanies();
+            });
+
+            // 筛选按钮
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFilter = btn.dataset.filter;
+                    renderCompanies();
+                });
+            });
+
+            loadData();
+        });
+    </script>
+</body>
+</html>

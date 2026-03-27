@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人才Mapping报告 - 详情</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .back-link {
+            color: #a1a1aa;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .back-link:hover {
+            color: #e4e4e7;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .company-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f4f4f5;
+        }
+
+        .business-type {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(102, 126, 234, 0.2);
+            color: #818cf8;
+            font-size: 0.8rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .business-type.b2b {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .business-type.finance {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e4e4e7;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px;
+        }
+
+        .info-bar {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #a1a1aa;
+            font-size: 0.9rem;
+        }
+
+        .info-item strong {
+            color: #e4e4e7;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 20px 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f4f4f5;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(102, 126, 234, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .edit-toggle {
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            color: #a1a1aa;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .edit-toggle:hover {
+            background: rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+            color: #818cf8;
+        }
+
+        .section-body {
+            padding: 24px;
+        }
+
+        .section-content {
+            white-space: pre-wrap;
+            line-height: 1.8;
+            color: #d4d4d8;
+            font-size: 0.95rem;
+        }
+
+        .section-content:empty::before {
+            content: '暂无数据';
+            color: #52525b;
+            font-style: italic;
+        }
+
+        .section-textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 12px;
+            color: #e4e4e7;
+            font-family: inherit;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            resize: vertical;
+        }
+
+        .section-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .save-status {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 14px 24px;
+            background: rgba(34, 197, 94, 0.95);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .save-status.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .save-status.error {
+            background: rgba(239, 68, 68, 0.95);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 80px;
+            color: #a1a1aa;
+        }
+
+        .loading .spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .not-found {
+            text-align: center;
+            padding: 80px;
+        }
+
+        .not-found .icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .not-found h2 {
+            color: #a1a1aa;
+            margin-bottom: 8px;
+        }
+
+        .not-found p {
+            color: #71717a;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-actions {
+                width: 100%;
+            }
+
+            .btn {
+                flex: 1;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <a href="mapping-dashboard.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回列表
+                </a>
+                <div>
+                    <div class="company-title" id="companyName">加载中...</div>
+                    <span class="business-type" id="businessType">--</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="revertChanges()">
+                    <span>↩️</span> 撤销更改
+                </button>
+                <button class="btn btn-success" onclick="saveAllChanges()">
+                    <span>💾</span> 保存全部
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="mainContent">
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>加载中...</p>
+        </div>
+    </div>
+
+    <div class="save-status" id="saveStatus">
+        <span>✓</span> 已保存
+    </div>
+
+    <script>
+        let companyData = null;
+        let originalData = null;
+        let editingSections = new Set();
+        let allData = [];
+
+        const sections = [
+            { key: 'organization', title: '组织架构', icon: '🏗️' },
+            { key: 'teamSize', title: '团队规模', icon: '👥' },
+            { key: 'talentBackground', title: '人才背景', icon: '🎓' },
+            { key: 'compensation', title: '薪酬特点', icon: '💰' },
+            { key: 'talentFlow', title: '人才流动', icon: '🔄' },
+            { key: 'strategy', title: '寻访策略', icon: '🎯' },
+            { key: 'rawContent', title: '原始内容', icon: '📄' },
+        ];
+
+        // 获取URL参数
+        function getUrlParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        // 加载数据
+        async function loadData() {
+            try {
+                const response = await fetch('data/mapping-data.json');
+                allData = await response.json();
+
+                const id = getUrlParam('id');
+                companyData = allData.find(d => d.id === id);
+
+                if (!companyData) {
+                    showNotFound();
+                    return;
+                }
+
+                originalData = JSON.parse(JSON.stringify(companyData));
+                loadLocalEdits();
+                renderPage();
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('mainContent').innerHTML = `
+                    <div class="not-found">
+                        <div class="icon">⚠️</div>
+                        <h2>数据加载失败</h2>
+                        <p>请确保 mapping-data.json 文件存在</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 加载本地编辑
+        function loadLocalEdits() {
+            const saved = localStorage.getItem(`mapping_edits_${companyData.id}`);
+            if (saved) {
+                try {
+                    const edits = JSON.parse(saved);
+                    Object.assign(companyData, edits);
+                } catch (e) {
+                    console.error('加载本地编辑失败:', e);
+                }
+            }
+        }
+
+        // 保存到本地
+        function saveLocalEdits() {
+            const edits = {};
+            sections.forEach(s => {
+                if (companyData[s.key] !== originalData[s.key]) {
+                    edits[s.key] = companyData[s.key];
+                }
+            });
+            if (Object.keys(edits).length > 0) {
+                localStorage.setItem(`mapping_edits_${companyData.id}`, JSON.stringify(edits));
+            } else {
+                localStorage.removeItem(`mapping_edits_${companyData.id}`);
+            }
+        }
+
+        // 显示未找到
+        function showNotFound() {
+            document.getElementById('mainContent').innerHTML = `
+                <div class="not-found">
+                    <div class="icon">🔍</div>
+                    <h2>未找到该公司</h2>
+                    <p><a href="mapping-dashboard.html" style="color: #818cf8;">返回列表页</a></p>
+                </div>
+            `;
+        }
+
+        // 获取业务类型样式类
+        function getBusinessTypeClass(type) {
+            if (type === '大模型AI平台') return '';
+            if (type === 'B2B机构业务') return 'b2b';
+            if (type === 'AI业务/金融信息') return 'finance';
+            return '';
+        }
+
+        // 渲染页面
+        function renderPage() {
+            document.getElementById('companyName').textContent = companyData.name;
+            const typeEl = document.getElementById('businessType');
+            typeEl.textContent = companyData.businessType;
+            typeEl.className = 'business-type ' + getBusinessTypeClass(companyData.businessType);
+
+            document.getElementById('mainContent').innerHTML = `
+                <div class="info-bar">
+                    <div class="info-item">
+                        <span>📁</span>
+                        <span>文件名: <strong>${escapeHtml(companyData.filename)}</strong></span>
+                    </div>
+                    ${companyData.reportDate ? `
+                        <div class="info-item">
+                            <span>📅</span>
+                            <span>报告日期: <strong>${escapeHtml(companyData.reportDate)}</strong></span>
+                        </div>
+                    ` : ''}
+                </div>
+                <div class="content-grid">
+                    ${sections.map(s => renderSection(s)).join('')}
+                </div>
+            `;
+        }
+
+        // 渲染单个区块
+        function renderSection(section) {
+            const isEditing = editingSections.has(section.key);
+            const value = companyData[section.key] || '';
+
+            return `
+                <div class="section-card" id="section-${section.key}">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">${section.icon}</span>
+                            ${section.title}
+                        </div>
+                        <button class="edit-toggle" onclick="toggleEdit('${section.key}')">
+                            ${isEditing ? '👁️ 预览' : '✏️ 编辑'}
+                        </button>
+                    </div>
+                    <div class="section-body">
+                        ${isEditing ? `
+                            <textarea class="section-textarea" id="textarea-${section.key}"
+                                onchange="updateField('${section.key}')"
+                                oninput="autoSaveField('${section.key}')">${escapeHtml(value)}</textarea>
+                        ` : `
+                            <div class="section-content">${escapeHtml(value)}</div>
+                        `}
+                    </div>
+                </div>
+            `;
+        }
+
+        // 切换编辑模式
+        function toggleEdit(key) {
+            if (editingSections.has(key)) {
+                editingSections.delete(key);
+            } else {
+                editingSections.add(key);
+            }
+            const sectionEl = document.getElementById(`section-${key}`);
+            const section = sections.find(s => s.key === key);
+            sectionEl.outerHTML = renderSection(section);
+        }
+
+        // 更新字段
+        function updateField(key) {
+            const textarea = document.getElementById(`textarea-${key}`);
+            if (textarea) {
+                companyData[key] = textarea.value;
+                saveLocalEdits();
+            }
+        }
+
+        // 自动保存
+        let autoSaveTimer = null;
+        function autoSaveField(key) {
+            clearTimeout(autoSaveTimer);
+            autoSaveTimer = setTimeout(() => {
+                updateField(key);
+            }, 500);
+        }
+
+        // 撤销更改
+        function revertChanges() {
+            if (!confirm('确定要撤销所有更改吗？这将恢复到原始数据。')) {
+                return;
+            }
+            companyData = JSON.parse(JSON.stringify(originalData));
+            localStorage.removeItem(`mapping_edits_${companyData.id}`);
+            editingSections.clear();
+            renderPage();
+            showSaveStatus('已撤销', false);
+        }
+
+        // 保存全部更改
+        function saveAllChanges() {
+            sections.forEach(s => {
+                if (editingSections.has(s.key)) {
+                    updateField(s.key);
+                }
+            });
+            saveLocalEdits();
+            showSaveStatus('已保存到本地浏览器', false);
+
+            setTimeout(() => {
+                if (confirm('是否导出完整的 JSON 文件？\n\n（注意：GitHub Pages 无法直接保存文件，需要手动更新 data/mapping-data.json）')) {
+                    exportFullJson();
+                }
+            }, 500);
+        }
+
+        // 导出完整 JSON
+        function exportFullJson() {
+            const index = allData.findIndex(d => d.id === companyData.id);
+            if (index >= 0) {
+                allData[index] = companyData;
+            }
+
+            const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'mapping-data.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // 显示保存状态
+        function showSaveStatus(message, isError = false) {
+            const el = document.getElementById('saveStatus');
+            el.innerHTML = `<span>${isError ? '⚠️' : '✓'}</span> ${message}`;
+            el.className = 'save-status show' + (isError ? ' error' : '');
+            setTimeout(() => {
+                el.classList.remove('show');
+            }, 3000);
+        }
+
+        // HTML转义
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

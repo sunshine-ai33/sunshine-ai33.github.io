@@ -187,6 +187,8 @@
     <script>
         // 页面列表数据（由 Claude 自动生成）
         const pages = [
+            { filename: 'salary-dashboard.html', title: '薪资数据看板', description: '查看和管理薪资调研数据' },
+            { filename: 'mapping-dashboard.html', title: '人才Mapping报告库', description: '33家公司的人才Mapping报告' },
             { filename: 'card-images.html', title: 'card-images.html' },
             { filename: 'project-report.html', title: 'project-report.html' }
         ];
@@ -215,7 +217,7 @@
                         ${getIconForPage(page.filename)}
                     </div>
                     <h3 class="card-title">${page.title || page.filename}</h3>
-                    <p class="card-desc">${page.filename}</p>
+                    <p class="card-desc">${page.description || page.filename}</p>
                     <a href="${page.filename}" class="card-link">
                         访问页面
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -230,6 +232,7 @@
         // 根据文件名获取图标
         function getIconForPage(filename) {
             const lower = filename.toLowerCase();
+            if (lower.includes('mapping')) return '🏢';
             if (lower.includes('train') || lower.includes('培训')) return '🎓';
             if (lower.includes('report') || lower.includes('报告')) return '📊';
             if (lower.includes('card') || lower.includes('卡片')) return '🃏';
