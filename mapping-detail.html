@@ -545,6 +545,12 @@
             return '';
         }
 
+        function hasContent(sectionKey) {
+            const value = companyData[sectionKey] || '';
+            const table = getTableForSection(sectionKey);
+            return value.trim().length > 0 || (table && table.trim().length > 0);
+        }
+
         function renderPage() {
             document.getElementById('companyName').textContent = companyData.name;
             const typeEl = document.getElementById('businessType');
@@ -565,8 +571,8 @@
                     ` : ''}
                 </div>
                 <div class="content-grid">
-                    ${sections.map(s => renderSection(s)).join('')}
-                    ${renderSection(sensitiveSection, true)}
+                    ${sections.filter(s => hasContent(s.key)).map(s => renderSection(s)).join('')}
+                    ${hasContent(sensitiveSection.key) ? renderSection(sensitiveSection, true) : ''}
                 </div>
             `;
         }
