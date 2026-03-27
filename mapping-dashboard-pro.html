@@ -21,7 +21,7 @@
         .header {
             background: #ffffff;
             border-bottom: 1px solid #e1e8ed;
-            padding: 24px 40px;
+            padding: 28px 40px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -45,7 +45,7 @@
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
             color: #1a4d2e;
             letter-spacing: -0.3px;
@@ -53,7 +53,7 @@
 
         .logo-sub {
             color: #64748b;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 400;
             margin-left: 12px;
             padding-left: 12px;
@@ -67,7 +67,7 @@
             align-items: center;
             gap: 8px;
             transition: color 0.2s;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
         }
 
@@ -75,130 +75,42 @@
             color: #1a4d2e;
         }
 
-        .header-right {
+        .header-stats {
             display: flex;
+            gap: 24px;
             align-items: center;
-            gap: 20px;
         }
 
-        .update-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 13px;
+        .stat {
+            text-align: right;
         }
 
-        .update-badge {
-            padding: 6px 12px;
-            background: #dcfce7;
-            color: #166534;
-            border-radius: 6px;
-            font-weight: 600;
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a4d2e;
+        }
+
+        .stat-label {
             font-size: 12px;
-        }
-
-        .update-badge.overdue {
-            background: #fee2e2;
-            color: #991b1b;
-        }
-
-        .update-date {
             color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 32px 40px;
+            padding: 40px;
         }
 
-        .stats-overview {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 32px;
-        }
-
-        .stat-card {
-            background: #ffffff;
-            border: 1px solid #e1e8ed;
-            border-radius: 12px;
-            padding: 24px;
-            transition: all 0.2s;
-        }
-
-        .stat-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-
-        .stat-card.primary {
-            background: linear-gradient(135deg, #1a4d2e 0%, #2d6a4f 100%);
-            border: none;
-        }
-
-        .stat-card.primary .stat-value,
-        .stat-card.primary .stat-label {
-            color: #ffffff;
-        }
-
-        .stat-value {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1e293b;
-            line-height: 1.2;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: #64748b;
-            margin-top: 6px;
-            font-weight: 500;
-        }
-
-        .stat-trend {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            margin-top: 8px;
-            font-size: 12px;
-            color: #94a3b8;
-        }
-
-        .stat-trend.up {
-            color: #16a34a;
-        }
-
-        .stat-icon {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .filters-section {
+        .filters {
             background: #ffffff;
             border: 1px solid #e1e8ed;
             border-radius: 12px;
             padding: 24px;
             margin-bottom: 32px;
-        }
-
-        .filters-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .filters-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #475569;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .filters-row {
             display: flex;
             gap: 20px;
             align-items: center;
@@ -426,30 +338,20 @@
             font-size: 14px;
         }
 
-        @media (max-width: 1024px) {
-            .stats-overview {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         @media (max-width: 768px) {
             .header {
-                padding: 16px 20px;
+                padding: 20px;
             }
 
             .container {
                 padding: 20px;
             }
 
-            .stats-overview {
-                grid-template-columns: 1fr;
-            }
-
             .company-grid {
                 grid-template-columns: 1fr;
             }
 
-            .filters-row {
+            .filters {
                 flex-direction: column;
             }
 
@@ -457,9 +359,9 @@
                 min-width: 100%;
             }
 
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
+            .header-stats {
+                width: 100%;
+                justify-content: flex-end;
             }
         }
     </style>
@@ -475,41 +377,33 @@
                     返回首页
                 </a>
                 <div style="display:flex;align-items:center;">
-                    <div class="logo">🏢 人才Mapping数据库</div>
+                    <div class="logo">人才Mapping报告库</div>
                     <span class="logo-sub">2026年度</span>
                 </div>
             </div>
-            <div class="header-right">
-                <div class="update-info">
-                    <span class="update-badge" id="updateBadge">数据最新</span>
-                    <span class="update-date" id="updateDate">数据更新至：--</span>
+            <div class="header-stats">
+                <div class="stat">
+                    <div class="stat-value" id="totalCount">0</div>
+                    <div class="stat-label">公司</div>
                 </div>
             </div>
         </div>
     </header>
 
     <div class="container">
-        <div class="stats-overview" id="statsOverview">
-        </div>
-
-        <div class="filters-section">
-            <div class="filters-header">
-                <div class="filters-title">筛选公司</div>
+        <div class="filters">
+            <div class="search-box">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="搜索公司名称...">
             </div>
-            <div class="filters-row">
-                <div class="search-box">
-                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="M21 21l-4.35-4.35"/>
-                    </svg>
-                    <input type="text" id="searchInput" placeholder="搜索公司名称...">
-                </div>
-                <div class="filter-group">
-                    <button class="filter-btn active" data-filter="all">全部</button>
-                    <button class="filter-btn" data-filter="大模型AI平台">大模型AI平台</button>
-                    <button class="filter-btn" data-filter="B2B机构业务">B2B机构业务</button>
-                    <button class="filter-btn" data-filter="AI业务/金融信息">AI业务/金融信息</button>
-                </div>
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="大模型AI平台">大模型AI平台</button>
+                <button class="filter-btn" data-filter="B2B机构业务">B2B机构业务</button>
+                <button class="filter-btn" data-filter="AI业务/金融信息">AI业务/金融信息</button>
             </div>
         </div>
 
@@ -521,15 +415,13 @@
         let allData = [];
         let currentFilter = 'all';
         let searchQuery = '';
-        const DATA_VERSION = '2026-03';
 
         async function loadData() {
             try {
                 const response = await fetch('data/mapping-data.json');
                 allData = await response.json();
-                renderStats();
                 renderCompanies();
-                updateDateInfo();
+                document.getElementById('totalCount').textContent = allData.length;
             } catch (error) {
                 document.getElementById('companyGrid').innerHTML = `
                     <div class="empty-state">
@@ -539,61 +431,6 @@
                     </div>
                 `;
             }
-        }
-
-        function updateDateInfo() {
-            const dates = allData.map(d => d.reportDate).filter(d => d);
-            const latestDate = dates.length > 0 ? dates.sort().pop() : DATA_VERSION;
-
-            document.getElementById('updateDate').textContent = `数据更新至：${latestDate}`;
-
-            const [year, month] = latestDate.split('-').map(Number);
-            const lastUpdate = new Date(year, (month || 1) - 1);
-            const now = new Date();
-            const daysDiff = Math.floor((now - lastUpdate) / (1000 * 60 * 60 * 24));
-
-            const badge = document.getElementById('updateBadge');
-            if (daysDiff > 30) {
-                badge.textContent = '需要更新';
-                badge.classList.add('overdue');
-            } else {
-                badge.textContent = '数据最新';
-                badge.classList.remove('overdue');
-            }
-        }
-
-        function renderStats() {
-            const stats = [
-                {
-                    value: allData.length,
-                    label: '公司总数',
-                    icon: '🏢',
-                    primary: true
-                },
-                {
-                    value: allData.filter(d => d.businessType === '大模型AI平台').length,
-                    label: '大模型AI平台',
-                    icon: '🤖'
-                },
-                {
-                    value: allData.filter(d => d.businessType === 'B2B机构业务').length,
-                    label: 'B2B机构业务',
-                    icon: '🏛️'
-                },
-                {
-                    value: allData.filter(d => d.businessType === 'AI业务/金融信息').length,
-                    label: 'AI业务/金融信息',
-                    icon: '💰'
-                }
-            ];
-
-            document.getElementById('statsOverview').innerHTML = stats.map(s => `
-                <div class="stat-card ${s.primary ? 'primary' : ''}">
-                    <div class="stat-icon">${s.icon}</div>
-                    <div class="stat-value">${s.value}</div>
-                    <div class="stat-label">${s.label}</div>
-                </div>
-            `).join('');
         }
 
         function getBusinessTypeClass(type) {
