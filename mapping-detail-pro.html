@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人才Mapping报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            color: #2c3e50;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #e1e8ed;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .back-link {
+            color: #64748b;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #1a4d2e;
+        }
+
+        .company-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e293b;
+            letter-spacing: -0.3px;
+        }
+
+        .business-type {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 11px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-left: 12px;
+        }
+
+        .business-type.b2b {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .business-type.finance {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-secondary {
+            background: #f8fafc;
+            color: #475569;
+            border: 1px solid #e1e8ed;
+        }
+
+        .btn-secondary:hover {
+            background: #f1f5f9;
+        }
+
+        .btn-primary {
+            background: #1a4d2e;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #0f341f;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 40px;
+        }
+
+        .info-bar {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 32px;
+            padding: 20px 24px;
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .info-item strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .section-card {
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .section-card.sensitive {
+            border-color: #fecaca;
+            background: #fef2f2;
+        }
+
+        .section-header {
+            padding: 18px 24px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e1e8ed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-card.sensitive .section-header {
+            background: #fee2e2;
+            border-bottom-color: #fecaca;
+        }
+
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-icon {
+            width: 32px;
+            height: 32px;
+            background: #e0f2fe;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .section-card.sensitive .section-icon {
+            background: #fecaca;
+        }
+
+        .sensitive-badge {
+            background: #dc2626;
+            color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+        }
+
+        .edit-toggle {
+            padding: 6px 14px;
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .edit-toggle:hover {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .section-body {
+            padding: 24px;
+        }
+
+        .section-content {
+            white-space: pre-wrap;
+            line-height: 1.8;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .section-content:empty::before {
+            content: '暂无数据';
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .section-textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 16px;
+            background: #f8fafc;
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            color: #374151;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 1.8;
+            resize: vertical;
+        }
+
+        .section-textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+        }
+
+        .table-wrapper {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .table-label {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .markdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .markdown-table th,
+        .markdown-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .markdown-table th {
+            background: #f8fafc;
+            font-weight: 700;
+            color: #374151;
+        }
+
+        .markdown-table td {
+            color: #475569;
+        }
+
+        .markdown-table tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
+        .save-status {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 14px 22px;
+            background: #16a34a;
+            color: #ffffff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+        }
+
+        .save-status.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .save-status.error {
+            background: #dc2626;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 80px;
+            color: #9ca3af;
+        }
+
+        .loading .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e1e8ed;
+            border-top-color: #1a4d2e;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .not-found {
+            text-align: center;
+            padding: 80px;
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+        }
+
+        .not-found .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .not-found h2 {
+            color: #475569;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .not-found p {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-actions {
+                width: 100%;
+            }
+
+            .btn {
+                flex: 1;
+                justify-content: center;
+            }
+
+            .markdown-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .info-bar {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <a href="mapping-dashboard-pro.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    返回列表
+                </a>
+                <div style="display:flex;align-items:center;">
+                    <div class="company-title" id="companyName">加载中...</div>
+                    <span class="business-type" id="businessType">--</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="revertChanges()">
+                    <span>↩️</span> 撤销更改
+                </button>
+                <button class="btn btn-primary" onclick="saveAllChanges()">
+                    <span>💾</span> 保存全部
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="mainContent">
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>加载中...</p>
+        </div>
+    </div>
+
+    <div class="save-status" id="saveStatus">
+        <span>✓</span> 已保存
+    </div>
+
+    <script>
+        let companyData = null;
+        let originalData = null;
+        let editingSections = new Set();
+        let allData = [];
+
+        const sections = [
+            { key: 'companyOverview', title: '公司概况', icon: '🏢' },
+            { key: 'organization', title: '组织架构', icon: '🏗️' },
+            { key: 'teamSize', title: '团队规模与汇报关系', icon: '👥' },
+            { key: 'talentBackground', title: '人才背景特征', icon: '🎓' },
+            { key: 'compensation', title: '薪酬体系', icon: '💰' },
+            { key: 'talentFlow', title: '人才流动分析', icon: '🔄' },
+            { key: 'strategy', title: '寻访策略建议', icon: '🎯' },
+        ];
+
+        const sensitiveSection = { key: 'coreMembers', title: '公开可查核心成员信息整理', icon: '🔐' };
+
+        function getUrlParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch('data/mapping-data.json');
+                allData = await response.json();
+
+                const id = getUrlParam('id');
+                companyData = allData.find(d => d.id === id);
+
+                if (!companyData) {
+                    showNotFound();
+                    return;
+                }
+
+                originalData = JSON.parse(JSON.stringify(companyData));
+                loadLocalEdits();
+                renderPage();
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('mainContent').innerHTML = `
+                    <div class="not-found">
+                        <div class="icon">⚠️</div>
+                        <h2>数据加载失败</h2>
+                        <p>请确保 mapping-data.json 文件存在</p>
+                    </div>
+                `;
+            }
+        }
+
+        function loadLocalEdits() {
+            const saved = localStorage.getItem(`mapping_edits_${companyData.id}`);
+            if (saved) {
+                try {
+                    const edits = JSON.parse(saved);
+                    Object.assign(companyData, edits);
+                } catch (e) {
+                    console.error('加载本地编辑失败:', e);
+                }
+            }
+        }
+
+        function saveLocalEdits() {
+            const allKeys = sections.map(s => s.key).concat([sensitiveSection.key]);
+            const edits = {};
+            allKeys.forEach(key => {
+                if (companyData[key] !== originalData[key]) {
+                    edits[key] = companyData[key];
+                }
+            });
+            if (Object.keys(edits).length > 0) {
+                localStorage.setItem(`mapping_edits_${companyData.id}`, JSON.stringify(edits));
+            } else {
+                localStorage.removeItem(`mapping_edits_${companyData.id}`);
+            }
+        }
+
+        function showNotFound() {
+            document.getElementById('mainContent').innerHTML = `
+                <div class="not-found">
+                    <div class="icon">🔍</div>
+                    <h2>未找到该公司</h2>
+                    <p><a href="mapping-dashboard-pro.html" style="color: #1a4d2e;">返回列表页</a></p>
+                </div>
+            `;
+        }
+
+        function getBusinessTypeClass(type) {
+            if (type === '大模型AI平台') return '';
+            if (type === 'B2B机构业务') return 'b2b';
+            if (type === 'AI业务/金融信息') return 'finance';
+            return '';
+        }
+
+        function hasContent(sectionKey) {
+            const value = companyData[sectionKey] || '';
+            const table = getTableForSection(sectionKey);
+            return value.trim().length > 0 || (table && table.trim().length > 0);
+        }
+
+        function getTableForSection(sectionKey) {
+            const tableMap = {
+                'companyOverview': 'companyOverviewTable',
+                'teamSize': 'keyPositionsTable',
+                'compensation': 'compensationTable',
+                'talentFlow': 'talentFlowTable',
+                'coreMembers': 'coreMembersTable',
+            };
+            const tableKey = tableMap[sectionKey];
+            return tableKey ? companyData[tableKey] : null;
+        }
+
+        function renderPage() {
+            document.getElementById('companyName').textContent = companyData.name;
+            const typeEl = document.getElementById('businessType');
+            typeEl.textContent = companyData.businessType;
+            typeEl.className = 'business-type ' + getBusinessTypeClass(companyData.businessType);
+
+            document.getElementById('mainContent').innerHTML = `
+                <div class="info-bar">
+                    <div class="info-item">
+                        <span>📁</span>
+                        <span>文件名: <strong>${escapeHtml(companyData.filename)}</strong></span>
+                    </div>
+                    ${companyData.reportDate ? `
+                        <div class="info-item">
+                            <span>📅</span>
+                            <span>报告日期: <strong>${escapeHtml(companyData.reportDate)}</strong></span>
+                        </div>
+                    ` : ''}
+                </div>
+                <div>
+                    ${sections.filter(s => hasContent(s.key)).map(s => renderSection(s)).join('')}
+                    ${hasContent(sensitiveSection.key) ? renderSection(sensitiveSection, true) : ''}
+                </div>
+            `;
+        }
+
+        function renderSection(section, isSensitive = false) {
+            const isEditing = editingSections.has(section.key);
+            const value = companyData[section.key] || '';
+            const tableHtml = getTableForSection(section.key);
+
+            return `
+                <div class="section-card ${isSensitive ? 'sensitive' : ''}" id="section-${section.key}">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">${section.icon}</span>
+                            ${section.title}
+                            ${isSensitive ? '<span class="sensitive-badge">敏感信息</span>' : ''}
+                        </div>
+                        <button class="edit-toggle" onclick="toggleEdit('${section.key}')">
+                            ${isEditing ? '👁️ 预览' : '✏️ 编辑'}
+                        </button>
+                    </div>
+                    <div class="section-body">
+                        ${isEditing ? `
+                            <textarea class="section-textarea" id="textarea-${section.key}"
+                                onchange="updateField('${section.key}')"
+                                oninput="autoSaveField('${section.key}')">${escapeHtml(value)}</textarea>
+                        ` : `
+                            <div class="section-content">${escapeHtml(value)}</div>
+                        `}
+                        ${tableHtml ? `
+                            <div class="table-wrapper">
+                                <div class="table-label">📊 数据表格</div>
+                                ${tableHtml}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleEdit(key) {
+            if (editingSections.has(key)) {
+                editingSections.delete(key);
+            } else {
+                editingSections.add(key);
+            }
+            const sectionEl = document.getElementById(`section-${key}`);
+            const isSensitive = key === sensitiveSection.key;
+            const section = isSensitive ? sensitiveSection : sections.find(s => s.key === key);
+            sectionEl.outerHTML = renderSection(section, isSensitive);
+        }
+
+        function updateField(key) {
+            const textarea = document.getElementById(`textarea-${key}`);
+            if (textarea) {
+                companyData[key] = textarea.value;
+                saveLocalEdits();
+            }
+        }
+
+        let autoSaveTimer = null;
+        function autoSaveField(key) {
+            clearTimeout(autoSaveTimer);
+            autoSaveTimer = setTimeout(() => {
+                updateField(key);
+            }, 500);
+        }
+
+        function revertChanges() {
+            if (!confirm('确定要撤销所有更改吗？这将恢复到原始数据。')) {
+                return;
+            }
+            companyData = JSON.parse(JSON.stringify(originalData));
+            localStorage.removeItem(`mapping_edits_${companyData.id}`);
+            editingSections.clear();
+            renderPage();
+            showSaveStatus('已撤销', false);
+        }
+
+        function saveAllChanges() {
+            const allKeys = sections.map(s => s.key).concat([sensitiveSection.key]);
+            allKeys.forEach(key => {
+                if (editingSections.has(key)) {
+                    updateField(key);
+                }
+            });
+            saveLocalEdits();
+            showSaveStatus('已保存到本地浏览器', false);
+
+            setTimeout(() => {
+                if (confirm('是否导出完整的 JSON 文件？\n\n（注意：GitHub Pages 无法直接保存文件，需要手动更新 data/mapping-data.json）')) {
+                    exportFullJson();
+                }
+            }, 500);
+        }
+
+        function exportFullJson() {
+            const index = allData.findIndex(d => d.id === companyData.id);
+            if (index >= 0) {
+                allData[index] = companyData;
+            }
+
+            const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'mapping-data.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function showSaveStatus(message, isError = false) {
+            const el = document.getElementById('saveStatus');
+            el.innerHTML = `<span>${isError ? '⚠️' : '✓'}</span> ${message}`;
+            el.className = 'save-status show' + (isError ? ' error' : '');
+            setTimeout(() => {
+                el.classList.remove('show');
+            }, 3000);
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>
