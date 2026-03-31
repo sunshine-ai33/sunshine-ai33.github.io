@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目标制定与对齐 - 培训材料</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #1e293b;
+            overflow: hidden;
+        }
+
+        .slides-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            padding: 80px 120px;
+            display: none;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide.cover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #6d28d9 100%);
+            color: white;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #3730a3;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.85;
+            margin-top: 20px;
+            font-weight: 400;
+        }
+
+        .cover-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            margin-top: 40px;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .two-col {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .three-col {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+        }
+
+        .list-bullet {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .table-wrapper {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+            padding: 18px 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            border-left: 4px solid #667eea;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .highlight-box-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+        }
+
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 4px solid #667eea;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 5px;
+        }
+
+        .timeline-desc {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .tag-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: white;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        .tag.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+        }
+
+        .tag.green {
+            background: #dcfce7;
+            color: #166534;
+            border: none;
+        }
+
+        .tag.red {
+            background: #fee2e2;
+            color: #991b1b;
+            border: none;
+        }
+
+        .nav-dots {
+            position: fixed;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #667eea;
+        }
+
+        .nav-dot.active {
+            background: #667eea;
+            transform: scale(1.4);
+        }
+
+        .slide-number {
+            position: fixed;
+            bottom: 30px;
+            right: 40px;
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .key-takeaway {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 16px;
+            margin-top: 30px;
+        }
+
+        .key-takeaway-title {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        .key-takeaway-content {
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .do-dont-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .do-box {
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .dont-box {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .do-box-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 20px;
+        }
+
+        .dont-box-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 20px;
+        }
+
+        .big-number {
+            font-size: 5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .big-number-label {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots" id="navDots"></div>
+    <div class="slide-number" id="slideNumber"></div>
+
+    <div class="slides-container">
+        <!-- 封面 -->
+        <div class="slide cover active">
+            <h1>目标制定与对齐</h1>
+            <p class="subtitle">保持本色 · 融入敏捷 · 上下同欲</p>
+            <div class="cover-tag">主管培训材料</div>
+        </div>
+
+        <!-- 方案概述 -->
+        <div class="slide">
+            <h2>方案概述</h2>
+            <div class="content-grid two-col">
+                <div class="card">
+                    <div class="card-icon">✓</div>
+                    <div class="card-title">保持本色</div>
+                    <div class="card-desc">
+                        继续沿用"结构化思考-四个知道"方法论<br><br>
+                        继续使用TPC驾驶舱、绩效承诺书等现有工具
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <div class="card-title">融入敏捷</div>
+                    <div class="card-desc">
+                        增加目标对齐会和1:1沟通<br><br>
+                        增加月度回顾、中期调整、复盘沉淀
+                    </div>
+                </div>
+            </div>
+            <div class="key-takeaway">
+                <div class="key-takeaway-title">核心设计思路</div>
+                <div class="key-takeaway-content">目标制定不是"填表"，是"建立共识"</div>
+            </div>
+        </div>
+
+        <!-- 时间节奏 -->
+        <div class="slide">
+            <h2>时间节奏概览</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-title">每月初</div>
+                    <div class="timeline-desc">团队对齐会<br>1:1深度对齐</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-title">每月中</div>
+                    <div class="timeline-desc">月度回顾<br>轻量级同步</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-title">季度中</div>
+                    <div class="timeline-desc">中期调整<br>灵活应对变化</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">4</div>
+                    <div class="timeline-title">结束时</div>
+                    <div class="timeline-desc">复盘沉淀<br>总结经验</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 四个知道 -->
+        <div class="slide">
+            <h2>目标制定：四个知道</h2>
+            <div class="content-grid two-col">
+                <div class="card">
+                    <div class="card-title">横向四个知道（看外部）</div>
+                    <div class="list-item">
+                        <div class="list-bullet">1</div>
+                        <div>社会、行业发展，2-3年趋势</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">2</div>
+                        <div>竞争对手的情况</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">3</div>
+                        <div>政策监控方向</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">4</div>
+                        <div>技术发展</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">纵向四个知道（看自身）</div>
+                    <div class="list-item">
+                        <div class="list-bullet">1</div>
+                        <div>学术前沿（主要paper）</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">2</div>
+                        <div>工业水平（最佳实践）</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">3</div>
+                        <div>牛掰架构的主要工程模块</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">4</div>
+                        <div>我们的技术在行业中的位置</div>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">这是我们的核心优势</div>
+                <div>四个知道帮我们"以终为始"，基于深度分析定目标，而不是拍脑袋。</div>
+            </div>
+        </div>
+
+        <!-- 团队对齐会 -->
+        <div class="slide">
+            <h2>团队对齐会（2小时）</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>环节</th>
+                            <th>操作要点</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight:600;color:#1e3a8a;">15min</td>
+                            <td><strong>主管开场</strong></td>
+                            <td>分享背景，讲清楚"为什么"</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;color:#1e3a8a;">40min</td>
+                            <td><strong>员工分享</strong></td>
+                            <td>每个人说想法，主管先听</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;color:#1e3a8a;">40min</td>
+                            <td><strong>集体研讨</strong></td>
+                            <td>碰撞对齐，明确协作依赖</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;color:#1e3a8a;">15min</td>
+                            <td><strong>总结收尾</strong></td>
+                            <td>明确下一步动作</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 三要三不要 -->
+        <div class="slide">
+            <h2>对齐会上：三要三不要</h2>
+            <div class="do-dont-grid">
+                <div class="do-box">
+                    <div class="do-box-title">✓ 要</div>
+                    <div class="list-item">
+                        <div style="font-size:1.5rem;margin-right:15px;">👂</div>
+                        <div><strong>先听员工说</strong><br>不要一上来就定调</div>
+                    </div>
+                    <div class="list-item">
+                        <div style="font-size:1.5rem;margin-right:15px;">❓</div>
+                        <div><strong>问"为什么"</strong><br>理解背后的思考</div>
+                    </div>
+                    <div class="list-item">
+                        <div style="font-size:1.5rem;margin-right:15px;">💬</div>
+                        <div><strong>鼓励不同声音</strong><br>真理越辩越明</div>
+                    </div>
+                </div>
+                <div class="dont-box">
+                    <div class="dont-box-title">✗ 不要</div>
+                    <div class="list-item">
+                        <div style="font-size:1.5rem;margin-right:15px;">🚫</div>
+                        <div><strong>打断员工</strong><br>哪怕你不同意</div>
+                    </div>
+                    <div class="list-item">
+                        <div style="font-size:1.5rem;margin-right:15px;">🚫</div>
+                        <div><strong>说"这不行"</strong><br>要说"我们再想想"</div>
+                    </div>
+                    <div class="list-item">
+                        <div style="font-size:1.5rem;margin-right:15px;">🚫</div>
+                        <div><strong>追求"一致通过"</strong><br>必要时可以拍板</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1:1深度对齐 -->
+        <div class="slide">
+            <h2>1:1深度对齐（45分钟/人）</h2>
+            <div class="content-grid two-col">
+                <div class="card">
+                    <div class="card-title">标准流程</div>
+                    <div class="list-item">
+                        <div class="list-bullet">1</div>
+                        <div><strong>员工先说</strong>（10min）<br>分享自己的想法</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">2</div>
+                        <div><strong>共同探讨</strong>（20min）<br>提问、补充、挑战</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">3</div>
+                        <div><strong>确认优先级</strong>（10min）<br>明确什么最重要</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-bullet">4</div>
+                        <div><strong>收尾确认</strong>（5min）<br>总结确认</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">好用的提问清单</div>
+                    <p style="margin-bottom:15px;color:#64748b;">关于目标：</p>
+                    <div class="tag-row">
+                        <span class="tag">实现了会带来什么价值？</span>
+                        <span class="tag">和团队大目标的关联是？</span>
+                        <span class="tag">挑战感打几分？</span>
+                    </div>
+                    <p style="margin:20px 0 15px;color:#64748b;">关于发展：</p>
+                    <div class="tag-row">
+                        <span class="tag">能锻炼你哪方面能力？</span>
+                        <span class="tag">和你长期方向一致吗？</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 收尾一定要做 -->
+        <div class="slide">
+            <h2>1:1收尾：一定要做的4件事</h2>
+            <div class="content-grid two-col" style="margin-top:30px;">
+                <div style="text-align:center;">
+                    <div class="big-number">1</div>
+                    <div class="big-number-label">让员工用自己的话<br><strong>复述一遍</strong></div>
+                </div>
+                <div style="text-align:center;">
+                    <div class="big-number">2</div>
+                    <div class="big-number-label">明确：<strong>最重要的1件事</strong></div>
+                </div>
+                <div style="text-align:center;">
+                    <div class="big-number">3</div>
+                    <div class="big-number-label">确认：<strong>需要什么支持</strong></div>
+                </div>
+                <div style="text-align:center;">
+                    <div class="big-number">4</div>
+                    <div class="big-number-label">同步：<strong>更新TPC和绩效承诺书</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 过程管理 -->
+        <div class="slide">
+            <h2>过程管理：月度回顾与中期调整</h2>
+            <div class="content-grid two-col">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">月度回顾（1小时）</div>
+                    <div class="card-desc">
+                        <strong>重点看：</strong><br><br>
+                        • 谁在正常推进？<br>
+                        • 谁遇到困难需要帮助？<br>
+                        • 有什么风险需要早知道？
+                    </div>
+                    <div class="highlight-box" style="margin-top:20px;background:#f0fdf4;border-left-color:#22c55e;">
+                        <div style="color:#166534;font-weight:600;">原则：风险和需要帮助 > 已完成的成果</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <div class="card-title">中期调整</div>
+                    <div class="card-desc">
+                        <strong>这些情况可以调整目标：</strong><br><br>
+                        • 外部环境变了<br>
+                        • 内部情况变了<br>
+                        • 之前的假设被证伪了
+                    </div>
+                    <div class="highlight-box" style="margin-top:20px;background:#fef9c3;border-left-color:#eab308;">
+                        <div style="color:#854d0e;font-weight:600;">目标不是定死的，及时调整是负责任的表现</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 复盘沉淀 -->
+        <div class="slide">
+            <h2>复盘沉淀：从经历到经验</h2>
+            <div class="card" style="margin-bottom:30px;">
+                <div class="card-title">团队复盘四步走</div>
+                <div class="content-grid four-col" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px;">
+                    <div style="text-align:center;padding:20px;">
+                        <div style="font-size:2.5rem;margin-bottom:10px;">📈</div>
+                        <div style="font-weight:600;color:#1e3a8a;">回顾成果</div>
+                        <div style="font-size:0.9rem;color:#64748b;margin-top:8px;">目标是什么？<br>实际达成了什么？</div>
+                    </div>
+                    <div style="text-align:center;padding:20px;">
+                        <div style="font-size:2.5rem;margin-bottom:10px;">🔍</div>
+                        <div style="font-weight:600;color:#1e3a8a;">分析原因</div>
+                        <div style="font-size:0.9rem;color:#64748b;margin-top:8px;">为什么成？<br>为什么没成？</div>
+                    </div>
+                    <div style="text-align:center;padding:20px;">
+                        <div style="font-size:2.5rem;margin-bottom:10px;">💡</div>
+                        <div style="font-weight:600;color:#1e3a8a;">沉淀经验</div>
+                        <div style="font-size:0.9rem;color:#64748b;margin-top:8px;">如果重来，<br>会怎么做？</div>
+                    </div>
+                    <div style="text-align:center;padding:20px;">
+                        <div style="font-size:2.5rem;margin-bottom:10px;">❤️</div>
+                        <div style="font-weight:600;color:#1e3a8a;">感谢彼此</div>
+                        <div style="font-size:0.9rem;color:#64748b;margin-top:8px;">最想感谢谁？<br>为什么？</div>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">复盘不是"算总账"，是"学习会"</div>
+                <div>对事不对人，聚焦"为什么"，不是"谁的错"。</div>
+            </div>
+        </div>
+
+        <!-- 工具配合 -->
+        <div class="slide">
+            <h2>现有工具与新增方法的配合</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>现有工具</th>
+                            <th>新增方法</th>
+                            <th>如何配合</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>TPC驾驶舱</strong></td>
+                            <td>团队对齐会</td>
+                            <td>先在对齐会上共识，再填到TPC里</td>
+                        </tr>
+                        <tr>
+                            <td><strong>绩效承诺书</strong></td>
+                            <td>1:1深度沟通</td>
+                            <td>主管辅导，员工主动参与，不是"填写"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>产品中台</strong></td>
+                            <td>案例分享</td>
+                            <td>在对齐会上分享产品中台上的优秀文档</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="key-takeaway" style="margin-top:30px;">
+                <div class="key-takeaway-title">最终目的</div>
+                <div class="key-takeaway-content">当每个人都理解"为什么"，当每个人都对目标有ownership，我们才能真正"上下同欲"，无往不胜。</div>
+            </div>
+        </div>
+
+        <!-- 结束页 -->
+        <div class="slide cover">
+            <h1>谢谢聆听</h1>
+            <p class="subtitle">保持本色 · 融入敏捷 · 上下同欲</p>
+            <div class="tag-row" style="justify-content:center;margin-top:40px;">
+                <span class="tag" style="background:rgba(255,255,255,0.15);color:white;border:none;">一页纸速查表</span>
+                <span class="tag" style="background:rgba(255,255,255,0.15);color:white;border:none;">主管随身卡</span>
+                <span class="tag" style="background:rgba(255,255,255,0.15);color:white;border:none;">完整操作指南</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const navDotsContainer = document.getElementById('navDots');
+        const slideNumberEl = document.getElementById('slideNumber');
+        let currentSlide = 0;
+
+        // Create nav dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot' + (index === 0 ? ' active' : '');
+            dot.addEventListener('click', () => goToSlide(index));
+            navDotsContainer.appendChild(dot);
+        });
+
+        function updateSlideNumber() {
+            slideNumberEl.textContent = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            document.querySelectorAll('.nav-dot')[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            document.querySelectorAll('.nav-dot')[currentSlide].classList.add('active');
+            updateSlideNumber();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                if (currentSlide < slides.length - 1) goToSlide(currentSlide + 1);
+            } else if (e.key === 'ArrowLeft') {
+                if (currentSlide > 0) goToSlide(currentSlide - 1);
+            }
+        });
+
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            if (touchStartX - touchEndX > 50 && currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 1);
+            } else if (touchEndX - touchStartX > 50 && currentSlide > 0) {
+                goToSlide(currentSlide - 1);
+            }
+        });
+
+        updateSlideNumber();
+    </script>
+</body>
+</html>
