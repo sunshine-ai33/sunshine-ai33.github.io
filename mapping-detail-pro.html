@@ -88,43 +88,6 @@
             color: #b45309;
         }
 
-        .header-actions {
-            display: flex;
-            gap: 12px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-secondary {
-            background: #f8fafc;
-            color: #475569;
-            border: 1px solid #e1e8ed;
-        }
-
-        .btn-secondary:hover {
-            background: #f1f5f9;
-        }
-
-        .btn-primary {
-            background: #1a4d2e;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background: #0f341f;
-        }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -217,23 +180,6 @@
             margin-left: 10px;
         }
 
-        .edit-toggle {
-            padding: 6px 14px;
-            background: #ffffff;
-            border: 1px solid #e1e8ed;
-            border-radius: 6px;
-            color: #64748b;
-            font-size: 12px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .edit-toggle:hover {
-            background: #f1f5f9;
-            color: #1e293b;
-        }
-
         .section-body {
             padding: 24px;
         }
@@ -249,27 +195,6 @@
             content: '暂无数据';
             color: #9ca3af;
             font-style: italic;
-        }
-
-        .section-textarea {
-            width: 100%;
-            min-height: 150px;
-            padding: 16px;
-            background: #f8fafc;
-            border: 1px solid #e1e8ed;
-            border-radius: 6px;
-            color: #374151;
-            font-family: inherit;
-            font-size: 14px;
-            line-height: 1.8;
-            resize: vertical;
-        }
-
-        .section-textarea:focus {
-            outline: none;
-            border-color: #2563eb;
-            background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
         }
 
         .table-wrapper {
@@ -313,36 +238,6 @@
 
         .markdown-table tr:nth-child(even) td {
             background: #f8fafc;
-        }
-
-        .save-status {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            padding: 14px 22px;
-            background: #16a34a;
-            color: #ffffff;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
-        }
-
-        .save-status.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .save-status.error {
-            background: #dc2626;
-            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
         }
 
         .loading {
@@ -403,15 +298,6 @@
                 align-items: flex-start;
             }
 
-            .header-actions {
-                width: 100%;
-            }
-
-            .btn {
-                flex: 1;
-                justify-content: center;
-            }
-
             .markdown-table {
                 display: block;
                 overflow-x: auto;
@@ -439,14 +325,6 @@
                     <span class="business-type" id="businessType">--</span>
                 </div>
             </div>
-            <div class="header-actions">
-                <button class="btn btn-secondary" onclick="revertChanges()">
-                    <span>↩️</span> 撤销更改
-                </button>
-                <button class="btn btn-primary" onclick="saveAllChanges()">
-                    <span>💾</span> 保存全部
-                </button>
-            </div>
         </div>
     </header>
 
@@ -457,14 +335,8 @@
         </div>
     </div>
 
-    <div class="save-status" id="saveStatus">
-        <span>✓</span> 已保存
-    </div>
-
     <script>
         let companyData = null;
-        let originalData = null;
-        let editingSections = new Set();
         let allData = [];
 
         const sections = [
@@ -497,8 +369,6 @@
                     return;
                 }
 
-                originalData = JSON.parse(JSON.stringify(companyData));
-                loadLocalEdits();
                 renderPage();
             } catch (error) {
                 console.error('加载数据失败:', error);
@@ -509,33 +379,6 @@
                         <p>请确保 mapping-data.json 文件存在</p>
                     </div>
                 `;
-            }
-        }
-
-        function loadLocalEdits() {
-            const saved = localStorage.getItem(`mapping_edits_${companyData.id}`);
-            if (saved) {
-                try {
-                    const edits = JSON.parse(saved);
-                    Object.assign(companyData, edits);
-                } catch (e) {
-                    console.error('加载本地编辑失败:', e);
-                }
-            }
-        }
-
-        function saveLocalEdits() {
-            const allKeys = sections.map(s => s.key).concat([sensitiveSection.key]);
-            const edits = {};
-            allKeys.forEach(key => {
-                if (companyData[key] !== originalData[key]) {
-                    edits[key] = companyData[key];
-                }
-            });
-            if (Object.keys(edits).length > 0) {
-                localStorage.setItem(`mapping_edits_${companyData.id}`, JSON.stringify(edits));
-            } else {
-                localStorage.removeItem(`mapping_edits_${companyData.id}`);
             }
         }
 
@@ -601,7 +444,6 @@
         }
 
         function renderSection(section, isSensitive = false) {
-            const isEditing = editingSections.has(section.key);
             const value = companyData[section.key] || '';
             const tableHtml = getTableForSection(section.key);
 
@@ -613,18 +455,9 @@
                             ${section.title}
                             ${isSensitive ? '<span class="sensitive-badge">敏感信息</span>' : ''}
                         </div>
-                        <button class="edit-toggle" onclick="toggleEdit('${section.key}')">
-                            ${isEditing ? '👁️ 预览' : '✏️ 编辑'}
-                        </button>
                     </div>
                     <div class="section-body">
-                        ${isEditing ? `
-                            <textarea class="section-textarea" id="textarea-${section.key}"
-                                onchange="updateField('${section.key}')"
-                                oninput="autoSaveField('${section.key}')">${escapeHtml(value)}</textarea>
-                        ` : `
-                            <div class="section-content">${escapeHtml(value)}</div>
-                        `}
+                        <div class="section-content">${escapeHtml(value)}</div>
                         ${tableHtml ? `
                             <div class="table-wrapper">
                                 <div class="table-label">📊 数据表格</div>
@@ -634,86 +467,6 @@
                     </div>
                 </div>
             `;
-        }
-
-        function toggleEdit(key) {
-            if (editingSections.has(key)) {
-                editingSections.delete(key);
-            } else {
-                editingSections.add(key);
-            }
-            const sectionEl = document.getElementById(`section-${key}`);
-            const isSensitive = key === sensitiveSection.key;
-            const section = isSensitive ? sensitiveSection : sections.find(s => s.key === key);
-            sectionEl.outerHTML = renderSection(section, isSensitive);
-        }
-
-        function updateField(key) {
-            const textarea = document.getElementById(`textarea-${key}`);
-            if (textarea) {
-                companyData[key] = textarea.value;
-                saveLocalEdits();
-            }
-        }
-
-        let autoSaveTimer = null;
-        function autoSaveField(key) {
-            clearTimeout(autoSaveTimer);
-            autoSaveTimer = setTimeout(() => {
-                updateField(key);
-            }, 500);
-        }
-
-        function revertChanges() {
-            if (!confirm('确定要撤销所有更改吗？这将恢复到原始数据。')) {
-                return;
-            }
-            companyData = JSON.parse(JSON.stringify(originalData));
-            localStorage.removeItem(`mapping_edits_${companyData.id}`);
-            editingSections.clear();
-            renderPage();
-            showSaveStatus('已撤销', false);
-        }
-
-        function saveAllChanges() {
-            const allKeys = sections.map(s => s.key).concat([sensitiveSection.key]);
-            allKeys.forEach(key => {
-                if (editingSections.has(key)) {
-                    updateField(key);
-                }
-            });
-            saveLocalEdits();
-            showSaveStatus('已保存到本地浏览器', false);
-
-            setTimeout(() => {
-                if (confirm('是否导出完整的 JSON 文件？\n\n（注意：GitHub Pages 无法直接保存文件，需要手动更新 data/mapping-data.json）')) {
-                    exportFullJson();
-                }
-            }, 500);
-        }
-
-        function exportFullJson() {
-            const index = allData.findIndex(d => d.id === companyData.id);
-            if (index >= 0) {
-                allData[index] = companyData;
-            }
-
-            const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'mapping-data.json';
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-
-        function showSaveStatus(message, isError = false) {
-            const el = document.getElementById('saveStatus');
-            el.innerHTML = `<span>${isError ? '⚠️' : '✓'}</span> ${message}`;
-            el.className = 'save-status show' + (isError ? ' error' : '');
-            setTimeout(() => {
-                el.classList.remove('show');
-            }, 3000);
         }
 
         function escapeHtml(text) {
