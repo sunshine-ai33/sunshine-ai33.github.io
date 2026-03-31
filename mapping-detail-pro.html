@@ -88,6 +88,33 @@
             color: #b45309;
         }
 
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #1a4d2e;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #0f341f;
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -180,6 +207,23 @@
             margin-left: 10px;
         }
 
+        .edit-toggle {
+            padding: 6px 14px;
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .edit-toggle:hover {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
         .section-body {
             padding: 24px;
         }
@@ -195,6 +239,27 @@
             content: '暂无数据';
             color: #9ca3af;
             font-style: italic;
+        }
+
+        .section-textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 16px;
+            background: #f8fafc;
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            color: #374151;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 1.8;
+            resize: vertical;
+        }
+
+        .section-textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
         }
 
         .table-wrapper {
@@ -284,6 +349,31 @@
             font-size: 14px;
         }
 
+        .save-status {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 14px 22px;
+            background: #16a34a;
+            color: #ffffff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+        }
+
+        .save-status.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             .header {
                 padding: 16px 20px;
@@ -296,6 +386,15 @@
             .header-content {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            .header-actions {
+                width: 100%;
+            }
+
+            .btn {
+                flex: 1;
+                justify-content: center;
             }
 
             .markdown-table {
@@ -325,6 +424,11 @@
                     <span class="business-type" id="businessType">--</span>
                 </div>
             </div>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="exportJson()">
+                    <span>📥</span> 导出 JSON
+                </button>
+            </div>
         </div>
     </header>
 
@@ -335,8 +439,14 @@
         </div>
     </div>
 
+    <div class="save-status" id="saveStatus">
+        <span>✓</span> 已开始下载
+    </div>
+
     <script>
         let companyData = null;
+        let originalData = null;
+        let editingSections = new Set();
         let allData = [];
 
         const sections = [
@@ -369,6 +479,7 @@
                     return;
                 }
 
+                originalData = JSON.parse(JSON.stringify(companyData));
                 renderPage();
             } catch (error) {
                 console.error('加载数据失败:', error);
@@ -444,6 +555,7 @@
         }
 
         function renderSection(section, isSensitive = false) {
+            const isEditing = editingSections.has(section.key);
             const value = companyData[section.key] || '';
             const tableHtml = getTableForSection(section.key);
 
@@ -455,9 +567,18 @@
                             ${section.title}
                             ${isSensitive ? '<span class="sensitive-badge">敏感信息</span>' : ''}
                         </div>
+                        <button class="edit-toggle" onclick="toggleEdit('${section.key}')">
+                            ${isEditing ? '👁️ 预览' : '✏️ 编辑'}
+                        </button>
                     </div>
                     <div class="section-body">
-                        <div class="section-content">${escapeHtml(value)}</div>
+                        ${isEditing ? `
+                            <textarea class="section-textarea" id="textarea-${section.key}"
+                                onchange="updateField('${section.key}')"
+                                oninput="autoSaveField('${section.key}')">${escapeHtml(value)}</textarea>
+                        ` : `
+                            <div class="section-content">${escapeHtml(value)}</div>
+                        `}
                         ${tableHtml ? `
                             <div class="table-wrapper">
                                 <div class="table-label">📊 数据表格</div>
@@ -467,6 +588,59 @@
                     </div>
                 </div>
             `;
+        }
+
+        function toggleEdit(key) {
+            if (editingSections.has(key)) {
+                editingSections.delete(key);
+            } else {
+                editingSections.add(key);
+            }
+            const sectionEl = document.getElementById(`section-${key}`);
+            const isSensitive = key === sensitiveSection.key;
+            const section = isSensitive ? sensitiveSection : sections.find(s => s.key === key);
+            sectionEl.outerHTML = renderSection(section, isSensitive);
+        }
+
+        function updateField(key) {
+            const textarea = document.getElementById(`textarea-${key}`);
+            if (textarea) {
+                companyData[key] = textarea.value;
+            }
+        }
+
+        let autoSaveTimer = null;
+        function autoSaveField(key) {
+            clearTimeout(autoSaveTimer);
+            autoSaveTimer = setTimeout(() => {
+                updateField(key);
+            }, 500);
+        }
+
+        function exportJson() {
+            const index = allData.findIndex(d => d.id === companyData.id);
+            if (index >= 0) {
+                allData[index] = companyData;
+            }
+
+            const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'mapping-data.json';
+            a.click();
+            URL.revokeObjectURL(url);
+
+            showSaveStatus('已开始下载 mapping-data.json');
+        }
+
+        function showSaveStatus(message) {
+            const el = document.getElementById('saveStatus');
+            el.innerHTML = `<span>✓</span> ${message}`;
+            el.className = 'save-status show';
+            setTimeout(() => {
+                el.classList.remove('show');
+            }, 3000);
         }
 
         function escapeHtml(text) {
