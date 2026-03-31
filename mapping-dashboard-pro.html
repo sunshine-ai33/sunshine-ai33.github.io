@@ -400,10 +400,10 @@
                 <input type="text" id="searchInput" placeholder="搜索公司名称...">
             </div>
             <div class="filter-group">
-                <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="大模型AI平台">大模型AI平台</button>
-                <button class="filter-btn" data-filter="B2B机构业务">B2B机构业务</button>
-                <button class="filter-btn" data-filter="AI业务/金融信息">AI业务/金融信息</button>
+                <button class="filter-btn active" data-filter="all" id="filter-all">全部</button>
+                <button class="filter-btn" data-filter="大模型AI平台" id="filter-ai">大模型AI平台</button>
+                <button class="filter-btn" data-filter="B2B机构业务" id="filter-b2b">B2B机构业务</button>
+                <button class="filter-btn" data-filter="AI业务/金融信息" id="filter-finance">AI业务/金融信息</button>
             </div>
         </div>
 
@@ -416,10 +416,23 @@
         let currentFilter = 'all';
         let searchQuery = '';
 
+        function updateFilterCounts() {
+            const countAll = allData.length;
+            const countAI = allData.filter(c => c.businessType === '大模型AI平台').length;
+            const countB2B = allData.filter(c => c.businessType === 'B2B机构业务').length;
+            const countFinance = allData.filter(c => c.businessType === 'AI业务/金融信息').length;
+
+            document.getElementById('filter-all').textContent = `全部 (${countAll})`;
+            document.getElementById('filter-ai').textContent = `大模型AI平台 (${countAI})`;
+            document.getElementById('filter-b2b').textContent = `B2B机构业务 (${countB2B})`;
+            document.getElementById('filter-finance').textContent = `AI业务/金融信息 (${countFinance})`;
+        }
+
         async function loadData() {
             try {
                 const response = await fetch('data/mapping-data.json');
                 allData = await response.json();
+                updateFilterCounts();
                 renderCompanies();
                 document.getElementById('totalCount').textContent = allData.length;
             } catch (error) {
