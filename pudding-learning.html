@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pudding's English Learning Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .stars {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        /* Stats Cards */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .stat-card .number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card .label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Lesson Timeline */
+        .timeline-section {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "📚";
+            font-size: 1.6rem;
+        }
+
+        /* Lesson Card */
+        .lesson-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .lesson-date {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .lesson-topic {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Corrections Table */
+        .corrections-title {
+            font-weight: 700;
+            color: #555;
+            margin: 15px 0 10px;
+            font-size: 0.95rem;
+        }
+
+        .correction-item {
+            background: white;
+            border-radius: 10px;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .correction-arrow {
+            color: #667eea;
+            font-weight: 800;
+            font-size: 1.2rem;
+            padding-top: 2px;
+        }
+
+        .correction-content {
+            flex: 1;
+        }
+
+        .original {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            text-decoration: line-through;
+        }
+
+        .corrected {
+            color: #27ae60;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 3px;
+        }
+
+        /* Vocabulary */
+        .vocab-section {
+            margin-top: 15px;
+        }
+
+        .vocab-title {
+            font-weight: 700;
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .vocab-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .vocab-tag {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .vocab-tag span {
+            opacity: 0.9;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+
+        /* Next Lesson */
+        .next-lesson {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .next-lesson strong {
+            color: #764ba2;
+        }
+
+        /* Lesson Plan Card */
+        .plan-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .plan-card .section-title::before {
+            content: "📋";
+        }
+
+        .plan-item {
+            background: rgba(255,255,255,0.7);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .plan-item h4 {
+            color: #d35400;
+            margin-bottom: 8px;
+        }
+
+        .plan-item ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .plan-item li {
+            margin: 5px 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .lesson-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🌟 Pudding's English Learning Journey 🌟</h1>
+            <p class="subtitle">With Teacher Kent</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="number">3</div>
+                <div class="label">已上课程</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">17</div>
+                <div class="label">剩余课程</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">2</div>
+                <div class="label">新词汇</div>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline-section">
+            <h2 class="section-title">学习记录</h2>
+
+            <!-- 07/22 Lesson -->
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-date">📅 2026-07-22</div>
+                    <div class="lesson-topic">Everybody Up: Book 2 Page 4</div>
+                </div>
+
+                <div class="corrections-title">✏️ 课堂纠正</div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">I don't like animal.</div>
+                        <div class="corrected">I don't like animals.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">Eat the ice cream.</div>
+                        <div class="corrected">Eating ice cream makes me happy.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">I'm not like.</div>
+                        <div class="corrected">I don't like the hot weather.</div>
+                    </div>
+                </div>
+
+                <div class="vocab-section">
+                    <div class="vocab-title">📖 新词汇</div>
+                    <div class="vocab-tags">
+                        <div class="vocab-tag">Pilot <span>飞行员</span></div>
+                        <div class="vocab-tag">Excited <span>兴奋</span></div>
+                    </div>
+                </div>
+
+                <div class="next-lesson">
+                    🔜 <strong>下次课：</strong>Everybody Up: Book 2 Page 6
+                </div>
+            </div>
+
+            <!-- 07/21 Lesson -->
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-date">📅 2026-07-21</div>
+                    <div class="lesson-topic">Singular/Plural</div>
+                </div>
+
+                <div class="corrections-title">✏️ 课堂纠正</div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">I eat the dinner.</div>
+                        <div class="corrected">Yes, I ate dinner.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">Little like.</div>
+                        <div class="corrected">I like it a little.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">I can't find.</div>
+                        <div class="corrected">I could not find it.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">Fast.</div>
+                        <div class="corrected">It's a fast toy car.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">Are you feel better?</div>
+                        <div class="corrected">Do you feel better?</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">Play.</div>
+                        <div class="corrected">I will play after our class.</div>
+                    </div>
+                </div>
+
+                <div class="next-lesson">
+                    🔜 <strong>下次课：</strong>Sentence Construction
+                </div>
+            </div>
+
+            <!-- 07/13 Lesson -->
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-date">📅 2026-07-13</div>
+                    <div class="lesson-topic">A/An + Sentence Structure</div>
+                </div>
+
+                <div class="corrections-title">✏️ 课堂纠正</div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">I play with the grandpa.</div>
+                        <div class="corrected">I am happy because I played with my grandpa.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">Yes, I'm eat.</div>
+                        <div class="corrected">Yes, I ate dinner.</div>
+                    </div>
+                </div>
+                <div class="correction-item">
+                    <div class="correction-arrow">→</div>
+                    <div class="correction-content">
+                        <div class="original">Dog.</div>
+                        <div class="corrected">That is a dog.</div>
+                    </div>
+                </div>
+
+                <div class="next-lesson">
+                    🔜 <strong>下次课：</strong>Sentence Structure
+                </div>
+            </div>
+
+            <!-- Lesson Plan -->
+            <div class="plan-card">
+                <h2 class="section-title" style="color: #d35400;">整体课程计划</h2>
+
+                <div class="plan-item">
+                    <h4>🎯 Focus: Sentence Building</h4>
+                    <p style="color: #666; font-size: 0.9rem;">14 Lessons (25 minutes per lesson)</p>
+                </div>
+
+                <div class="plan-item">
+                    <h4>1️⃣ Likes, Dislikes, and Feelings</h4>
+                    <ul>
+                        <li>I am.... (happy, tired, sad)</li>
+                        <li>I like.... (playing, reading, playing sports)</li>
+                        <li>I don't like.... (eating vegetables, the hot weather)</li>
+                    </ul>
+                </div>
+
+                <div class="plan-item">
+                    <h4>2️⃣ Want and Need + Reason (because)</h4>
+                    <ul>
+                        <li>I want.... because....</li>
+                        <li>I need.... because....</li>
+                    </ul>
+                </div>
+
+                <div class="plan-item">
+                    <h4>3️⃣ Identifying and Locating Things/Objects</h4>
+                    <ul>
+                        <li>It is a.... / This is a....</li>
+                        <li>It is in/on/at....</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>💪 Keep Learning, Pudding! 🚀</p>
+        </div>
+    </div>
+</body>
+</html>
