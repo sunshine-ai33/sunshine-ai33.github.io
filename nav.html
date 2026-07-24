@@ -187,6 +187,7 @@
     <script>
         // 页面列表数据（由 Claude 自动生成）
         const pages = [
+            { filename: 'pudding-learning.html', title: 'Pudding英语学习记录', description: 'Pudding的外教Kent老师学习记录看板' },
             { filename: 'salary-dashboard.html', title: '薪资数据看板', description: '查看和管理薪资调研数据' },
             { filename: 'mapping-dashboard.html', title: '人才Mapping报告库', description: '33家公司的人才Mapping报告（深色版）' },
             { filename: 'mapping-dashboard-pro.html', title: '人才Mapping报告库（专业版）', description: '咨询公司风格，浅色底' },
@@ -233,6 +234,7 @@
         // 根据文件名获取图标
         function getIconForPage(filename) {
             const lower = filename.toLowerCase();
+            if (lower.includes('pudding')) return '🌟';
             if (lower.includes('mapping')) return '🏢';
             if (lower.includes('train') || lower.includes('培训')) return '🎓';
             if (lower.includes('report') || lower.includes('报告')) return '📊';
