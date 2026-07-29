@@ -13,24 +13,20 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-            background: #f5f7fa;
+            background: #f8fafc;
             min-height: 100vh;
-            color: #2c3e50;
+            color: #1e293b;
         }
 
         /* Header */
         .header {
-            background: #ffffff;
-            border-bottom: 1px solid #e1e8ed;
-            padding: 24px 40px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 28px 40px;
+            color: white;
         }
 
         .header-content {
-            max-width: 1100px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -42,11 +38,11 @@
         .header-left {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 16px;
         }
 
         .back-link {
-            color: #64748b;
+            color: rgba(255,255,255,0.8);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -57,332 +53,380 @@
         }
 
         .back-link:hover {
-            color: #2563eb;
+            color: white;
         }
 
-        .logo {
-            font-size: 22px;
+        .title-block {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .main-title {
+            font-size: 24px;
             font-weight: 700;
-            color: #1e293b;
             letter-spacing: -0.3px;
         }
 
-        .logo-sub {
-            color: #64748b;
+        .subtitle {
             font-size: 14px;
-            font-weight: 400;
-            margin-left: 12px;
-            padding-left: 12px;
-            border-left: 1px solid #e1e8ed;
+            opacity: 0.8;
         }
 
         .header-stats {
             display: flex;
-            gap: 32px;
+            gap: 36px;
             align-items: center;
         }
 
         .stat {
-            text-align: right;
+            text-align: center;
         }
 
         .stat-value {
-            font-size: 26px;
+            font-size: 32px;
             font-weight: 700;
-            color: #2563eb;
         }
 
         .stat-label {
             font-size: 12px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 28px 40px;
+            display: grid;
+            grid-template-columns: 280px 1fr 340px;
+            gap: 24px;
+        }
+
+        /* Sidebar Left - Lesson List */
+        .sidebar-left {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            height: fit-content;
+            position: sticky;
+            top: 24px;
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 600;
             color: #64748b;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-top: 2px;
+            margin-bottom: 16px;
         }
 
-        /* Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 32px 40px;
-        }
-
-        /* Quick Actions */
-        .quick-actions {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 24px;
-            align-items: center;
-        }
-
-        .action-btn {
-            padding: 10px 20px;
-            background: #ffffff;
-            border: 1px solid #e1e8ed;
-            border-radius: 8px;
-            color: #64748b;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .action-btn:hover {
-            background: #f8fafc;
-            color: #2c3e50;
-            border-color: #cbd5e1;
-        }
-
-        .action-btn.primary {
-            background: #2563eb;
-            border-color: #2563eb;
-            color: #ffffff;
-        }
-
-        .action-btn.primary:hover {
-            background: #1d4ed8;
-        }
-
-        /* Lesson Timeline */
         .lesson-list {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 8px;
         }
 
-        /* Lesson Card */
-        .lesson-card {
-            background: #ffffff;
-            border: 1px solid #e1e8ed;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.2s;
-        }
-
-        .lesson-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-            border-color: #cbd5e1;
-        }
-
-        .lesson-header {
-            padding: 20px 24px;
+        .lesson-item {
+            padding: 12px 14px;
+            border-radius: 10px;
             cursor: pointer;
-            user-select: none;
+            transition: all 0.2s;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 4px;
+            border: 2px solid transparent;
         }
 
-        .lesson-header:hover {
-            background: #f8fafc;
+        .lesson-item:hover {
+            background: #f1f5f9;
         }
 
-        .lesson-header-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
+        .lesson-item.active {
+            background: #eff6ff;
+            border-color: #3b82f6;
         }
 
-        .lesson-date {
-            font-size: 16px;
+        .lesson-item-date {
+            font-size: 14px;
             font-weight: 600;
             color: #1e293b;
         }
 
-        .lesson-topic {
-            background: #eff6ff;
+        .lesson-item-topic {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .lesson-item.active .lesson-item-date {
             color: #1d4ed8;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 500;
         }
 
-        .lesson-meta {
+        .new-badge {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+
+        /* Middle Column - Detail */
+        .middle-column {
             display: flex;
-            gap: 12px;
-            align-items: center;
+            flex-direction: column;
+            gap: 24px;
         }
 
-        .meta-item {
-            font-size: 13px;
-            color: #64748b;
+        .lesson-detail-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .detail-header {
             display: flex;
-            align-items: center;
-            gap: 6px;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .toggle-icon {
+        .detail-title-block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .detail-date {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .detail-topic {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 6px 14px;
+            border-radius: 20px;
             font-size: 14px;
-            color: #64748b;
-            transition: transform 0.3s ease;
+            font-weight: 500;
+            width: fit-content;
         }
 
-        .toggle-icon.collapsed {
-            transform: rotate(-90deg);
+        /* Corrections Section */
+        .section {
+            margin-bottom: 28px;
         }
 
-        /* Lesson Content */
-        .lesson-content {
-            max-height: 2000px;
-            overflow: hidden;
-            transition: max-height 0.35s ease-out, padding 0.35s ease-out, opacity 0.25s ease-out;
-            padding: 0 24px 24px 24px;
-            opacity: 1;
-            border-top: 1px solid #f1f5f9;
+        .section:last-child {
+            margin-bottom: 0;
         }
 
-        .lesson-content.collapsed {
-            max-height: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-            opacity: 0;
-        }
-
-        /* Section */
         .section-title {
             font-size: 13px;
             font-weight: 600;
-            color: #475569;
-            margin: 20px 0 12px 0;
+            color: #64748b;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        .section-title:first-child {
-            margin-top: 16px;
-        }
-
-        /* Corrections */
-        .corrections-grid {
-            display: grid;
-            gap: 10px;
-        }
-
-        .correction-item {
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 14px 16px;
+        .corrections-list {
             display: flex;
-            align-items: flex-start;
-            gap: 14px;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .correction-arrow {
-            color: #2563eb;
-            font-weight: 700;
-            font-size: 14px;
-            padding-top: 2px;
+        .correction-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 16px 18px;
+            display: grid;
+            grid-template-columns: 1fr 24px 1fr;
+            gap: 16px;
+            align-items: center;
         }
 
-        .correction-content {
-            flex: 1;
-        }
-
-        .original {
+        .correction-original {
             color: #dc2626;
             font-size: 14px;
             text-decoration: line-through;
             opacity: 0.7;
+            line-height: 1.6;
         }
 
-        .corrected {
-            color: #16a34a;
+        .correction-arrow {
+            color: #3b82f6;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .correction-corrected {
+            color: #059669;
             font-weight: 500;
-            font-size: 14px;
-            margin-top: 4px;
+            font-size: 15px;
+            line-height: 1.6;
         }
 
-        /* Vocabulary */
-        .vocab-tags {
+        /* Right Sidebar - Vocab & Info */
+        .sidebar-right {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .vocab-tag {
+        .sidebar-card {
+            background: white;
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .vocab-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .vocab-item {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
-            padding: 8px 16px;
-            border-radius: 8px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 15px;
             font-weight: 500;
-            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .vocab-tag span {
+        .vocab-translation {
             opacity: 0.9;
             font-weight: 400;
             margin-left: 10px;
         }
 
-        /* Next Lesson */
-        .next-lesson {
-            background: #fef3c7;
-            border-radius: 10px;
+        .mispronounced-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .mispronounced-item {
+            background: #fef2f2;
+            color: #dc2626;
             padding: 12px 16px;
-            color: #92400e;
+            border-radius: 10px;
             font-size: 14px;
+            font-weight: 500;
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-top: 16px;
         }
 
-        .next-lesson strong {
-            color: #b45309;
+        .next-lesson-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+            color: #92400e;
+            padding: 18px 20px;
+            border-radius: 12px;
+        }
+
+        .next-lesson-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .next-lesson-text {
+            font-size: 16px;
             font-weight: 600;
         }
 
-        /* Lesson Plan Section */
-        .lesson-plan-section {
-            margin-top: 40px;
-            background: #ffffff;
-            border: 1px solid #e1e8ed;
-            border-radius: 12px;
-            padding: 28px 32px;
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
 
-        .lesson-plan-title {
-            font-size: 18px;
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .info-item:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .info-value {
+            font-size: 14px;
             font-weight: 600;
             color: #1e293b;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        .plan-grid {
+        /* Lesson Plan */
+        .lesson-plan-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .lesson-plan-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 16px;
         }
 
         .plan-item {
             background: #f8fafc;
             border-radius: 10px;
-            padding: 18px 20px;
+            padding: 16px;
         }
 
         .plan-item h4 {
+            font-size: 14px;
+            font-weight: 600;
             color: #1e293b;
             margin-bottom: 10px;
-            font-size: 15px;
-            font-weight: 600;
         }
 
         .plan-item ul {
             margin-left: 18px;
             color: #475569;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .plan-item li {
-            margin: 6px 0;
+            margin: 4px 0;
         }
 
         /* Footer */
@@ -394,13 +438,28 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .header {
-                padding: 18px 20px;
+        @media (max-width: 1100px) {
+            .main-container {
+                grid-template-columns: 1fr;
             }
 
-            .container {
-                padding: 24px 20px;
+            .sidebar-left {
+                position: relative;
+                top: 0;
+            }
+
+            .lesson-plan-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header {
+                padding: 20px;
+            }
+
+            .main-container {
+                padding: 20px;
             }
 
             .header-content {
@@ -408,23 +467,13 @@
                 align-items: flex-start;
             }
 
-            .header-stats {
-                width: 100%;
-                justify-content: flex-start;
-            }
-
-            .lesson-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-
-            .lesson-header-left {
-                flex-wrap: wrap;
-            }
-
-            .plan-grid {
+            .correction-card {
                 grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .correction-arrow {
+                display: none;
             }
         }
     </style>
@@ -439,263 +488,104 @@
                     </svg>
                     返回首页
                 </a>
-                <div style="display:flex;align-items:center;">
-                    <div class="logo">Pudding 英语学习记录</div>
-                    <span class="logo-sub">With Teacher Kent</span>
+                <div class="title-block">
+                    <div class="main-title">Pudding 英语学习记录</div>
+                    <div class="subtitle">With Teacher Kent</div>
                 </div>
             </div>
             <div class="header-stats">
                 <div class="stat">
-                    <div class="stat-value">4</div>
+                    <div class="stat-value">5</div>
                     <div class="stat-label">已上课程</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">16</div>
+                    <div class="stat-value">15</div>
                     <div class="stat-label">剩余课程</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">3</div>
+                    <div class="stat-value">4</div>
                     <div class="stat-label">新词汇</div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="quick-actions">
-            <button class="action-btn" onclick="toggleAll()">▼ 全部收起</button>
-        </div>
-
-        <div class="lesson-list">
-            <!-- 07/27 Lesson -->
-            <div class="lesson-card">
-                <div class="lesson-header" onclick="toggleLesson(this)">
-                    <div class="lesson-header-left">
-                        <div class="lesson-date">📅 2026-07-27</div>
-                        <div class="lesson-topic">Everybody Up: Book 2 Page 4</div>
+    <div class="main-container">
+        <!-- Left Sidebar - Lesson List -->
+        <aside class="sidebar-left">
+            <div class="sidebar-title">课程记录</div>
+            <div class="lesson-list">
+                <div class="lesson-item active" data-lesson="0">
+                    <div>
+                        <span class="lesson-item-date">07/28</span>
+                        <span class="new-badge">New</span>
                     </div>
-                    <div class="toggle-icon">▼</div>
+                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 12</div>
                 </div>
-                <div class="lesson-content">
-                    <div class="section-title">✏️ 课堂纠正</div>
-                    <div class="corrections-grid">
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">I not eat.</div>
-                                <div class="corrected">I didn't eat ice cream.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">I eat the McDonald's.</div>
-                                <div class="corrected">I ate this in McDonald's.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Use my eyes.</div>
-                                <div class="corrected">I use my eyes to see.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section-title">📖 新词汇</div>
-                    <div class="vocab-tags">
-                        <div class="vocab-tag">Flavor <span>味道</span></div>
-                    </div>
-
-                    <div class="next-lesson">
-                        🔜 <strong>下次课：</strong>Everybody Up: Book 2 Page 12 JOBS
-                    </div>
+                <div class="lesson-item" data-lesson="1">
+                    <div class="lesson-item-date">07/27</div>
+                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 4</div>
+                </div>
+                <div class="lesson-item" data-lesson="2">
+                    <div class="lesson-item-date">07/22</div>
+                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 4</div>
+                </div>
+                <div class="lesson-item" data-lesson="3">
+                    <div class="lesson-item-date">07/21</div>
+                    <div class="lesson-item-topic">Singular/Plural</div>
+                </div>
+                <div class="lesson-item" data-lesson="4">
+                    <div class="lesson-item-date">07/13</div>
+                    <div class="lesson-item-topic">A/An + Sentence Structure</div>
                 </div>
             </div>
+        </aside>
 
-            <!-- 07/22 Lesson -->
-            <div class="lesson-card">
-                <div class="lesson-header" onclick="toggleLesson(this)">
-                    <div class="lesson-header-left">
-                        <div class="lesson-date">📅 2026-07-22</div>
-                        <div class="lesson-topic">Everybody Up: Book 2 Page 4</div>
-                    </div>
-                    <div class="toggle-icon">▼</div>
-                </div>
-                <div class="lesson-content">
-                    <div class="section-title">✏️ 课堂纠正</div>
-                    <div class="corrections-grid">
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">I don't like animal.</div>
-                                <div class="corrected">I don't like animals.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Eat the ice cream.</div>
-                                <div class="corrected">Eating ice cream makes me happy.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">I'm not like.</div>
-                                <div class="corrected">I don't like the hot weather.</div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Middle Column - Detail -->
+        <main class="middle-column" id="lessonDetail">
+            <!-- Detail will be rendered here -->
+        </main>
 
-                    <div class="section-title">📖 新词汇</div>
-                    <div class="vocab-tags">
-                        <div class="vocab-tag">Pilot <span>飞行员</span></div>
-                        <div class="vocab-tag">Excited <span>兴奋</span></div>
-                    </div>
+        <!-- Right Sidebar -->
+        <aside class="sidebar-right" id="sidebarRight">
+            <!-- Sidebar content will be rendered here -->
+        </aside>
+    </div>
 
-                    <div class="next-lesson">
-                        🔜 <strong>下次课：</strong>Everybody Up: Book 2 Page 6
+    <div class="main-container" style="padding-top: 0;">
+        <div style="grid-column: 1 / -1;">
+            <div class="lesson-plan-card">
+                <div class="section-title">📋 整体课程计划</div>
+                <div class="lesson-plan-grid">
+                    <div class="plan-item">
+                        <h4>🎯 课程目标</h4>
+                        <ul>
+                            <li>Focus: Sentence Building</li>
+                            <li>共14节课，每节25分钟</li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-
-            <!-- 07/21 Lesson -->
-            <div class="lesson-card">
-                <div class="lesson-header" onclick="toggleLesson(this)">
-                    <div class="lesson-header-left">
-                        <div class="lesson-date">📅 2026-07-21</div>
-                        <div class="lesson-topic">Singular/Plural</div>
+                    <div class="plan-item">
+                        <h4>1️⃣ Likes, Dislikes, and Feelings</h4>
+                        <ul>
+                            <li>I am.... (happy, tired, sad)</li>
+                            <li>I like.... (playing, reading, playing sports)</li>
+                            <li>I don't like.... (eating vegetables, the hot weather)</li>
+                        </ul>
                     </div>
-                    <div class="toggle-icon">▼</div>
-                </div>
-                <div class="lesson-content">
-                    <div class="section-title">✏️ 课堂纠正</div>
-                    <div class="corrections-grid">
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">I eat the dinner.</div>
-                                <div class="corrected">Yes, I ate dinner.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Little like.</div>
-                                <div class="corrected">I like it a little.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">I can't find.</div>
-                                <div class="corrected">I could not find it.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Fast.</div>
-                                <div class="corrected">It's a fast toy car.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Are you feel better?</div>
-                                <div class="corrected">Do you feel better?</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Play.</div>
-                                <div class="corrected">I will play after our class.</div>
-                            </div>
-                        </div>
+                    <div class="plan-item">
+                        <h4>2️⃣ Want and Need + Reason</h4>
+                        <ul>
+                            <li>I want.... because....</li>
+                            <li>I need.... because....</li>
+                        </ul>
                     </div>
-
-                    <div class="next-lesson">
-                        🔜 <strong>下次课：</strong>Sentence Construction
+                    <div class="plan-item">
+                        <h4>3️⃣ Identifying and Locating</h4>
+                        <ul>
+                            <li>It is a.... / This is a....</li>
+                            <li>It is in/on/at....</li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-
-            <!-- 07/13 Lesson -->
-            <div class="lesson-card">
-                <div class="lesson-header" onclick="toggleLesson(this)">
-                    <div class="lesson-header-left">
-                        <div class="lesson-date">📅 2026-07-13</div>
-                        <div class="lesson-topic">A/An + Sentence Structure</div>
-                    </div>
-                    <div class="toggle-icon">▼</div>
-                </div>
-                <div class="lesson-content">
-                    <div class="section-title">✏️ 课堂纠正</div>
-                    <div class="corrections-grid">
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">I play with the grandpa.</div>
-                                <div class="corrected">I am happy because I played with my grandpa.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Yes, I'm eat.</div>
-                                <div class="corrected">Yes, I ate dinner.</div>
-                            </div>
-                        </div>
-                        <div class="correction-item">
-                            <div class="correction-arrow">→</div>
-                            <div class="correction-content">
-                                <div class="original">Dog.</div>
-                                <div class="corrected">That is a dog.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="next-lesson">
-                        🔜 <strong>下次课：</strong>Sentence Structure
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Lesson Plan Section -->
-        <div class="lesson-plan-section">
-            <div class="lesson-plan-title">📋 整体课程计划</div>
-            <div class="plan-grid">
-                <div class="plan-item">
-                    <h4>🎯 课程目标</h4>
-                    <ul>
-                        <li>Focus: Sentence Building</li>
-                        <li>共14节课，每节25分钟</li>
-                    </ul>
-                </div>
-                <div class="plan-item">
-                    <h4>1️⃣ Likes, Dislikes, and Feelings</h4>
-                    <ul>
-                        <li>I am.... (happy, tired, sad)</li>
-                        <li>I like.... (playing, reading, playing sports)</li>
-                        <li>I don't like.... (eating vegetables, the hot weather)</li>
-                    </ul>
-                </div>
-                <div class="plan-item">
-                    <h4>2️⃣ Want and Need + Reason</h4>
-                    <ul>
-                        <li>I want.... because....</li>
-                        <li>I need.... because....</li>
-                    </ul>
-                </div>
-                <div class="plan-item">
-                    <h4>3️⃣ Identifying and Locating</h4>
-                    <ul>
-                        <li>It is a.... / This is a....</li>
-                        <li>It is in/on/at....</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -706,71 +596,219 @@
     </div>
 
     <script>
-        let allCollapsed = false;
-
-        function toggleLesson(header) {
-            const card = header.parentElement;
-            const content = card.querySelector('.lesson-content');
-            const icon = card.querySelector('.toggle-icon');
-
-            content.classList.toggle('collapsed');
-            icon.classList.toggle('collapsed');
-
-            updateToggleAllButton();
-        }
-
-        function toggleAll() {
-            const contents = document.querySelectorAll('.lesson-content');
-            const icons = document.querySelectorAll('.toggle-icon');
-
-            allCollapsed = !allCollapsed;
-
-            contents.forEach(content => {
-                if (allCollapsed) {
-                    content.classList.add('collapsed');
-                } else {
-                    content.classList.remove('collapsed');
+        const lessons = [
+            {
+                date: '2026-07-28',
+                topic: 'Everybody Up: Book 2 Page 12',
+                corrections: [
+                    { original: 'Because I eat the fries in the dinner.', corrected: 'I am happy because I ate fries for dinner.' },
+                    { original: 'Because fries is I like.', corrected: 'Because I like eating fries.' },
+                    { original: 'My dad job is AI engineer.', corrected: 'My dad is an AI engineer.' },
+                    { original: 'I\'m go to there.', corrected: 'I went there.' }
+                ],
+                vocab: [
+                    { word: 'Job', translation: '工作' }
+                ],
+                mispronounced: [
+                    'Pilot'
+                ],
+                nextLesson: 'Everybody Up: Book 2 Page 14',
+                info: {
+                    remaining: 15
                 }
-            });
-
-            icons.forEach(icon => {
-                if (allCollapsed) {
-                    icon.classList.add('collapsed');
-                } else {
-                    icon.classList.remove('collapsed');
+            },
+            {
+                date: '2026-07-27',
+                topic: 'Everybody Up: Book 2 Page 4',
+                corrections: [
+                    { original: 'I not eat.', corrected: 'I didn\'t eat ice cream.' },
+                    { original: 'I eat the McDonald\'s.', corrected: 'I ate this in McDonald\'s.' },
+                    { original: 'Use my eyes.', corrected: 'I use my eyes to see.' }
+                ],
+                vocab: [
+                    { word: 'Flavor', translation: '味道' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 2 Page 12 JOBS',
+                info: {
+                    remaining: 16
                 }
-            });
-
-            updateToggleAllButton();
-        }
-
-        function updateToggleAllButton() {
-            const btn = document.querySelector('.action-btn');
-            const contents = document.querySelectorAll('.lesson-content');
-            const collapsedCount = document.querySelectorAll('.lesson-content.collapsed').length;
-
-            if (collapsedCount === contents.length) {
-                allCollapsed = true;
-                btn.textContent = '▼ 全部展开';
-            } else {
-                allCollapsed = false;
-                btn.textContent = '▼ 全部收起';
+            },
+            {
+                date: '2026-07-22',
+                topic: 'Everybody Up: Book 2 Page 4',
+                corrections: [
+                    { original: 'I don\'t like animal.', corrected: 'I don\'t like animals.' },
+                    { original: 'Eat the ice cream.', corrected: 'Eating ice cream makes me happy.' },
+                    { original: 'I\'m not like.', corrected: 'I don\'t like the hot weather.' }
+                ],
+                vocab: [
+                    { word: 'Pilot', translation: '飞行员' },
+                    { word: 'Excited', translation: '兴奋' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 2 Page 6',
+                info: {
+                    remaining: 17
+                }
+            },
+            {
+                date: '2026-07-21',
+                topic: 'Singular/Plural',
+                corrections: [
+                    { original: 'I eat the dinner.', corrected: 'Yes, I ate dinner.' },
+                    { original: 'Little like.', corrected: 'I like it a little.' },
+                    { original: 'I can\'t find.', corrected: 'I could not find it.' },
+                    { original: 'Fast.', corrected: 'It\'s a fast toy car.' },
+                    { original: 'Are you feel better?', corrected: 'Do you feel better?' },
+                    { original: 'Play.', corrected: 'I will play after our class.' }
+                ],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Sentence Construction',
+                info: {
+                    remaining: 18
+                }
+            },
+            {
+                date: '2026-07-13',
+                topic: 'A/An + Sentence Structure',
+                corrections: [
+                    { original: 'I play with the grandpa.', corrected: 'I am happy because I played with my grandpa.' },
+                    { original: 'Yes, I\'m eat.', corrected: 'Yes, I ate dinner.' },
+                    { original: 'Dog.', corrected: 'That is a dog.' }
+                ],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Sentence Structure',
+                info: {
+                    remaining: 19
+                }
             }
-        }
+        ];
 
-        // Collapse older lessons by default
-        document.addEventListener('DOMContentLoaded', function() {
-            const contents = document.querySelectorAll('.lesson-content');
-            const icons = document.querySelectorAll('.toggle-icon');
+        let currentLessonIndex = 0;
 
-            contents.forEach((content, index) => {
-                if (index > 0) {
-                    content.classList.add('collapsed');
-                    icons[index].classList.add('collapsed');
+        function renderLessonDetail(index) {
+            const lesson = lessons[index];
+            const detailContainer = document.getElementById('lessonDetail');
+            const sidebarContainer = document.getElementById('sidebarRight');
+
+            // Render main content
+            detailContainer.innerHTML = `
+                <div class="lesson-detail-card">
+                    <div class="detail-header">
+                        <div class="detail-title-block">
+                            <div class="detail-date">📅 ${lesson.date}</div>
+                            <div class="detail-topic">${lesson.topic}</div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title">✏️ 课堂纠正</div>
+                        <div class="corrections-list">
+                            ${lesson.corrections.map(c => `
+                                <div class="correction-card">
+                                    <div class="correction-original">${escapeHtml(c.original)}</div>
+                                    <div class="correction-arrow">→</div>
+                                    <div class="correction-corrected">${escapeHtml(c.corrected)}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Render sidebar
+            sidebarContainer.innerHTML = `
+                ${lesson.vocab.length > 0 ? `
+                    <div class="sidebar-card">
+                        <div class="section-title">📖 新词汇</div>
+                        <div class="vocab-list">
+                            ${lesson.vocab.map(v => `
+                                <div class="vocab-item">
+                                    <span>${v.word}</span>
+                                    <span class="vocab-translation">${v.translation}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+
+                ${lesson.mispronounced.length > 0 ? `
+                    <div class="sidebar-card">
+                        <div class="section-title">⚠️ 发音注意</div>
+                        <div class="mispronounced-list">
+                            ${lesson.mispronounced.map(w => `
+                                <div class="mispronounced-item">
+                                    <span>🔊</span>
+                                    <span>${w}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+
+                <div class="sidebar-card">
+                    <div class="next-lesson-card">
+                        <div class="next-lesson-label">下次课</div>
+                        <div class="next-lesson-text">🔜 ${lesson.nextLesson}</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="section-title">📊 课程信息</div>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">学生</span>
+                            <span class="info-value">Pudding</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">课程安排</span>
+                            <span class="info-value">周一至周五</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">课时</span>
+                            <span class="info-value">25分钟</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">剩余课程</span>
+                            <span class="info-value">${lesson.info.remaining}节</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">上课时间</span>
+                            <span class="info-value">20:30-20:55</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Update active state in sidebar
+            document.querySelectorAll('.lesson-item').forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
                 }
             });
+        }
 
-            updateToggleAllButton();
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderLessonDetail(currentLessonIndex);
+
+            document.querySelectorAll('.lesson-item').forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    currentLessonIndex = index;
+                    renderLessonDetail(index);
+                });
+            });
         });
     </script>
 </body>
