@@ -474,11 +474,11 @@
             </div>
             <div class="header-stats">
                 <div class="stat">
-                    <div class="stat-value">5</div>
+                    <div class="stat-value">7</div>
                     <div class="stat-label">已上课程</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">15</div>
+                    <div class="stat-value">10</div>
                     <div class="stat-label">剩余课程</div>
                 </div>
                 <div class="stat">
@@ -496,24 +496,34 @@
             <div class="lesson-list">
                 <div class="lesson-item active" data-lesson="0">
                     <div>
-                        <span class="lesson-item-date">07/28</span>
+                        <span class="lesson-item-date">08/04</span>
                         <span class="new-badge">New</span>
                     </div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 12</div>
+                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 30</div>
                 </div>
                 <div class="lesson-item" data-lesson="1">
+                    <div>
+                        <span class="lesson-item-date">08/03</span>
+                    </div>
+                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 24</div>
+                </div>
+                <div class="lesson-item" data-lesson="2">
+                    <div class="lesson-item-date">07/28</div>
+                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 12</div>
+                </div>
+                <div class="lesson-item" data-lesson="3">
                     <div class="lesson-item-date">07/27</div>
                     <div class="lesson-item-topic">Everybody Up: Book 2 Page 4</div>
                 </div>
-                <div class="lesson-item" data-lesson="2">
+                <div class="lesson-item" data-lesson="4">
                     <div class="lesson-item-date">07/22</div>
                     <div class="lesson-item-topic">Everybody Up: Book 2 Page 4</div>
                 </div>
-                <div class="lesson-item" data-lesson="3">
+                <div class="lesson-item" data-lesson="5">
                     <div class="lesson-item-date">07/21</div>
                     <div class="lesson-item-topic">Singular/Plural</div>
                 </div>
-                <div class="lesson-item" data-lesson="4">
+                <div class="lesson-item" data-lesson="6">
                     <div class="lesson-item-date">07/13</div>
                     <div class="lesson-item-topic">A/An + Sentence Structure</div>
                 </div>
@@ -576,6 +586,38 @@
 
     <script>
         const lessons = [
+            {
+                date: '2026-08-04',
+                topic: 'Everybody Up: Book 2 Page 30',
+                corrections: [
+                    { original: 'I ask you a question.', corrected: 'I want to ask you a question.' },
+                    { original: 'It\'s hot.', corrected: 'The weather is hot tonight.' },
+                    { original: 'A little like summer.', corrected: 'I like summer a little.' },
+                    { original: 'Because snow is little.', corrected: 'It doesn\'t snow a lot in my area.' }
+                ],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 2 Page 32',
+                info: {
+                    remaining: 10
+                }
+            },
+            {
+                date: '2026-08-03',
+                topic: 'Everybody Up: Book 2 Page 24',
+                corrections: [
+                    { original: 'My weekend go to the Hong Kong.', corrected: 'We went to Hong Kong on the weekend.' },
+                    { original: 'Look the sea.', corrected: 'I looked at the sea.' },
+                    { original: 'Today, I go to the swim.', corrected: 'I swam today.' },
+                    { original: 'A little like.', corrected: 'I like it a little.' }
+                ],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 2 Page 30',
+                info: {
+                    remaining: 11
+                }
+            },
             {
                 date: '2026-07-28',
                 topic: 'Everybody Up: Book 2 Page 12',
