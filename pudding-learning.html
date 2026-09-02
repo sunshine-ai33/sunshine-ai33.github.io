@@ -474,15 +474,15 @@
             </div>
             <div class="header-stats">
                 <div class="stat">
-                    <div class="stat-value">20</div>
+                    <div class="stat-value">21</div>
                     <div class="stat-label">已上课程</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">17</div>
+                    <div class="stat-value">16</div>
                     <div class="stat-label">剩余课程</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">9</div>
+                    <div class="stat-value">11</div>
                     <div class="stat-label">新词汇</div>
                 </div>
             </div>
@@ -496,8 +496,14 @@
             <div class="lesson-list">
                 <div class="lesson-item active" data-lesson="0">
                     <div>
-                        <span class="lesson-item-date">08/31</span>
+                        <span class="lesson-item-date">09/01</span>
                         <span class="new-badge">New</span>
+                    </div>
+                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 64</div>
+                </div>
+                <div class="lesson-item" data-lesson="1">
+                    <div>
+                        <span class="lesson-item-date">08/31</span>
                     </div>
                     <div class="lesson-item-topic">Everybody Up: Book 2 Page 64</div>
                 </div>
@@ -638,6 +644,25 @@
 
     <script>
         const lessons = [
+            {
+                date: '2026-09-01',
+                topic: 'Everybody Up: Book 2 Page 64',
+                corrections: [
+                    { original: 'Eat the cake.', corrected: 'I ate cake.' },
+                    { original: 'Today, I went to the new school.', corrected: 'I went to my new school today.' },
+                    { original: 'Today, eat the lunch at home.', corrected: 'Today, I ate lunch at home.' },
+                    { original: 'I back home at 1 o\'clock.', corrected: 'I got home at 1 o\'clock.' }
+                ],
+                vocab: [
+                    { word: 'P.E.', translation: '体育' },
+                    { word: 'Social Studies', translation: '社会课' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 2 Page 67',
+                info: {
+                    remaining: 16
+                }
+            },
             {
                 date: '2026-08-31',
                 topic: 'Everybody Up: Book 2 Page 64',
