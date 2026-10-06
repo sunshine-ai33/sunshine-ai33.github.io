@@ -87,7 +87,7 @@
             margin: 0 auto;
             padding: 28px 40px;
             display: grid;
-            grid-template-columns: 280px 1fr 340px;
+            grid-template-columns: 260px 1fr 320px;
             gap: 24px;
         }
 
@@ -95,11 +95,14 @@
         .sidebar-left {
             background: white;
             border-radius: 16px;
-            padding: 20px;
+            padding: 16px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
             height: fit-content;
             position: sticky;
             top: 24px;
+            max-height: calc(100vh - 48px);
+            display: flex;
+            flex-direction: column;
         }
 
         .sidebar-title {
@@ -108,24 +111,64 @@
             color: #64748b;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 16px;
+            padding: 4px 6px 12px;
         }
 
         .lesson-list {
+            overflow-y: auto;
+            flex: 1;
+            margin-right: -6px;
+            padding-right: 6px;
+        }
+
+        .lesson-list::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .lesson-list::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+
+        .lesson-group-title {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: white;
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+            padding: 8px 6px;
             display: flex;
-            flex-direction: column;
-            gap: 8px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lesson-group-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .lesson-group-count {
+            font-weight: 500;
+            opacity: 0.7;
         }
 
         .lesson-item {
-            padding: 12px 14px;
+            padding: 10px 12px;
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 3px;
             border: 2px solid transparent;
+            margin: 2px 0;
         }
 
         .lesson-item:hover {
@@ -137,10 +180,21 @@
             border-color: #3b82f6;
         }
 
+        .lesson-item-date-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         .lesson-item-date {
             font-size: 14px;
             font-weight: 600;
             color: #1e293b;
+        }
+
+        .lesson-item-meta {
+            font-size: 11px;
+            color: #94a3b8;
         }
 
         .lesson-item-topic {
@@ -156,12 +210,11 @@
             display: inline-block;
             background: #f59e0b;
             color: white;
-            font-size: 10px;
-            padding: 2px 8px;
+            font-size: 9px;
+            padding: 1px 7px;
             border-radius: 10px;
             font-weight: 600;
             text-transform: uppercase;
-            margin-left: 8px;
         }
 
         /* Middle Column - Detail */
@@ -179,38 +232,54 @@
         }
 
         .detail-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
             margin-bottom: 24px;
             padding-bottom: 20px;
             border-bottom: 1px solid #e2e8f0;
-        }
-
-        .detail-title-block {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
         }
 
         .detail-date {
             font-size: 22px;
             font-weight: 700;
             color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .detail-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .detail-topic {
             display: inline-block;
             background: #dbeafe;
             color: #1d4ed8;
-            padding: 6px 14px;
+            padding: 5px 14px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
-            width: fit-content;
         }
 
-        /* Corrections Section */
+        .detail-book-tag {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .detail-summary {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #64748b;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* Sections */
         .section {
             margin-bottom: 28px;
         }
@@ -226,9 +295,6 @@
             text-transform: uppercase;
             letter-spacing: 0.8px;
             margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .corrections-list {
@@ -269,7 +335,70 @@
             line-height: 1.6;
         }
 
-        /* Right Sidebar - Vocab & Info */
+        .correction-corrected .alt-option {
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed #a7f3d0;
+        }
+
+        .correction-corrected .alt-label {
+            display: block;
+            font-size: 11px;
+            color: #10b981;
+            opacity: 0.8;
+            margin-bottom: 2px;
+        }
+
+        /* Reading Practice */
+        .reading-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .reading-chip {
+            background: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Navigation */
+        .lesson-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .nav-btn {
+            background: #f1f5f9;
+            border: none;
+            color: #475569;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Right Sidebar */
         .sidebar-right {
             display: flex;
             flex-direction: column;
@@ -299,12 +428,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 10px;
         }
 
         .vocab-translation {
             opacity: 0.9;
             font-weight: 400;
-            margin-left: 10px;
+            text-align: right;
+            font-size: 13px;
         }
 
         .mispronounced-list {
@@ -431,6 +562,7 @@
             .sidebar-left {
                 position: relative;
                 top: 0;
+                max-height: 360px;
             }
 
             .lesson-plan-grid {
@@ -450,6 +582,10 @@
             .header-content {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            .header-stats {
+                gap: 24px;
             }
 
             .correction-card {
@@ -474,15 +610,15 @@
             </div>
             <div class="header-stats">
                 <div class="stat">
-                    <div class="stat-value">21</div>
+                    <div class="stat-value">34</div>
                     <div class="stat-label">已上课程</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">16</div>
+                    <div class="stat-value">3</div>
                     <div class="stat-label">剩余课程</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">11</div>
+                    <div class="stat-value">25</div>
                     <div class="stat-label">新词汇</div>
                 </div>
             </div>
@@ -493,126 +629,30 @@
         <!-- Left Sidebar - Lesson List -->
         <aside class="sidebar-left">
             <div class="sidebar-title">课程记录</div>
-            <div class="lesson-list">
-                <div class="lesson-item active" data-lesson="0">
-                    <div>
-                        <span class="lesson-item-date">09/01</span>
-                        <span class="new-badge">New</span>
-                    </div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 64</div>
-                </div>
-                <div class="lesson-item" data-lesson="1">
-                    <div>
-                        <span class="lesson-item-date">08/31</span>
-                    </div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 64</div>
-                </div>
-                <div class="lesson-item" data-lesson="1">
-                    <div>
-                        <span class="lesson-item-date">08/28</span>
-                    </div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 64</div>
-                </div>
-                <div class="lesson-item" data-lesson="2">
-                    <div class="lesson-item-date">08/27</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 61</div>
-                </div>
-                <div class="lesson-item" data-lesson="3">
-                    <div class="lesson-item-date">08/26</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 60</div>
-                </div>
-                <div class="lesson-item" data-lesson="4">
-                    <div class="lesson-item-date">08/25</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 57</div>
-                </div>
-                <div class="lesson-item" data-lesson="5">
-                    <div class="lesson-item-date">08/24</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 56</div>
-                </div>
-                <div class="lesson-item" data-lesson="6">
-                    <div class="lesson-item-date">08/20</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 51</div>
-                </div>
-                <div class="lesson-item" data-lesson="7">
-                    <div class="lesson-item-date">08/19</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 50</div>
-                </div>
-                <div class="lesson-item" data-lesson="8">
-                    <div class="lesson-item-date">08/18</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 46</div>
-                </div>
-                <div class="lesson-item" data-lesson="9">
-                    <div class="lesson-item-date">08/14</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 42</div>
-                </div>
-                <div class="lesson-item" data-lesson="10">
-                    <div class="lesson-item-date">08/13</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 38</div>
-                </div>
-                <div class="lesson-item" data-lesson="11">
-                    <div class="lesson-item-date">08/12</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 36</div>
-                </div>
-                <div class="lesson-item" data-lesson="12">
-                    <div class="lesson-item-date">08/11</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 32</div>
-                </div>
-                <div class="lesson-item" data-lesson="13">
-                    <div class="lesson-item-date">08/04</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 30</div>
-                </div>
-                <div class="lesson-item" data-lesson="14">
-                    <div class="lesson-item-date">08/03</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 24</div>
-                </div>
-                <div class="lesson-item" data-lesson="15">
-                    <div class="lesson-item-date">07/28</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 12</div>
-                </div>
-                <div class="lesson-item" data-lesson="16">
-                    <div class="lesson-item-date">07/27</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 4</div>
-                </div>
-                <div class="lesson-item" data-lesson="17">
-                    <div class="lesson-item-date">07/22</div>
-                    <div class="lesson-item-topic">Everybody Up: Book 2 Page 4</div>
-                </div>
-                <div class="lesson-item" data-lesson="18">
-                    <div class="lesson-item-date">07/21</div>
-                    <div class="lesson-item-topic">Singular/Plural</div>
-                </div>
-                <div class="lesson-item" data-lesson="19">
-                    <div class="lesson-item-date">07/13</div>
-                    <div class="lesson-item-topic">A/An + Sentence Structure</div>
-                </div>
-            </div>
+            <div class="lesson-list" id="lessonList"></div>
         </aside>
 
         <!-- Middle Column - Detail -->
-        <main class="middle-column" id="lessonDetail">
-            <!-- Detail will be rendered here -->
-        </main>
+        <main class="middle-column" id="lessonDetail"></main>
 
         <!-- Right Sidebar -->
-        <aside class="sidebar-right" id="sidebarRight">
-            <!-- Sidebar content will be rendered here -->
-        </aside>
+        <aside class="sidebar-right" id="sidebarRight"></aside>
     </div>
 
     <div class="main-container" style="padding-top: 0;">
         <div style="grid-column: 1 / -1;">
             <div class="lesson-plan-card">
-                <div class="section-title">📋 整体课程计划</div>
+                <div class="section-title">整体课程计划</div>
                 <div class="lesson-plan-grid">
                     <div class="plan-item">
-                        <h4>🎯 课程目标</h4>
+                        <h4>课程目标</h4>
                         <ul>
                             <li>Focus: Sentence Building</li>
                             <li>共14节课，每节25分钟</li>
                         </ul>
                     </div>
                     <div class="plan-item">
-                        <h4>1️⃣ Likes, Dislikes, and Feelings</h4>
+                        <h4>1. Likes, Dislikes, and Feelings</h4>
                         <ul>
                             <li>I am.... (happy, tired, sad)</li>
                             <li>I like.... (playing, reading, playing sports)</li>
@@ -620,14 +660,14 @@
                         </ul>
                     </div>
                     <div class="plan-item">
-                        <h4>2️⃣ Want and Need + Reason</h4>
+                        <h4>2. Want and Need + Reason</h4>
                         <ul>
                             <li>I want.... because....</li>
                             <li>I need.... because....</li>
                         </ul>
                     </div>
                     <div class="plan-item">
-                        <h4>3️⃣ Identifying and Locating</h4>
+                        <h4>3. Identifying and Locating</h4>
                         <ul>
                             <li>It is a.... / This is a....</li>
                             <li>It is in/on/at....</li>
@@ -639,11 +679,228 @@
     </div>
 
     <div class="footer">
-        💪 Keep Learning, Pudding!
+        Keep Learning, Pudding!
     </div>
 
     <script>
         const lessons = [
+            {
+                date: '2026-10-05',
+                topic: 'Everybody Up: Book 3 Page 15',
+                corrections: [
+                    { original: 'Go to the Shenzhen.', corrected: 'We went to Shenzhen.' },
+                    { original: 'Eat the hotpot.', corrected: 'We ate hotpot.' },
+                    { original: 'All have hotpot.', corrected: "There's hotpot everywhere in China." },
+                    { original: 'But I buy Hong Kong.', corrected: 'We have a Hong Kong ref magnet.' }
+                ],
+                readingPractice: [],
+                vocab: [
+                    { word: 'Picnic', translation: '野餐' },
+                    { word: 'Roller Coaster', translation: '过山车' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 18',
+                info: { remaining: 3 }
+            },
+            {
+                date: '2026-09-29',
+                topic: 'Everybody Up: Book 3 Page 15',
+                corrections: [
+                    { original: 'No in Hong Kong.', corrected: "I haven't been to the movie theatre in Hong Kong yet." }
+                ],
+                readingPractice: [],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 18',
+                info: { remaining: 4 }
+            },
+            {
+                date: '2026-09-28',
+                topic: 'Everybody Up: Book 3 Page 14',
+                corrections: [
+                    { original: 'At the Saturday.', corrected: 'We lit a lantern last Saturday.' },
+                    { original: 'Eat one mooncake.', corrected: 'I ate one mooncake.' }
+                ],
+                readingPractice: [],
+                vocab: [
+                    { word: 'Lantern', translation: '灯笼' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 15',
+                info: { remaining: 5 }
+            },
+            {
+                date: '2026-09-23',
+                topic: 'Everybody Up: Book 3 Page 13 D',
+                corrections: [
+                    { original: "She's look a movie.", corrected: "She's watching a movie." }
+                ],
+                readingPractice: [
+                    'Grocery / Groceries'
+                ],
+                vocab: [
+                    { word: 'Mail letters', translation: '寄信' },
+                    { word: 'Buy Groceries', translation: '买菜' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 14',
+                info: { remaining: 6 }
+            },
+            {
+                date: '2026-09-22',
+                topic: 'Everybody Up: Book 3 Page 12',
+                corrections: [
+                    { original: 'With my mom go to the supermarket.', corrected: 'I went to the supermarket with my mom.' },
+                    { original: 'Grape.', corrected: 'We bought grapes.' },
+                    { original: "She's isn't like that.", corrected: "My mom doesn't like eating potato chips." },
+                    { original: 'A little have.', corrected: ['They sell a few potato chips.', 'They sell some potato chips.'] },
+                    { original: "No, don't across from.", corrected: 'My school is not across from my house.' }
+                ],
+                readingPractice: [],
+                vocab: [
+                    { word: 'Haircut', translation: '理发' },
+                    { word: 'Between', translation: '在……之间（公园在学校和冰淇淋店之间）' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 13 D',
+                info: { remaining: 7 }
+            },
+            {
+                date: '2026-09-21',
+                topic: 'Everybody Up: Book 3 Page 12',
+                corrections: [
+                    { original: 'But he speak the English.', corrected: 'But he speaks in English.' },
+                    { original: 'Go to the beach.', corrected: 'We went to the beach.' },
+                    { original: "I want but I don't.", corrected: "I wanted too but I didn't." }
+                ],
+                readingPractice: [
+                    'Movie theater / Cinema',
+                    'Department store'
+                ],
+                vocab: [
+                    { word: 'Movie Theater / Cinema', translation: '电影院' },
+                    { word: 'Department Store', translation: '百货商场' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 12',
+                info: { remaining: 8 }
+            },
+            {
+                date: '2026-09-16',
+                topic: 'Everybody Up: Book 3 Page 10',
+                corrections: [
+                    { original: 'I like hide.', corrected: 'I like hiding.' },
+                    { original: 'One good hiding.', corrected: "One of my friends is good at hiding." },
+                    { original: 'I want to some ice cream.', corrected: 'I want to make some ice cream.' },
+                    { original: 'I favorite is watermelon.', corrected: 'My favorite fruit is watermelon.' }
+                ],
+                readingPractice: [],
+                vocab: [
+                    { word: 'Omelette', translation: '煎蛋卷' },
+                    { word: 'Smoothie', translation: '冰沙' },
+                    { word: 'Milkshake', translation: '奶昔' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 12',
+                info: { remaining: 9 }
+            },
+            {
+                date: '2026-09-15',
+                topic: 'Everybody Up: Book 3 Page 7',
+                corrections: [
+                    { original: "I don't like his cartoons.", corrected: "I don't like watching this cartoon." },
+                    { original: 'But I hurt.', corrected: 'But I got hurt.' }
+                ],
+                readingPractice: [
+                    'Carrot',
+                    'Cabbage'
+                ],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 10',
+                info: { remaining: 10 }
+            },
+            {
+                date: '2026-09-10',
+                topic: 'Everybody Up: Book 3 Page 5 D',
+                corrections: [
+                    { original: 'I play the Pad.', corrected: 'I played with my iPad before our class.' }
+                ],
+                readingPractice: [
+                    'Carrot',
+                    'Cabbage'
+                ],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 7',
+                info: { remaining: 11 }
+            },
+            {
+                date: '2026-09-09',
+                topic: 'Everybody Up: Book 3 Page 1',
+                corrections: [
+                    { original: 'Two.', corrected: 'I have two friends now.' },
+                    { original: 'Because he go home.', corrected: 'I only played with one of my friends because my other friend went home early.' },
+                    { original: 'I favorite subject is art.', corrected: 'My favorite subject is art.' },
+                    { original: 'Look af films.', corrected: 'We eat popcorn when watching a movie.' }
+                ],
+                readingPractice: [
+                    'Spaghetti',
+                    'Gum',
+                    'Peanut'
+                ],
+                vocab: [
+                    { word: 'Gum', translation: '口香糖' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 5 D',
+                info: { remaining: 12 }
+            },
+            {
+                date: '2026-09-08',
+                topic: 'Everybody Up: Book 2 Page 73 E',
+                corrections: [
+                    { original: 'Because I play with two new friends.', corrected: 'Because I played with two new friends.' },
+                    { original: 'Eat the hamburger.', corrected: 'I ate hamburger.' }
+                ],
+                readingPractice: [],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 3 Page 1',
+                info: { remaining: 13 }
+            },
+            {
+                date: '2026-09-07',
+                topic: 'Everybody Up: Book 2 Page 67',
+                corrections: [
+                    { original: 'Today, I go to the park.', corrected: 'Today, I went to the park.' },
+                    { original: 'Go to the slide.', corrected: 'I played on the slide.' },
+                    { original: "New friend, isn't a classmate.", corrected: 'I played with a new friend.' },
+                    { original: 'Go to the hike.', corrected: 'We went hiking.' },
+                    { original: "Don't have the dad.", corrected: "My dad didn't go hiking with us." },
+                    { original: 'My brother in Candana.', corrected: 'My cousin lives in Canada.' }
+                ],
+                readingPractice: [],
+                vocab: [],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 2 Page 73 E',
+                info: { remaining: 14 }
+            },
+            {
+                date: '2026-09-03',
+                topic: 'Everybody Up: Book 2 Page 67',
+                corrections: [
+                    { original: 'I jump on the bed.', corrected: 'I jumped on the bed.' },
+                    { original: 'Yes.', corrected: 'Yes, I finished some of my homework.' }
+                ],
+                readingPractice: [],
+                vocab: [
+                    { word: 'Academy', translation: '补习班' }
+                ],
+                mispronounced: [],
+                nextLesson: 'Everybody Up: Book 2 Page 69',
+                info: { remaining: 15 }
+            },
             {
                 date: '2026-09-01',
                 topic: 'Everybody Up: Book 2 Page 64',
@@ -653,15 +910,14 @@
                     { original: 'Today, eat the lunch at home.', corrected: 'Today, I ate lunch at home.' },
                     { original: 'I back home at 1 o\'clock.', corrected: 'I got home at 1 o\'clock.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'P.E.', translation: '体育' },
                     { word: 'Social Studies', translation: '社会课' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 67',
-                info: {
-                    remaining: 16
-                }
+                info: { remaining: 16 }
             },
             {
                 date: '2026-08-31',
@@ -672,14 +928,13 @@
                     { original: 'I watch at 3 o\'clock at afternoon.', corrected: 'I sometimes watch TV at 3 o\'clock in the afternoon.' },
                     { original: 'Because I watch Tom & Jerry this class.', corrected: 'Because I already watch Tom & Jerry during our class.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Hike', translation: '远足' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 65',
-                info: {
-                    remaining: 17
-                }
+                info: { remaining: 17 }
             },
             {
                 date: '2026-08-28',
@@ -689,14 +944,13 @@
                     { original: 'Because it is the new school.', corrected: 'Because I am going to a new school.' },
                     { original: 'When does he come to the home?', corrected: 'When does he come home?' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Daily Routine', translation: '日常作息' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 64',
-                info: {
-                    remaining: 18
-                }
+                info: { remaining: 18 }
             },
             {
                 date: '2026-08-27',
@@ -707,12 +961,11 @@
                     { original: 'Today, I eat time at 8 o\'clock.', corrected: 'I ate dinner at 8 o\'clock.' },
                     { original: 'I don\'t eat the snack today.', corrected: 'I didn\'t eat snack today.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 64',
-                info: {
-                    remaining: 19
-                }
+                info: { remaining: 19 }
             },
             {
                 date: '2026-08-26',
@@ -722,12 +975,11 @@
                     { original: 'And the others.', corrected: 'I ate Lays and other snacks.' },
                     { original: 'Go to the showe.', corrected: 'I will take a shower after our class.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 61',
-                info: {
-                    remaining: 20
-                }
+                info: { remaining: 20 }
             },
             {
                 date: '2026-08-25',
@@ -736,12 +988,11 @@
                     { original: 'Eating the peach.', corrected: 'I am eating peach.' },
                     { original: 'New house.', corrected: 'We just moved to our new house.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 60',
-                info: {
-                    remaining: 1
-                }
+                info: { remaining: 1 }
             },
             {
                 date: '2026-08-24',
@@ -750,12 +1001,11 @@
                     { original: 'Eat the McDonald\'s.', corrected: 'We ate in McDonald\'s.' },
                     { original: 'I, grandma ate the children meal.', corrected: 'My grandma and I ate the kiddie meal.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 57 (Skip Counting)',
-                info: {
-                    remaining: 2
-                }
+                info: { remaining: 2 }
             },
             {
                 date: '2026-08-20',
@@ -764,12 +1014,11 @@
                     { original: 'Climb the mountain.', corrected: 'I go on a hike with my friend.' },
                     { original: 'No, many tree.', corrected: 'There aren\'t many trees.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 56',
-                info: {
-                    remaining: 3
-                }
+                info: { remaining: 3 }
             },
             {
                 date: '2026-08-19',
@@ -780,12 +1029,11 @@
                     { original: 'There is the one table in the kitchen.', corrected: 'There is one table in the kitchen.' },
                     { original: 'No.', corrected: 'There is no clock in our bathroom.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 50',
-                info: {
-                    remaining: 4
-                }
+                info: { remaining: 4 }
             },
             {
                 date: '2026-08-18',
@@ -797,14 +1045,13 @@
                     { original: 'They listen music.', corrected: 'They listening to music.' },
                     { original: 'Go to the sleep.', corrected: 'I will go to bed after our class.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Activity', translation: '活动' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 50',
-                info: {
-                    remaining: 5
-                }
+                info: { remaining: 5 }
             },
             {
                 date: '2026-08-14',
@@ -814,15 +1061,14 @@
                     { original: 'That shop did not have barbeque.', corrected: 'The store we went to didn\'t have a barbeque flavor.' },
                     { original: 'Go to the Hong Kong.', corrected: 'We will go to Hong Kong on the weekend.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Hobby', translation: '爱好' },
                     { word: 'Activity', translation: '活动' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 46',
-                info: {
-                    remaining: 6
-                }
+                info: { remaining: 6 }
             },
             {
                 date: '2026-08-13',
@@ -831,14 +1077,13 @@
                     { original: 'Because I play in the home.', corrected: 'I didn\'t go out because I played at home.' },
                     { original: 'Grandma win.', corrected: 'My grandma won when we played boardgame.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Flavor', translation: '味道' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 42',
-                info: {
-                    remaining: 7
-                }
+                info: { remaining: 7 }
             },
             {
                 date: '2026-08-12',
@@ -849,14 +1094,13 @@
                     { original: 'She isn\'t wearing hat.', corrected: 'She isn\'t wearing a hat.' },
                     { original: 'She wearing a sweater.', corrected: 'She is wearing a sweater.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Flavor', translation: '味道' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 38',
-                info: {
-                    remaining: 8
-                }
+                info: { remaining: 8 }
             },
             {
                 date: '2026-08-11',
@@ -867,14 +1111,13 @@
                     { original: 'I\'m also like.', corrected: 'I also like eating vegetables.' },
                     { original: 'I go to the sleep.', corrected: 'I will go to bed after our class.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Sneakers', translation: '运动鞋' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 36',
-                info: {
-                    remaining: 9
-                }
+                info: { remaining: 9 }
             },
             {
                 date: '2026-08-04',
@@ -885,12 +1128,11 @@
                     { original: 'A little like summer.', corrected: 'I like summer a little.' },
                     { original: 'Because snow is little.', corrected: 'It doesn\'t snow a lot in my area.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 32',
-                info: {
-                    remaining: 10
-                }
+                info: { remaining: 10 }
             },
             {
                 date: '2026-08-03',
@@ -901,12 +1143,11 @@
                     { original: 'Today, I go to the swim.', corrected: 'I swam today.' },
                     { original: 'A little like.', corrected: 'I like it a little.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 30',
-                info: {
-                    remaining: 11
-                }
+                info: { remaining: 11 }
             },
             {
                 date: '2026-07-28',
@@ -917,6 +1158,7 @@
                     { original: 'My dad job is AI engineer.', corrected: 'My dad is an AI engineer.' },
                     { original: 'I\'m go to there.', corrected: 'I went there.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Job', translation: '工作' }
                 ],
@@ -924,9 +1166,7 @@
                     'Pilot'
                 ],
                 nextLesson: 'Everybody Up: Book 2 Page 14',
-                info: {
-                    remaining: 15
-                }
+                info: { remaining: 15 }
             },
             {
                 date: '2026-07-27',
@@ -936,14 +1176,13 @@
                     { original: 'I eat the McDonald\'s.', corrected: 'I ate this in McDonald\'s.' },
                     { original: 'Use my eyes.', corrected: 'I use my eyes to see.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Flavor', translation: '味道' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 12 JOBS',
-                info: {
-                    remaining: 16
-                }
+                info: { remaining: 16 }
             },
             {
                 date: '2026-07-22',
@@ -953,15 +1192,14 @@
                     { original: 'Eat the ice cream.', corrected: 'Eating ice cream makes me happy.' },
                     { original: 'I\'m not like.', corrected: 'I don\'t like the hot weather.' }
                 ],
+                readingPractice: [],
                 vocab: [
                     { word: 'Pilot', translation: '飞行员' },
                     { word: 'Excited', translation: '兴奋' }
                 ],
                 mispronounced: [],
                 nextLesson: 'Everybody Up: Book 2 Page 6',
-                info: {
-                    remaining: 17
-                }
+                info: { remaining: 17 }
             },
             {
                 date: '2026-07-21',
@@ -974,12 +1212,11 @@
                     { original: 'Are you feel better?', corrected: 'Do you feel better?' },
                     { original: 'Play.', corrected: 'I will play after our class.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Sentence Construction',
-                info: {
-                    remaining: 18
-                }
+                info: { remaining: 18 }
             },
             {
                 date: '2026-07-13',
@@ -989,57 +1226,147 @@
                     { original: 'Yes, I\'m eat.', corrected: 'Yes, I ate dinner.' },
                     { original: 'Dog.', corrected: 'That is a dog.' }
                 ],
+                readingPractice: [],
                 vocab: [],
                 mispronounced: [],
                 nextLesson: 'Sentence Structure',
-                info: {
-                    remaining: 19
-                }
+                info: { remaining: 19 }
             }
         ];
 
         let currentLessonIndex = 0;
+        const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+
+        function formatFullDate(iso) {
+            const [y, m, d] = iso.split('-').map(Number);
+            const wd = weekdays[new Date(iso + 'T00:00:00').getDay()];
+            return `${y}年${m}月${d}日 · ${wd}`;
+        }
+
+        function formatShortDate(iso) {
+            const [, m, d] = iso.split('-');
+            return `${m}/${d}`;
+        }
+
+        function shortTopic(topic) {
+            const match = topic.match(/Book\s+(\d+).*?Page\s+([0-9A-Za-z ]+?)(?:\s*\(|$)/);
+            return match ? `B${match[1]} · P.${match[2].trim()}` : topic;
+        }
+
+        function getBook(topic) {
+            const match = topic.match(/Book\s+(\d+)/);
+            return match ? match[1] : null;
+        }
+
+        function renderLessonList() {
+            const container = document.getElementById('lessonList');
+            const groups = {};
+            lessons.forEach((lesson, index) => {
+                const month = lesson.date.slice(0, 7);
+                if (!groups[month]) groups[month] = [];
+                groups[month].push({ lesson, index });
+            });
+
+            container.innerHTML = Object.entries(groups).map(([month, items]) => {
+                const [, m] = month.split('-');
+                const monthLabel = `${parseInt(m, 10)}月`;
+                return `
+                    <div class="lesson-group">
+                        <div class="lesson-group-title">
+                            <span>${monthLabel}</span>
+                            <span class="lesson-group-count">${items.length} 节课</span>
+                        </div>
+                        ${items.map(({ lesson, index }) => `
+                            <div class="lesson-item ${index === currentLessonIndex ? 'active' : ''}" data-index="${index}">
+                                <div class="lesson-item-date-row">
+                                    <span class="lesson-item-date">${formatShortDate(lesson.date)}</span>
+                                    ${index === 0 ? '<span class="new-badge">New</span>' : ''}
+                                </div>
+                                <div class="lesson-item-topic">${shortTopic(lesson.topic)}</div>
+                                <div class="lesson-item-meta">${lesson.corrections.length} 处纠正${lesson.vocab.length ? ` · ${lesson.vocab.length} 个新词` : ''}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }).join('');
+
+            container.querySelectorAll('.lesson-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    currentLessonIndex = parseInt(item.dataset.index, 10);
+                    renderLessonDetail(currentLessonIndex);
+                });
+            });
+        }
 
         function renderLessonDetail(index) {
             const lesson = lessons[index];
             const detailContainer = document.getElementById('lessonDetail');
             const sidebarContainer = document.getElementById('sidebarRight');
+            const book = getBook(lesson.topic);
 
-            // Render main content
+            const summaryParts = [`${lesson.corrections.length} 处课堂纠正`];
+            if (lesson.vocab.length) summaryParts.push(`${lesson.vocab.length} 个新词汇`);
+            if (lesson.readingPractice.length) summaryParts.push(`${lesson.readingPractice.length} 项朗读练习`);
+
             detailContainer.innerHTML = `
                 <div class="lesson-detail-card">
                     <div class="detail-header">
-                        <div class="detail-title-block">
-                            <div class="detail-date">📅 ${lesson.date}</div>
-                            <div class="detail-topic">${lesson.topic}</div>
+                        <div class="detail-date">${formatFullDate(lesson.date)}</div>
+                        <div class="detail-tags">
+                            ${book ? `<span class="detail-book-tag">Book ${book}</span>` : ''}
+                            <span class="detail-topic">${escapeHtml(lesson.topic)}</span>
                         </div>
+                        <div class="detail-summary">${summaryParts.map(s => `<span>${s}</span>`).join('')}</div>
                     </div>
 
                     <div class="section">
-                        <div class="section-title">✏️ 课堂纠正</div>
+                        <div class="section-title">课堂纠正</div>
                         <div class="corrections-list">
-                            ${lesson.corrections.map(c => `
-                                <div class="correction-card">
-                                    <div class="correction-original">${escapeHtml(c.original)}</div>
-                                    <div class="correction-arrow">→</div>
-                                    <div class="correction-corrected">${escapeHtml(c.corrected)}</div>
-                                </div>
-                            `).join('')}
+                            ${lesson.corrections.map(c => {
+                                const alternatives = Array.isArray(c.corrected) ? c.corrected : [c.corrected];
+                                return `
+                                    <div class="correction-card">
+                                        <div class="correction-original">${escapeHtml(c.original)}</div>
+                                        <div class="correction-arrow">→</div>
+                                        <div class="correction-corrected">
+                                            ${alternatives.map((alt, i) => `
+                                                ${i > 0 ? '<div class="alt-option"><span class="alt-label">也可以说</span>' : '<div>'}
+                                                ${escapeHtml(alt)}</div>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
                         </div>
+                    </div>
+
+                    ${lesson.readingPractice.length > 0 ? `
+                        <div class="section">
+                            <div class="section-title">朗读练习</div>
+                            <div class="reading-list">
+                                ${lesson.readingPractice.map(word => `
+                                    <span class="reading-chip">${escapeHtml(word)}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+
+                    <div class="lesson-nav">
+                        <button class="nav-btn" id="prevBtn" ${index === lessons.length - 1 ? 'disabled' : ''}>← 更早一课</button>
+                        <button class="nav-btn" id="nextBtn" ${index === 0 ? 'disabled' : ''}>更新一课 →</button>
                     </div>
                 </div>
             `;
 
-            // Render sidebar
             sidebarContainer.innerHTML = `
                 ${lesson.vocab.length > 0 ? `
                     <div class="sidebar-card">
-                        <div class="section-title">📖 新词汇</div>
+                        <div class="section-title">新词汇</div>
                         <div class="vocab-list">
                             ${lesson.vocab.map(v => `
                                 <div class="vocab-item">
-                                    <span>${v.word}</span>
-                                    <span class="vocab-translation">${v.translation}</span>
+                                    <span>${escapeHtml(v.word)}</span>
+                                    <span class="vocab-translation">${escapeHtml(v.translation)}</span>
                                 </div>
                             `).join('')}
                         </div>
@@ -1048,12 +1375,12 @@
 
                 ${lesson.mispronounced.length > 0 ? `
                     <div class="sidebar-card">
-                        <div class="section-title">⚠️ 发音注意</div>
+                        <div class="section-title">发音注意</div>
                         <div class="mispronounced-list">
                             ${lesson.mispronounced.map(w => `
                                 <div class="mispronounced-item">
                                     <span>🔊</span>
-                                    <span>${w}</span>
+                                    <span>${escapeHtml(w)}</span>
                                 </div>
                             `).join('')}
                         </div>
@@ -1063,12 +1390,12 @@
                 <div class="sidebar-card">
                     <div class="next-lesson-card">
                         <div class="next-lesson-label">下次课</div>
-                        <div class="next-lesson-text">🔜 ${lesson.nextLesson}</div>
+                        <div class="next-lesson-text">${escapeHtml(lesson.nextLesson)}</div>
                     </div>
                 </div>
 
                 <div class="sidebar-card">
-                    <div class="section-title">📊 课程信息</div>
+                    <div class="section-title">课程信息</div>
                     <div class="info-list">
                         <div class="info-item">
                             <span class="info-label">学生</span>
@@ -1094,14 +1421,20 @@
                 </div>
             `;
 
-            // Update active state in sidebar
-            document.querySelectorAll('.lesson-item').forEach((item, i) => {
-                if (i === index) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
-            });
+            renderLessonList();
+
+            document.getElementById('prevBtn').addEventListener('click', () => navigate(1));
+            document.getElementById('nextBtn').addEventListener('click', () => navigate(-1));
+        }
+
+        function navigate(delta) {
+            const newIndex = currentLessonIndex + delta;
+            if (newIndex < 0 || newIndex >= lessons.length) return;
+            currentLessonIndex = newIndex;
+            renderLessonDetail(newIndex);
+            const activeItem = document.querySelector('.lesson-item.active');
+            if (activeItem) activeItem.scrollIntoView({ block: 'nearest' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function escapeHtml(text) {
@@ -1113,13 +1446,6 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             renderLessonDetail(currentLessonIndex);
-
-            document.querySelectorAll('.lesson-item').forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    currentLessonIndex = index;
-                    renderLessonDetail(index);
-                });
-            });
         });
     </script>
 </body>
